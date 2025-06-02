@@ -1,0 +1,111 @@
+
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\setstretch{1.15}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{IITISOC 2025 Proposal}
+\lhead{Dual-Drone Framework}
+\rfoot{\thepage}
+\titleformat{\section}{\normalfont\Large\bfseries}{}{0pt}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{}{0pt}{}
+
+\title{IITISOC 2025\\\large Coordinated Dual-Drone Framework for Coverage Based Irrigation Tasks}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Team Details}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Team Leader:} Burra Venkata Chakrapani (240021005)\\
+  GitHub: \texttt{chakri2007}, Discord: chakrapani2006, \href{https://www.linkedin.com/in/chakrapani-burra-086878352}{LinkedIn}\\
+  Skills: ROS2, PX4, Python
+  \item \textbf{Team Member 2:} Bhav Makhija (240021004)\\
+  GitHub: \texttt{Bhavdex}, Discord: Bhavj, \href{https://www.linkedin.com/in/bhav-makhija}{LinkedIn}\\
+  Skills: Algorithm Development
+  \item \textbf{Team Member 3:} Sathvik (240021001)\\
+  GitHub: \texttt{Sathvik557}, Discord: Sathvik0586, \href{https://www.linkedin.com/in/amadala-sathvik-333b7a323}{LinkedIn}\\
+  Skills: PX4, CAD
+  \item \textbf{Team Member 4:} Srujana Patil (240021018)\\
+  GitHub: \texttt{Sruj-08}, Discord: Sruj08, \href{https://www.linkedin.com/in/srujana-patil-620677324}{LinkedIn}\\
+  Skills: Python
+  \item \textbf{Team Member 5:} Sana Tejasri Lakshmi (240041033)\\
+  GitHub: \texttt{Tejasri676}, Discord: Sana676, \href{https://www.linkedin.com/in/tejasri-lakshmi-sana-b6951b321}{LinkedIn}\\
+  Skills: Python
+\end{itemize}
+
+\section*{Domain and Problem Statement}
+\textbf{Domain:} Intelligent Vehicles and Robotics\\
+\textbf{Problem Statement:} Coordinated Dual-Drone Framework for Coverage Based Irrigation Tasks\\
+\textbf{PS Number:} 04 \\
+\textbf{Preference Number:} 01
+
+\section*{Project Solution}
+We describe our plan to approach the project step-by-step including geotagging, drone communication, and energy management to optimize irrigation.
+
+To minimize energy, surveillance drones start with an empty water tank. They only switch roles to irrigation if needed.
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Drone Condition} & \textbf{Speed (m/s)} & \textbf{Flight Time} & \textbf{Recharge Time} \\
+\hline
+With Water & 4 & 15 min & 25 min \\
+Without Water & 8 & 30 min & 25 min \\
+\hline
+\end{tabular}
+\end{center}
+
+Drones start from the farthest point and move inward for better efficiency.
+
+\section*{Launch and Path Planning}
+Using QGroundControl (QGC), we define geofences and generate a lawnmower path. Waypoints are exported as a KML file and include an `IsVisited` flag.
+
+\section*{Geotagging and Severity Level}
+Waypoints are placed 25m apart using latitude and longitude increments. Each is assigned a severity level from 1 (low) to 5 (high). Levels 2–5 trigger irrigation with amount based on severity.
+
+\section*{Battery Recharging Logic}
+Drones track battery and task load to ensure one drone is always operational.
+
+\subsection*{Battery Thresholds for Return-to-Base}
+Drones return if the energy is only enough for return using the $x'$ method:
+\begin{itemize}
+  \item $X$ = max travel range on full battery
+  \item $Y$ = current distance to charging station
+  \item $X' = X - Y$
+\end{itemize}
+If next waypoint distance > $X'$, drone returns to base.
+
+\section*{Swarm Coordination}
+Drones share GPS location, battery, water levels and progress to avoid duplication, support role switching, and balance load.
+
+\section*{Collision Avoidance}
+Drones fly at different altitudes. If on the same level, a PX4 obstacle avoidance system with a depth camera adjusts flight path during AUTO missions.
+
+\section*{Time Efficiency}
+Launching from the farthest point helps reduce return trip energy use. Parallel operation and task sharing increases speed and reduces mission time.
+
+\section*{Further Improvements}
+We plan to run MATLAB simulations to optimize our strategy before real-world deployment.
+
+\section*{Proposal Schedule}
+
+\begin{itemize}
+\item \textbf{Week 1:} Mission planning with QGC, generate lawnmower path and waypoint JSON.
+\item \textbf{Week 2:} Configure surveillance drone for geotagging and severity assignment.
+\item \textbf{Week 3:} Irrigation drone reads geotags and performs targeted irrigation.
+\item \textbf{Week 4:} Implement real-time battery monitoring and auto return-to-base logic.
+\item \textbf{Week 5:} Add swarm coordination for dynamic workload sharing.
+\item \textbf{Week 6:} Altitude separation and PX4 obstacle avoidance; MATLAB simulations.
+\item \textbf{Week 7:} Automate launch files, setup GitHub repo with README.
+\item \textbf{Week 8:} Optimize code, finalize report and documentation.
+\end{itemize}
+
+\end{document}
