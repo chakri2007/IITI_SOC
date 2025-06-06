@@ -4,22 +4,7 @@ import json
 import os
 
 def kml_to_waypoints_json(kml_filepath):
-    """
-    Reads KML data from a file, extracts Placemark waypoint information,
-    and converts it into a list of dictionaries.
-
-    Args:
-        kml_filepath (str): The path to the KML input file.
-
-    Returns:
-        list: A list of dictionaries, where each dictionary represents a waypoint.
-              Returns an empty list if no waypoints are found, the KML file
-              is invalid, or an error occurs during file reading.
-    """
     waypoints = []
-    
-    # Define the KML namespace to correctly find elements
-    # KML uses a default namespace, so we need to specify it when parsing
     namespace = {'kml': 'http://www.opengis.net/kml/2.2'}
 
     if not os.path.exists(kml_filepath):
@@ -79,13 +64,7 @@ def kml_to_waypoints_json(kml_filepath):
     return waypoints
 
 def save_json_to_file(data, output_filepath):
-    """
-    Saves a Python list/dictionary to a JSON file.
 
-    Args:
-        data (list or dict): The data to save.
-        output_filepath (str): The path to the output JSON file.
-    """
     try:
         # Create directory if it doesn't exist
         output_dir = os.path.dirname(output_filepath)
