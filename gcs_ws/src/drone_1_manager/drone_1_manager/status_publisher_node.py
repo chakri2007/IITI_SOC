@@ -4,7 +4,7 @@ from rclpy.node import Node
 # Import the existing DroneStatus message
 from drone_interfaces.msg import DroneStatus
 # Import the new custom messages for QGC commands and Mission status
-from drone_interfaces.msg import QGCCommand, MissionStatus
+from drone_interfaces.msg import DroneTypeChange, MissionStatus
 
 
 class StatusPublisher(Node):
@@ -35,7 +35,7 @@ class StatusPublisher(Node):
         # --- Subscriber for QGC Commands (to change drone type) ---
         # Listens for commands from a Quality Ground Control (QGC) station to update drone type.
         self.qgc_command_subscriber = self.create_subscription(
-            QGCCommand,
+            DroneTypeChange,
             '/qgc/command', # Topic for QGC commands
             self.qgc_command_callback,
             10
@@ -59,7 +59,7 @@ class StatusPublisher(Node):
 
     def qgc_command_callback(self, msg):
         """
-        Callback function for QGCCommand messages.
+        Callback function for DroneTypeChange messages.
         Updates the drone's type based on the received command.
         """
         old_drone_type = self.drone_type
