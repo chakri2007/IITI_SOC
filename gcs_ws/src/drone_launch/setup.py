@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'gcs_controller'
+package_name = 'drone_launch'
 
 setup(
     name=package_name,
@@ -10,7 +10,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name + '/launch', ['launch/gcs.launch.py']),
+        ('share/' + package_name + '/launch', ['launch/drone.launch.py']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -21,9 +21,6 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'geotag_manager_node = gcs_controller.geotag_manager_node:main',
-            'swarm_supervisor_node = gcs_controller.swarm_supervisor_node',
-            'waypoint_manager_node = gcs_controller.waypoint_manager_node:main',
         ],
     },
 )
