@@ -72,7 +72,7 @@ class StatusPublisher(Node):
         Updates the drone's operational status based on the received message.
         """
         old_drone_status = self.drone_status
-        self.drone_status = msg.new_drone_status.upper() # Store status in uppercase
+        self.drone_status = msg.status.upper() # Store status in uppercase
         self.get_logger().info(f'Mission Handler changed drone_status from "{old_drone_status}" to "{self.drone_status}".')
 
     def publish_drone_status(self):

@@ -16,7 +16,7 @@ class WaypointPublisher(Node):
         self.descending_batches = []
         self.assigned_batches_status = {}
 
-        self.declare_parameter('json_file_path', '')
+        self.declare_parameter('json_file_path', '/Users/burrachakrapani/Documents/IITISOC/mission_files/iiti_waypoints.json')
         self.declare_parameter('batch_size', 5)
 
         json_file_path = self.get_parameter('json_file_path').get_parameter_value().string_value
