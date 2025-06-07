@@ -44,7 +44,7 @@ class SwarmSupervisorNode(Node):
         self.drone_status[msg.drone_id] = msg
         self.get_logger().info(f"Status received from {msg.drone_id}")
 
-        drone_type = msg.drone_type.lower()
+        drone_type = msg.type.lower()
         drone_status = msg.status.lower()
 
         if drone_status != 'idle' or drone_type not in ['surveillance', 'irrigation']:
