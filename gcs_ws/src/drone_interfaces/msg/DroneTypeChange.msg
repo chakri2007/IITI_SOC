@@ -1,1 +1,1 @@
-sting new_drone_type
+string new_drone_type
