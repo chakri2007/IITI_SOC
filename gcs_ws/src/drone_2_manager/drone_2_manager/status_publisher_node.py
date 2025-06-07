@@ -20,7 +20,7 @@ class StatusPublisherNode(Node):
         )
         self.status_publisher = self.create_publisher(
             DroneStatus,
-            f'/drone/drone_1/status',
+            f'/drone/drone_2/status',
             qos_profile
         )
 
