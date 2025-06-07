@@ -22,7 +22,7 @@ class MissionHandlerNode(Node):
         # Publishers
         self.px4_command_pub = self.create_publisher(VehicleCommand, '/fmu/in/vehicle_command', 10)
         self.waypoint_update_pub = self.create_publisher(WaypointVisited, '/mission_handler/waypoint_visited', 10)
-        self.status_update_pub = self.create_publisher(DroneStatusUpdate, '/status_publisher/update_status', 10)
+        self.status_update_pub = self.create_publisher(DroneStatusUpdate, '/drone_1/update_status', 10)
 
         # Timer for simulating waypoint arrival
         self.timer = self.create_timer(2.0, self.execute_mission)
