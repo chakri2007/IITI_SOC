@@ -27,10 +27,10 @@ class StatusPublisher(Node):
         # This node publishes the current status of drone_1 on a dedicated topic.
         self.status_publisher = self.create_publisher(
             DroneStatus,
-            f'/drone/{self.drone_id}/status', # Topic includes drone_id for specificity
+            f'/drone_1/status', # Topic includes drone_id for specificity
             10                                # QoS history depth
         )
-        self.get_logger().info(f'Publishing drone status to /drone/{self.drone_id}/status.')
+        self.get_logger().info(f'Publishing drone status to /drone_1/status.')
 
         # --- Subscriber for QGC Commands (to change drone type) ---
         # Listens for commands from a Quality Ground Control (QGC) station to update drone type.
