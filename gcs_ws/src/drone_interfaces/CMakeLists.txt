@@ -30,6 +30,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/DroneStatus.msg"
   "msg/WaypointRequest.msg"
   "msg/WaypointVisited.msg"
+  "msg/DroneStatusUpdate.msg"
+  "msg/DroneTypeChange.msg"
 )
 
 ament_package()
