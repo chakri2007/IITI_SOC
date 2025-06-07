@@ -1,0 +1,1 @@
+sting new_drone_type

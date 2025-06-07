@@ -22,7 +22,7 @@ setup(
     entry_points={
         'console_scripts': [
             'geotag_manager_node = gcs_controller.geotag_manager_node:main',
-            'swarm_supervisor_node = gcs_controller.swarm_supervisor_node',
+            'swarm_supervisor_node = gcs_controller.swarm_supervisor_node:main',
             'waypoint_manager_node = gcs_controller.waypoint_manager_node:main',
         ],
     },

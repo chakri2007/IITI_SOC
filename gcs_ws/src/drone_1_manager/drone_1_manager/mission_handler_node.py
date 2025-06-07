@@ -1,6 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from drone_interfaces.msg import Waypoint, WaypointArray, WaypointUpdate, StatusUpdate
+from drone_interfaces.msg import Waypoint, WaypointArray, WaypointVisited, StatusUpdate
 from px4_msgs.msg import VehicleCommand
 import time
 
@@ -21,7 +21,7 @@ class MissionHandlerNode(Node):
 
         # Publishers
         self.px4_command_pub = self.create_publisher(VehicleCommand, '/fmu/in/vehicle_command', 10)
-        self.waypoint_update_pub = self.create_publisher(WaypointUpdate, '/mission_handler/waypoint_visited', 10)
+        self.waypoint_update_pub = self.create_publisher(WaypointVisited, '/mission_handler/waypoint_visited', 10)
         self.status_update_pub = self.create_publisher(StatusUpdate, '/status_publisher/update_status', 10)
 
         # Timer for simulating waypoint arrival
@@ -64,7 +64,7 @@ class MissionHandlerNode(Node):
         self.get_logger().info(f"Reached waypoint {self.current_index + 1}")
 
         # Notify supervisor
-        waypoint_update = WaypointUpdate()
+        waypoint_update = WaypointVisited()
         waypoint_update.drone_id = self.drone_id
         waypoint_update.index = self.current_index
         waypoint_update.visited = True
