@@ -1,0 +1,233 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-9d1173222a2b82dc937f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				},
+				{
+					"build" : "drone_interfaces__py",
+					"jsonFile" : "directory-drone_interfaces__py-5276bd48f03b1a09bbdc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces/drone_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "drone_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_drone_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_drone_interfaces_egg-7a84fcbaf18d38b6eedf.json",
+					"name" : "ament_cmake_python_build_drone_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_drone_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_drone_interfaces-0456b8165cf44887f735.json",
+					"name" : "ament_cmake_python_copy_drone_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "drone_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-drone_interfaces-9f994f7dc3800b7142e1.json",
+					"name" : "drone_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "drone_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-drone_interfaces__cpp-9b6c2b09fab767b70f55.json",
+					"name" : "drone_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "drone_interfaces__py::@e3a2e1838aee22223451",
+					"jsonFile" : "target-drone_interfaces__py-8ea04e90fff02a77d195.json",
+					"name" : "drone_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "drone_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-drone_interfaces__rosidl_generator_c-f0a85a3375eab33866a3.json",
+					"name" : "drone_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "drone_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-drone_interfaces__rosidl_generator_py-3a23fe0b06cc591380f5.json",
+					"name" : "drone_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "drone_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-drone_interfaces__rosidl_typesupport_c-ef317934f2e0ffe0b516.json",
+					"name" : "drone_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "drone_interfaces__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-drone_interfaces__rosidl_typesupport_c__pyext-055d49d88f52fbc59947.json",
+					"name" : "drone_interfaces__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "drone_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-drone_interfaces__rosidl_typesupport_cpp-a3b9347ddbb54cf8c6f2.json",
+					"name" : "drone_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "drone_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-drone_interfaces__rosidl_typesupport_fastrtps_c-582875be52eb3b47ea08.json",
+					"name" : "drone_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "drone_interfaces__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-drone_interfaces__rosidl_typesupport_fastrtps_c__pyext-460b75dd0e94798c6f53.json",
+					"name" : "drone_interfaces__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "drone_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-drone_interfaces__rosidl_typesupport_fastrtps_cpp-da032584b0cc1437020c.json",
+					"name" : "drone_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "drone_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-drone_interfaces__rosidl_typesupport_introspection_c-ec0c7e0872c2e7538c23.json",
+					"name" : "drone_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "drone_interfaces__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-drone_interfaces__rosidl_typesupport_introspection_c__pyext-46272aff3a5a5637a4b6.json",
+					"name" : "drone_interfaces__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "drone_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-drone_interfaces__rosidl_typesupport_introspection_cpp-733753e433ae441cdc84.json",
+					"name" : "drone_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "drone_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-drone_interfaces_uninstall-4691144e4741e763a8bd.json",
+					"name" : "drone_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-f7a5cc11654c1d974fd9.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces",
+		"source" : "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

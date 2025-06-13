@@ -1,0 +1,399 @@
+[0.226s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.226s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=2, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7098a9d32800>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7098a9e13a90>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7098a9e13a90>>, mixin_verb=('build',))
+[0.554s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.555s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.555s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.555s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.556s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.556s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.556s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws'
+[0.556s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.556s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.556s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.556s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.556s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.556s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.556s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.556s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.556s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.578s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.579s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.579s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.579s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.579s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.580s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.580s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.580s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.580s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.580s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.580s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.581s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.581s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.581s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.583s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_1_manager) by extensions ['ignore', 'ignore_ament_install']
+[0.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_1_manager) by extension 'ignore'
+[0.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_1_manager) by extension 'ignore_ament_install'
+[0.585s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_1_manager) by extensions ['colcon_pkg']
+[0.585s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_1_manager) by extension 'colcon_pkg'
+[0.585s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_1_manager) by extensions ['colcon_meta']
+[0.585s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_1_manager) by extension 'colcon_meta'
+[0.586s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_1_manager) by extensions ['ros']
+[0.586s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_1_manager) by extension 'ros'
+[0.595s] DEBUG:colcon.colcon_core.package_identification:Package 'src/drone_1_manager' with type 'ros.ament_python' and name 'drone_1_manager'
+[0.596s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_2_manager) by extensions ['ignore', 'ignore_ament_install']
+[0.596s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_2_manager) by extension 'ignore'
+[0.596s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_2_manager) by extension 'ignore_ament_install'
+[0.596s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_2_manager) by extensions ['colcon_pkg']
+[0.596s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_2_manager) by extension 'colcon_pkg'
+[0.597s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_2_manager) by extensions ['colcon_meta']
+[0.597s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_2_manager) by extension 'colcon_meta'
+[0.597s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_2_manager) by extensions ['ros']
+[0.597s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_2_manager) by extension 'ros'
+[0.598s] DEBUG:colcon.colcon_core.package_identification:Package 'src/drone_2_manager' with type 'ros.ament_python' and name 'drone_2_manager'
+[0.599s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.599s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_interfaces) by extension 'ignore'
+[0.599s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_interfaces) by extension 'ignore_ament_install'
+[0.599s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_interfaces) by extensions ['colcon_pkg']
+[0.599s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_interfaces) by extension 'colcon_pkg'
+[0.600s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_interfaces) by extensions ['colcon_meta']
+[0.600s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_interfaces) by extension 'colcon_meta'
+[0.600s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_interfaces) by extensions ['ros']
+[0.600s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_interfaces) by extension 'ros'
+[0.601s] DEBUG:colcon.colcon_core.package_identification:Package 'src/drone_interfaces' with type 'ros.ament_cmake' and name 'drone_interfaces'
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_launch) by extensions ['ignore', 'ignore_ament_install']
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_launch) by extension 'ignore'
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_launch) by extension 'ignore_ament_install'
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_launch) by extensions ['colcon_pkg']
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_launch) by extension 'colcon_pkg'
+[0.602s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_launch) by extensions ['colcon_meta']
+[0.602s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_launch) by extension 'colcon_meta'
+[0.602s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_launch) by extensions ['ros']
+[0.602s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone_launch) by extension 'ros'
+[0.603s] DEBUG:colcon.colcon_core.package_identification:Package 'src/drone_launch' with type 'ros.ament_python' and name 'drone_launch'
+[0.603s] Level 1:colcon.colcon_core.package_identification:_identify(src/gcs_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.603s] Level 1:colcon.colcon_core.package_identification:_identify(src/gcs_controller) by extension 'ignore'
+[0.603s] Level 1:colcon.colcon_core.package_identification:_identify(src/gcs_controller) by extension 'ignore_ament_install'
+[0.603s] Level 1:colcon.colcon_core.package_identification:_identify(src/gcs_controller) by extensions ['colcon_pkg']
+[0.603s] Level 1:colcon.colcon_core.package_identification:_identify(src/gcs_controller) by extension 'colcon_pkg'
+[0.603s] Level 1:colcon.colcon_core.package_identification:_identify(src/gcs_controller) by extensions ['colcon_meta']
+[0.603s] Level 1:colcon.colcon_core.package_identification:_identify(src/gcs_controller) by extension 'colcon_meta'
+[0.603s] Level 1:colcon.colcon_core.package_identification:_identify(src/gcs_controller) by extensions ['ros']
+[0.604s] Level 1:colcon.colcon_core.package_identification:_identify(src/gcs_controller) by extension 'ros'
+[0.605s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gcs_controller' with type 'ros.ament_python' and name 'gcs_controller'
+[0.605s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_utils) by extensions ['ignore', 'ignore_ament_install']
+[0.605s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_utils) by extension 'ignore'
+[0.605s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_utils) by extension 'ignore_ament_install'
+[0.605s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_utils) by extensions ['colcon_pkg']
+[0.605s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_utils) by extension 'colcon_pkg'
+[0.605s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_utils) by extensions ['colcon_meta']
+[0.606s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_utils) by extension 'colcon_meta'
+[0.606s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_utils) by extensions ['ros']
+[0.606s] Level 1:colcon.colcon_core.package_identification:_identify(src/mission_utils) by extension 'ros'
+[0.607s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mission_utils' with type 'ros.ament_python' and name 'mission_utils'
+[0.607s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.607s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.607s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.607s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.607s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.677s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.677s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.680s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install
+[0.682s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 341 installed packages in /opt/ros/humble
+[0.684s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.771s] Level 5:colcon.colcon_core.verb:set package 'drone_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.772s] Level 5:colcon.colcon_core.verb:set package 'drone_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.772s] Level 5:colcon.colcon_core.verb:set package 'drone_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.772s] Level 5:colcon.colcon_core.verb:set package 'drone_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.772s] Level 5:colcon.colcon_core.verb:set package 'drone_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.772s] Level 5:colcon.colcon_core.verb:set package 'drone_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.772s] Level 5:colcon.colcon_core.verb:set package 'drone_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.772s] Level 5:colcon.colcon_core.verb:set package 'drone_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.772s] Level 5:colcon.colcon_core.verb:set package 'drone_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.772s] DEBUG:colcon.colcon_core.verb:Building package 'drone_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces', 'merge_install': False, 'path': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.773s] Level 5:colcon.colcon_core.verb:set package 'drone_launch' build argument 'cmake_args' from command line to 'None'
+[0.773s] Level 5:colcon.colcon_core.verb:set package 'drone_launch' build argument 'cmake_target' from command line to 'None'
+[0.773s] Level 5:colcon.colcon_core.verb:set package 'drone_launch' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.773s] Level 5:colcon.colcon_core.verb:set package 'drone_launch' build argument 'cmake_clean_cache' from command line to 'False'
+[0.773s] Level 5:colcon.colcon_core.verb:set package 'drone_launch' build argument 'cmake_clean_first' from command line to 'False'
+[0.773s] Level 5:colcon.colcon_core.verb:set package 'drone_launch' build argument 'cmake_force_configure' from command line to 'False'
+[0.773s] Level 5:colcon.colcon_core.verb:set package 'drone_launch' build argument 'ament_cmake_args' from command line to 'None'
+[0.773s] Level 5:colcon.colcon_core.verb:set package 'drone_launch' build argument 'catkin_cmake_args' from command line to 'None'
+[0.774s] Level 5:colcon.colcon_core.verb:set package 'drone_launch' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.774s] DEBUG:colcon.colcon_core.verb:Building package 'drone_launch' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch', 'merge_install': False, 'path': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_launch', 'symlink_install': False, 'test_result_base': None}
+[0.774s] Level 5:colcon.colcon_core.verb:set package 'mission_utils' build argument 'cmake_args' from command line to 'None'
+[0.774s] Level 5:colcon.colcon_core.verb:set package 'mission_utils' build argument 'cmake_target' from command line to 'None'
+[0.774s] Level 5:colcon.colcon_core.verb:set package 'mission_utils' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.774s] Level 5:colcon.colcon_core.verb:set package 'mission_utils' build argument 'cmake_clean_cache' from command line to 'False'
+[0.774s] Level 5:colcon.colcon_core.verb:set package 'mission_utils' build argument 'cmake_clean_first' from command line to 'False'
+[0.774s] Level 5:colcon.colcon_core.verb:set package 'mission_utils' build argument 'cmake_force_configure' from command line to 'False'
+[0.774s] Level 5:colcon.colcon_core.verb:set package 'mission_utils' build argument 'ament_cmake_args' from command line to 'None'
+[0.775s] Level 5:colcon.colcon_core.verb:set package 'mission_utils' build argument 'catkin_cmake_args' from command line to 'None'
+[0.775s] Level 5:colcon.colcon_core.verb:set package 'mission_utils' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.775s] DEBUG:colcon.colcon_core.verb:Building package 'mission_utils' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils', 'merge_install': False, 'path': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/mission_utils', 'symlink_install': False, 'test_result_base': None}
+[0.775s] Level 5:colcon.colcon_core.verb:set package 'drone_1_manager' build argument 'cmake_args' from command line to 'None'
+[0.775s] Level 5:colcon.colcon_core.verb:set package 'drone_1_manager' build argument 'cmake_target' from command line to 'None'
+[0.775s] Level 5:colcon.colcon_core.verb:set package 'drone_1_manager' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.775s] Level 5:colcon.colcon_core.verb:set package 'drone_1_manager' build argument 'cmake_clean_cache' from command line to 'False'
+[0.775s] Level 5:colcon.colcon_core.verb:set package 'drone_1_manager' build argument 'cmake_clean_first' from command line to 'False'
+[0.775s] Level 5:colcon.colcon_core.verb:set package 'drone_1_manager' build argument 'cmake_force_configure' from command line to 'False'
+[0.775s] Level 5:colcon.colcon_core.verb:set package 'drone_1_manager' build argument 'ament_cmake_args' from command line to 'None'
+[0.775s] Level 5:colcon.colcon_core.verb:set package 'drone_1_manager' build argument 'catkin_cmake_args' from command line to 'None'
+[0.775s] Level 5:colcon.colcon_core.verb:set package 'drone_1_manager' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.776s] DEBUG:colcon.colcon_core.verb:Building package 'drone_1_manager' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager', 'merge_install': False, 'path': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_1_manager', 'symlink_install': False, 'test_result_base': None}
+[0.776s] Level 5:colcon.colcon_core.verb:set package 'drone_2_manager' build argument 'cmake_args' from command line to 'None'
+[0.776s] Level 5:colcon.colcon_core.verb:set package 'drone_2_manager' build argument 'cmake_target' from command line to 'None'
+[0.776s] Level 5:colcon.colcon_core.verb:set package 'drone_2_manager' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.776s] Level 5:colcon.colcon_core.verb:set package 'drone_2_manager' build argument 'cmake_clean_cache' from command line to 'False'
+[0.776s] Level 5:colcon.colcon_core.verb:set package 'drone_2_manager' build argument 'cmake_clean_first' from command line to 'False'
+[0.776s] Level 5:colcon.colcon_core.verb:set package 'drone_2_manager' build argument 'cmake_force_configure' from command line to 'False'
+[0.776s] Level 5:colcon.colcon_core.verb:set package 'drone_2_manager' build argument 'ament_cmake_args' from command line to 'None'
+[0.776s] Level 5:colcon.colcon_core.verb:set package 'drone_2_manager' build argument 'catkin_cmake_args' from command line to 'None'
+[0.776s] Level 5:colcon.colcon_core.verb:set package 'drone_2_manager' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.776s] DEBUG:colcon.colcon_core.verb:Building package 'drone_2_manager' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager', 'merge_install': False, 'path': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_2_manager', 'symlink_install': False, 'test_result_base': None}
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'gcs_controller' build argument 'cmake_args' from command line to 'None'
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'gcs_controller' build argument 'cmake_target' from command line to 'None'
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'gcs_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'gcs_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'gcs_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'gcs_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'gcs_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'gcs_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.777s] Level 5:colcon.colcon_core.verb:set package 'gcs_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.777s] DEBUG:colcon.colcon_core.verb:Building package 'gcs_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller', 'merge_install': False, 'path': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/gcs_controller', 'symlink_install': False, 'test_result_base': None}
+[0.777s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.779s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.779s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_interfaces' with build type 'ament_cmake'
+[0.779s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_interfaces'
+[0.783s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.784s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.784s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.796s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/mission_utils' with build type 'ament_python'
+[0.798s] Level 1:colcon.colcon_core.shell:create_environment_hook('mission_utils', 'ament_prefix_path')
+[0.799s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/share/mission_utils/hook/ament_prefix_path.ps1'
+[0.801s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/share/mission_utils/hook/ament_prefix_path.dsv'
+[0.803s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/share/mission_utils/hook/ament_prefix_path.sh'
+[0.804s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.805s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.834s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager:/opt/ros/humble /usr/bin/cmake --build /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces -- -j2 -l2
+[2.048s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/mission_utils'
+[2.049s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.049s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.082s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager:/opt/ros/humble /usr/bin/cmake --build /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces -- -j2 -l2
+[3.160s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager:/opt/ros/humble /usr/bin/cmake --install /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces
+[3.642s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/mission_utils': PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mission_utils build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils/install.log --single-version-externally-managed install_data
+[3.723s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drone_interfaces)
+[3.730s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager:/opt/ros/humble /usr/bin/cmake --install /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces
+[3.746s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces' for CMake module files
+[3.748s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces' for CMake config files
+[3.748s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_interfaces', 'cmake_prefix_path')
+[3.749s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/hook/cmake_prefix_path.ps1'
+[3.751s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/hook/cmake_prefix_path.dsv'
+[3.752s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/hook/cmake_prefix_path.sh'
+[3.754s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib'
+[3.754s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_interfaces', 'ld_library_path_lib')
+[3.755s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/hook/ld_library_path_lib.ps1'
+[3.756s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/hook/ld_library_path_lib.dsv'
+[3.758s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/hook/ld_library_path_lib.sh'
+[3.759s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/bin'
+[3.759s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/pkgconfig/drone_interfaces.pc'
+[3.760s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/python3.10/site-packages'
+[3.762s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/bin'
+[3.768s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/package.ps1'
+[3.780s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/package.dsv'
+[3.782s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/package.sh'
+[3.784s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/package.bash'
+[3.786s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/package.zsh'
+[3.787s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/colcon-core/packages/drone_interfaces)
+[3.792s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drone_interfaces)
+[3.793s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces' for CMake module files
+[3.796s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces' for CMake config files
+[3.797s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_interfaces', 'cmake_prefix_path')
+[3.799s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/hook/cmake_prefix_path.ps1'
+[3.801s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/hook/cmake_prefix_path.dsv'
+[3.803s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/hook/cmake_prefix_path.sh'
+[3.804s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib'
+[3.804s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_interfaces', 'ld_library_path_lib')
+[3.805s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/hook/ld_library_path_lib.ps1'
+[3.807s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/hook/ld_library_path_lib.dsv'
+[3.807s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/hook/ld_library_path_lib.sh'
+[3.809s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/bin'
+[3.809s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/pkgconfig/drone_interfaces.pc'
+[3.809s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/python3.10/site-packages'
+[3.810s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/bin'
+[3.811s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/package.ps1'
+[3.813s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/package.dsv'
+[3.815s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/package.sh'
+[3.818s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/package.bash'
+[3.822s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/package.zsh'
+[3.825s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/colcon-core/packages/drone_interfaces)
+[3.827s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_launch' with build type 'ament_python'
+[3.828s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_launch', 'ament_prefix_path')
+[3.830s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/share/drone_launch/hook/ament_prefix_path.ps1'
+[3.831s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/share/drone_launch/hook/ament_prefix_path.dsv'
+[3.832s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/share/drone_launch/hook/ament_prefix_path.sh'
+[3.834s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.835s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.817s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_launch'
+[4.817s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.818s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.954s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils' for CMake module files
+[4.957s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/mission_utils' returned '0': PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mission_utils build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils/install.log --single-version-externally-managed install_data
+[4.966s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils' for CMake config files
+[4.968s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib'
+[4.969s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/bin'
+[4.970s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/pkgconfig/mission_utils.pc'
+[4.971s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages'
+[4.972s] Level 1:colcon.colcon_core.shell:create_environment_hook('mission_utils', 'pythonpath')
+[4.972s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/share/mission_utils/hook/pythonpath.ps1'
+[4.973s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/share/mission_utils/hook/pythonpath.dsv'
+[4.975s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/share/mission_utils/hook/pythonpath.sh'
+[4.976s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/bin'
+[4.977s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mission_utils)
+[4.978s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/share/mission_utils/package.ps1'
+[4.983s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/share/mission_utils/package.dsv'
+[4.988s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/share/mission_utils/package.sh'
+[4.995s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/share/mission_utils/package.bash'
+[4.996s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/share/mission_utils/package.zsh'
+[4.998s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/share/colcon-core/packages/mission_utils)
+[4.999s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_1_manager' with build type 'ament_python'
+[4.999s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_1_manager', 'ament_prefix_path')
+[5.002s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/share/drone_1_manager/hook/ament_prefix_path.ps1'
+[5.003s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/share/drone_1_manager/hook/ament_prefix_path.dsv'
+[5.005s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/share/drone_1_manager/hook/ament_prefix_path.sh'
+[5.009s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.009s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.978s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_1_manager'
+[5.979s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.979s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.200s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_launch': PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_launch build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch/install.log --single-version-externally-managed install_data
+[7.214s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch' for CMake module files
+[7.220s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_launch' returned '0': PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_launch build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch/install.log --single-version-externally-managed install_data
+[7.223s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch' for CMake config files
+[7.224s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib'
+[7.225s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/bin'
+[7.225s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/pkgconfig/drone_launch.pc'
+[7.226s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/python3.10/site-packages'
+[7.226s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_launch', 'pythonpath')
+[7.227s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/share/drone_launch/hook/pythonpath.ps1'
+[7.227s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/share/drone_launch/hook/pythonpath.dsv'
+[7.229s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/share/drone_launch/hook/pythonpath.sh'
+[7.231s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/bin'
+[7.232s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drone_launch)
+[7.232s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/share/drone_launch/package.ps1'
+[7.234s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/share/drone_launch/package.dsv'
+[7.236s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/share/drone_launch/package.sh'
+[7.237s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/share/drone_launch/package.bash'
+[7.241s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/share/drone_launch/package.zsh'
+[7.244s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/share/colcon-core/packages/drone_launch)
+[7.248s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_2_manager' with build type 'ament_python'
+[7.251s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_2_manager', 'ament_prefix_path')
+[7.255s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/share/drone_2_manager/hook/ament_prefix_path.ps1'
+[7.260s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/share/drone_2_manager/hook/ament_prefix_path.dsv'
+[7.263s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/share/drone_2_manager/hook/ament_prefix_path.sh'
+[7.264s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.264s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.059s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_2_manager'
+[8.059s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.059s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.088s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_1_manager': PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_1_manager build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/install.log --single-version-externally-managed install_data
+[9.355s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager' for CMake module files
+[9.358s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager' for CMake config files
+[9.356s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_1_manager' returned '0': PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_1_manager build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/install.log --single-version-externally-managed install_data
+[9.359s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib'
+[9.360s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/bin'
+[9.360s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/pkgconfig/drone_1_manager.pc'
+[9.361s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages'
+[9.361s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_1_manager', 'pythonpath')
+[9.361s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/share/drone_1_manager/hook/pythonpath.ps1'
+[9.367s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/share/drone_1_manager/hook/pythonpath.dsv'
+[9.377s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/share/drone_1_manager/hook/pythonpath.sh'
+[9.378s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/bin'
+[9.379s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drone_1_manager)
+[9.380s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/share/drone_1_manager/package.ps1'
+[9.381s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/share/drone_1_manager/package.dsv'
+[9.383s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/share/drone_1_manager/package.sh'
+[9.384s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/share/drone_1_manager/package.bash'
+[9.385s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/share/drone_1_manager/package.zsh'
+[9.396s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/share/colcon-core/packages/drone_1_manager)
+[9.406s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/gcs_controller' with build type 'ament_python'
+[9.406s] Level 1:colcon.colcon_core.shell:create_environment_hook('gcs_controller', 'ament_prefix_path')
+[9.407s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/share/gcs_controller/hook/ament_prefix_path.ps1'
+[9.412s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/share/gcs_controller/hook/ament_prefix_path.dsv'
+[9.415s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/share/gcs_controller/hook/ament_prefix_path.sh'
+[9.425s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[9.430s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[10.206s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/gcs_controller'
+[10.207s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[10.208s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[10.227s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_2_manager': PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_2_manager build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/install.log --single-version-externally-managed install_data
+[11.462s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/gcs_controller': AMENT_PREFIX_PATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces:/opt/ros/humble PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gcs_controller build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/install.log --single-version-externally-managed install_data
+[11.725s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager' for CMake module files
+[11.736s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager' for CMake config files
+[11.729s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_2_manager' returned '0': PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_2_manager build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/install.log --single-version-externally-managed install_data
+[11.742s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib'
+[11.742s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/bin'
+[11.743s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/pkgconfig/drone_2_manager.pc'
+[11.743s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages'
+[11.744s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_2_manager', 'pythonpath')
+[11.744s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/share/drone_2_manager/hook/pythonpath.ps1'
+[11.746s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/share/drone_2_manager/hook/pythonpath.dsv'
+[11.747s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/share/drone_2_manager/hook/pythonpath.sh'
+[11.751s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/bin'
+[11.752s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drone_2_manager)
+[11.753s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/share/drone_2_manager/package.ps1'
+[11.757s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/share/drone_2_manager/package.dsv'
+[11.762s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/share/drone_2_manager/package.sh'
+[11.764s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/share/drone_2_manager/package.bash'
+[11.766s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/share/drone_2_manager/package.zsh'
+[11.767s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/share/colcon-core/packages/drone_2_manager)
+[12.238s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller' for CMake module files
+[12.238s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller' for CMake config files
+[12.239s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib'
+[12.240s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/bin'
+[12.240s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/pkgconfig/gcs_controller.pc'
+[12.241s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages'
+[12.242s] Level 1:colcon.colcon_core.shell:create_environment_hook('gcs_controller', 'pythonpath')
+[12.241s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/gcs_controller' returned '0': AMENT_PREFIX_PATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces:/opt/ros/humble PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gcs_controller build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/install.log --single-version-externally-managed install_data
+[12.243s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/share/gcs_controller/hook/pythonpath.ps1'
+[12.244s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/share/gcs_controller/hook/pythonpath.dsv'
+[12.245s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/share/gcs_controller/hook/pythonpath.sh'
+[12.246s] Level 1:colcon.colcon_core.environment:checking '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/bin'
+[12.246s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gcs_controller)
+[12.246s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/share/gcs_controller/package.ps1'
+[12.247s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/share/gcs_controller/package.dsv'
+[12.248s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/share/gcs_controller/package.sh'
+[12.250s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/share/gcs_controller/package.bash'
+[12.252s] INFO:colcon.colcon_core.shell:Creating package script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/share/gcs_controller/package.zsh'
+[12.253s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/share/colcon-core/packages/gcs_controller)
+[12.254s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[12.257s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[12.257s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[12.257s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[12.275s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[12.275s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[12.275s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[12.320s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[12.321s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/local_setup.ps1'
+[12.325s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/_local_setup_util_ps1.py'
+[12.329s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/setup.ps1'
+[12.343s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/local_setup.sh'
+[12.344s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/_local_setup_util_sh.py'
+[12.345s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/setup.sh'
+[12.348s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/local_setup.bash'
+[12.348s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/setup.bash'
+[12.351s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/local_setup.zsh'
+[12.352s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/setup.zsh'

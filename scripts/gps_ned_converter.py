@@ -74,9 +74,9 @@ def kml_to_ned_waypoints_json(kml_filepath):
 
                 waypoints.append({
                     "id": waypoint_id,
-                    "north": north,
-                    "east": east,
-                    "down": down,
+                    "lat": north,   # north -> lat (in meters from origin)
+                    "lon": east,    # east  -> lon (in meters from origin)
+                    "alt": down,    # down  -> alt (in meters from origin)
                     "visited": False
                 })
 
@@ -98,12 +98,13 @@ def save_json_to_file(data, output_filepath):
         print(f"Error saving JSON: {e}")
 
 if __name__ == "__main__":
-    input_kml_file = "/Users/burrachakrapani/Documents/IITISOC/mission_files/iit.kml"
-    output_json_file = "/Users/burrachakrapani/Documents/IITISOC/mission_files/iiti_waypoints_ned.json"
+    input_kml_file = "/home/chakrapani/drone_files/IITI_SOC/mission_files/iit_survey.kml"
+    output_json_file = "/home/chakrapani/drone_files/IITI_SOC/mission_files/iiti_waypoints.json"
 
-    extracted_ned_waypoints = kml_to_ned_waypoints_json(input_kml_file)
+    extracted_waypoints = kml_to_ned_waypoints_json(input_kml_file)
 
-    if extracted_ned_waypoints:
-        save_json_to_file(extracted_ned_waypoints, output_json_file)
+    if extracted_waypoints:
+        save_json_to_file(extracted_waypoints, output_json_file)
     else:
         print("No waypoints extracted. JSON not created.")
+

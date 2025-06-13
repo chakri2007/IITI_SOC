@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from drone_interfaces/msg/DroneStatus.msg
+// generated code does not contain a copyright notice
+
+
+module drone_interfaces {
+  module msg {
+    struct DroneStatus {
+      @verbatim (language="comment", text=
+        "\"drone_1\", \"drone_2\"")
+      string drone_id;
+
+      @verbatim (language="comment", text=
+        "\"surveillance\" or \"irrigation\"")
+      string type;
+
+      @verbatim (language="comment", text=
+        "\"idle\", \"active\", etc.")
+      string status;
+
+      string direction;
+    };
+  };
+};

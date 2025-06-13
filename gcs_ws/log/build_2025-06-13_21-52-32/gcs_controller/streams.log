@@ -1,0 +1,23 @@
+[0.769s] Invoking command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/gcs_controller': AMENT_PREFIX_PATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces LD_LIBRARY_PATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gcs_controller build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/install.log --single-version-externally-managed install_data
+[1.041s] running egg_info
+[1.042s] writing ../../build/gcs_controller/gcs_controller.egg-info/PKG-INFO
+[1.042s] writing dependency_links to ../../build/gcs_controller/gcs_controller.egg-info/dependency_links.txt
+[1.042s] writing entry points to ../../build/gcs_controller/gcs_controller.egg-info/entry_points.txt
+[1.042s] writing requirements to ../../build/gcs_controller/gcs_controller.egg-info/requires.txt
+[1.042s] writing top-level names to ../../build/gcs_controller/gcs_controller.egg-info/top_level.txt
+[1.044s] reading manifest file '../../build/gcs_controller/gcs_controller.egg-info/SOURCES.txt'
+[1.045s] writing manifest file '../../build/gcs_controller/gcs_controller.egg-info/SOURCES.txt'
+[1.046s] running build
+[1.046s] running build_py
+[1.046s] running install
+[1.046s] running install_lib
+[1.049s] running install_data
+[1.049s] running install_egg_info
+[1.051s] removing '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller-0.0.0-py3.10.egg-info' (and everything under it)
+[1.051s] Copying ../../build/gcs_controller/gcs_controller.egg-info to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller-0.0.0-py3.10.egg-info
+[1.052s] running install_scripts
+[1.076s] Installing geotag_manager_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/gcs_controller
+[1.076s] Installing swarm_supervisor_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/gcs_controller
+[1.076s] Installing waypoint_manager_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/gcs_controller
+[1.076s] writing list of installed files to '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/install.log'
+[1.111s] Invoked command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/gcs_controller' returned '0': AMENT_PREFIX_PATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces LD_LIBRARY_PATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gcs_controller build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/install.log --single-version-externally-managed install_data

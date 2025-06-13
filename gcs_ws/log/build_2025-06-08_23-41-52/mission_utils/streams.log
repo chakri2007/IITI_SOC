@@ -1,0 +1,20 @@
+[3.322s] Invoking command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/mission_utils': PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mission_utils build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils/install.log --single-version-externally-managed install_data
+[4.823s] running egg_info
+[4.830s] writing ../../build/mission_utils/mission_utils.egg-info/PKG-INFO
+[4.844s] writing dependency_links to ../../build/mission_utils/mission_utils.egg-info/dependency_links.txt
+[4.845s] writing entry points to ../../build/mission_utils/mission_utils.egg-info/entry_points.txt
+[4.847s] writing requirements to ../../build/mission_utils/mission_utils.egg-info/requires.txt
+[4.851s] writing top-level names to ../../build/mission_utils/mission_utils.egg-info/top_level.txt
+[4.863s] reading manifest file '../../build/mission_utils/mission_utils.egg-info/SOURCES.txt'
+[4.879s] writing manifest file '../../build/mission_utils/mission_utils.egg-info/SOURCES.txt'
+[4.884s] running build
+[4.884s] running build_py
+[4.884s] running install
+[4.894s] running install_lib
+[4.918s] running install_data
+[4.918s] running install_egg_info
+[4.934s] removing '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages/mission_utils-0.0.0-py3.10.egg-info' (and everything under it)
+[4.940s] Copying ../../build/mission_utils/mission_utils.egg-info to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages/mission_utils-0.0.0-py3.10.egg-info
+[4.950s] running install_scripts
+[5.146s] writing list of installed files to '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils/install.log'
+[5.916s] Invoked command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/mission_utils' returned '0': PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mission_utils build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils/install.log --single-version-externally-managed install_data

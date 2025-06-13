@@ -1,0 +1,264 @@
+[0.024s] Invoking command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager:/home/chakrapani/ros2_px4_offboard_example_ws/install/px4_offboard:/home/chakrapani/octomap_ws/install/px4_odometry_converter:/home/chakrapani/octomap_ws/install/px4_localization:/home/chakrapani/px4_ros_ws/install/px4_offboard:/opt/ros/humble /usr/bin/cmake --build /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces -- -j2 -l2
+[0.095s] [  1%] Built target drone_interfaces__cpp
+[0.128s] [ 12%] Built target drone_interfaces__rosidl_generator_c
+[0.175s] [ 12%] Built target ament_cmake_python_copy_drone_interfaces
+[0.184s] [ 24%] Built target drone_interfaces__rosidl_typesupport_cpp
+[0.235s] [ 35%] Built target drone_interfaces__rosidl_typesupport_introspection_c
+[0.246s] [ 46%] Built target drone_interfaces__rosidl_typesupport_fastrtps_c
+[0.310s] [ 58%] Built target drone_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.320s] [ 69%] Built target drone_interfaces__rosidl_typesupport_c
+[0.350s] [ 81%] Built target drone_interfaces__rosidl_typesupport_introspection_cpp
+[0.389s] [ 81%] Built target drone_interfaces
+[0.415s] [ 82%] Built target drone_interfaces__py
+[0.451s] [ 92%] Built target drone_interfaces__rosidl_generator_py
+[0.480s] [ 94%] Built target drone_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[0.505s] [ 97%] Built target drone_interfaces__rosidl_typesupport_introspection_c__pyext
+[0.537s] [100%] Built target drone_interfaces__rosidl_typesupport_c__pyext
+[0.798s] running egg_info
+[0.799s] writing drone_interfaces.egg-info/PKG-INFO
+[0.800s] writing dependency_links to drone_interfaces.egg-info/dependency_links.txt
+[0.801s] writing top-level names to drone_interfaces.egg-info/top_level.txt
+[0.806s] reading manifest file 'drone_interfaces.egg-info/SOURCES.txt'
+[0.806s] writing manifest file 'drone_interfaces.egg-info/SOURCES.txt'
+[0.853s] [100%] Built target ament_cmake_python_build_drone_interfaces_egg
+[0.875s] Invoked command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager:/home/chakrapani/ros2_px4_offboard_example_ws/install/px4_offboard:/home/chakrapani/octomap_ws/install/px4_odometry_converter:/home/chakrapani/octomap_ws/install/px4_localization:/home/chakrapani/px4_ros_ws/install/px4_offboard:/opt/ros/humble /usr/bin/cmake --build /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces -- -j2 -l2
+[0.888s] Invoking command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager:/home/chakrapani/ros2_px4_offboard_example_ws/install/px4_offboard:/home/chakrapani/octomap_ws/install/px4_odometry_converter:/home/chakrapani/octomap_ws/install/px4_localization:/home/chakrapani/px4_ros_ws/install/px4_offboard:/opt/ros/humble /usr/bin/cmake --install /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces
+[0.897s] -- Install configuration: ""
+[0.898s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/ament_index/resource_index/rosidl_interfaces/drone_interfaces
+[0.898s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces
+[0.899s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg
+[0.900s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail
+[0.900s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__struct.h
+[0.900s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__struct.h
+[0.900s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__type_support.h
+[0.901s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__functions.h
+[0.901s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__functions.c
+[0.902s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__functions.h
+[0.903s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__struct.h
+[0.903s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__functions.c
+[0.906s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__functions.h
+[0.906s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__type_support.h
+[0.906s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__type_support.h
+[0.906s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__functions.c
+[0.906s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__struct.h
+[0.906s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__functions.c
+[0.906s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__functions.h
+[0.907s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__type_support.h
+[0.907s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__functions.h
+[0.907s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__type_support.h
+[0.910s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__functions.c
+[0.910s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__struct.h
+[0.910s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__functions.c
+[0.910s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__functions.c
+[0.910s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__struct.h
+[0.910s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__type_support.h
+[0.910s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__functions.h
+[0.910s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__type_support.h
+[0.910s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__struct.h
+[0.910s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__functions.h
+[0.911s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/drone_type_change.h
+[0.911s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_generator_c__visibility_control.h
+[0.911s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/waypoint.h
+[0.917s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/waypoint_visited.h
+[0.917s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/waypoint_array.h
+[0.917s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/drone_status_update.h
+[0.917s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/drone_status.h
+[0.917s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/waypoint_request.h
+[0.917s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/environment/library_path.sh
+[0.917s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/environment/library_path.dsv
+[0.918s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_generator_c.so
+[0.918s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces
+[0.918s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg
+[0.918s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail
+[0.918s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__rosidl_typesupport_fastrtps_c.h
+[0.918s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__rosidl_typesupport_fastrtps_c.h
+[0.918s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__rosidl_typesupport_fastrtps_c.h
+[0.918s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__rosidl_typesupport_fastrtps_c.h
+[0.918s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__rosidl_typesupport_fastrtps_c.h
+[0.918s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__rosidl_typesupport_fastrtps_c.h
+[0.918s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__rosidl_typesupport_fastrtps_c.h
+[0.918s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.918s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_fastrtps_c.so
+[0.918s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces
+[0.918s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg
+[0.919s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail
+[0.919s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__rosidl_typesupport_introspection_c.h
+[0.919s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__rosidl_typesupport_introspection_c.h
+[0.927s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__type_support.c
+[0.927s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__type_support.c
+[0.927s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__rosidl_typesupport_introspection_c.h
+[0.927s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__type_support.c
+[0.927s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__rosidl_typesupport_introspection_c.h
+[0.927s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__type_support.c
+[0.927s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__rosidl_typesupport_introspection_c.h
+[0.927s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__rosidl_typesupport_introspection_c.h
+[0.927s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__type_support.c
+[0.927s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__type_support.c
+[0.928s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__type_support.c
+[0.928s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__rosidl_typesupport_introspection_c.h
+[0.928s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.928s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_introspection_c.so
+[0.932s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_c.so
+[0.932s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces
+[0.932s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg
+[0.932s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail
+[0.932s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__traits.hpp
+[0.932s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__type_support.hpp
+[0.932s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__struct.hpp
+[0.933s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__builder.hpp
+[0.933s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__type_support.hpp
+[0.933s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__type_support.hpp
+[0.933s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__traits.hpp
+[0.933s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__traits.hpp
+[0.933s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__struct.hpp
+[0.933s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__builder.hpp
+[0.933s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__builder.hpp
+[0.933s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__struct.hpp
+[0.933s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__type_support.hpp
+[0.933s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__builder.hpp
+[0.933s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__struct.hpp
+[0.933s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__struct.hpp
+[0.933s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__traits.hpp
+[0.933s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__builder.hpp
+[0.934s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__traits.hpp
+[0.934s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__traits.hpp
+[0.934s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__type_support.hpp
+[0.941s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__builder.hpp
+[0.941s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__builder.hpp
+[0.941s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__struct.hpp
+[0.941s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__struct.hpp
+[0.941s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__type_support.hpp
+[0.941s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__traits.hpp
+[0.942s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__type_support.hpp
+[0.942s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/drone_status.hpp
+[0.942s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/waypoint_request.hpp
+[0.942s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/drone_status_update.hpp
+[0.945s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/waypoint_array.hpp
+[0.945s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[0.945s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/waypoint_visited.hpp
+[0.945s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/waypoint.hpp
+[0.945s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/drone_type_change.hpp
+[0.945s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces
+[0.945s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg
+[0.945s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail
+[0.947s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/dds_fastrtps
+[0.948s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__rosidl_typesupport_fastrtps_cpp.hpp
+[0.948s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__rosidl_typesupport_fastrtps_cpp.hpp
+[0.948s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__rosidl_typesupport_fastrtps_cpp.hpp
+[0.948s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__rosidl_typesupport_fastrtps_cpp.hpp
+[0.948s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__rosidl_typesupport_fastrtps_cpp.hpp
+[0.948s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__rosidl_typesupport_fastrtps_cpp.hpp
+[0.948s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__rosidl_typesupport_fastrtps_cpp.hpp
+[0.948s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.948s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[0.948s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces
+[0.948s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg
+[0.948s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail
+[0.949s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__type_support.cpp
+[0.949s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__rosidl_typesupport_introspection_cpp.hpp
+[0.949s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__type_support.cpp
+[0.949s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__type_support.cpp
+[0.949s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__rosidl_typesupport_introspection_cpp.hpp
+[0.949s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__rosidl_typesupport_introspection_cpp.hpp
+[0.949s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__rosidl_typesupport_introspection_cpp.hpp
+[0.949s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__type_support.cpp
+[0.951s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__type_support.cpp
+[0.952s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__type_support.cpp
+[0.952s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__rosidl_typesupport_introspection_cpp.hpp
+[0.952s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__rosidl_typesupport_introspection_cpp.hpp
+[0.952s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__rosidl_typesupport_introspection_cpp.hpp
+[0.952s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__type_support.cpp
+[0.952s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_introspection_cpp.so
+[0.952s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_cpp.so
+[0.952s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/environment/pythonpath.sh
+[0.953s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/environment/pythonpath.dsv
+[0.953s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info
+[0.953s] -- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[0.953s] -- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.953s] -- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[0.953s] -- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.953s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces
+[0.953s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_c.c
+[0.953s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/__init__.py
+[0.953s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg
+[0.954s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/__init__.py
+[0.954s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_waypoint_visited.py
+[0.954s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_drone_status_s.c
+[0.956s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_waypoint.py
+[0.956s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_waypoint_array_s.c
+[0.956s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_waypoint_request.py
+[0.956s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_waypoint_request_s.c
+[0.956s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_waypoint_s.c
+[0.956s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_drone_type_change_s.c
+[0.956s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_waypoint_array.py
+[0.956s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_drone_status_update_s.c
+[0.956s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_waypoint_visited_s.c
+[0.956s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_drone_status.py
+[0.957s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_drone_type_change.py
+[0.957s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_drone_status_update.py
+[0.957s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.957s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.957s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[0.957s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/libdrone_interfaces__rosidl_generator_py.so
+[0.957s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.957s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.046s] Listing '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces'...
+[1.046s] Listing '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg'...
+[1.053s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.054s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.056s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.056s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_generator_py.so
+[1.057s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/Waypoint.idl
+[1.057s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/WaypointArray.idl
+[1.058s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/DroneStatus.idl
+[1.058s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/WaypointRequest.idl
+[1.058s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/WaypointVisited.idl
+[1.059s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/DroneStatusUpdate.idl
+[1.059s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/DroneTypeChange.idl
+[1.059s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/Waypoint.msg
+[1.059s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/WaypointArray.msg
+[1.060s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/DroneStatus.msg
+[1.060s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/WaypointRequest.msg
+[1.060s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/WaypointVisited.msg
+[1.061s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/DroneStatusUpdate.msg
+[1.064s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/DroneTypeChange.msg
+[1.064s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/ament_index/resource_index/package_run_dependencies/drone_interfaces
+[1.064s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/ament_index/resource_index/parent_prefix_path/drone_interfaces
+[1.064s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/environment/ament_prefix_path.sh
+[1.064s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/environment/ament_prefix_path.dsv
+[1.064s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/environment/path.sh
+[1.064s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/environment/path.dsv
+[1.064s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/local_setup.bash
+[1.065s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/local_setup.sh
+[1.065s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/local_setup.zsh
+[1.065s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/local_setup.dsv
+[1.065s] -- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/package.dsv
+[1.065s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/ament_index/resource_index/packages/drone_interfaces
+[1.065s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_cExport.cmake
+[1.066s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_cExport-noconfig.cmake
+[1.066s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[1.066s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[1.066s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[1.067s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.067s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_cExport.cmake
+[1.067s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[1.068s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_cppExport.cmake
+[1.068s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.068s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[1.069s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[1.069s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.069s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_cppExport.cmake
+[1.072s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[1.072s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_pyExport.cmake
+[1.072s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[1.072s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/rosidl_cmake-extras.cmake
+[1.072s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.072s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[1.072s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[1.072s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.072s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.073s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.073s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfacesConfig.cmake
+[1.073s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfacesConfig-version.cmake
+[1.077s] -- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/package.xml
+[1.077s] Invoked command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager:/home/chakrapani/ros2_px4_offboard_example_ws/install/px4_offboard:/home/chakrapani/octomap_ws/install/px4_odometry_converter:/home/chakrapani/octomap_ws/install/px4_localization:/home/chakrapani/px4_ros_ws/install/px4_offboard:/opt/ros/humble /usr/bin/cmake --install /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces

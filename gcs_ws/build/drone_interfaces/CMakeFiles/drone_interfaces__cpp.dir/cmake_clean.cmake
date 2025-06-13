@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/drone_interfaces__cpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/drone_status__builder.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/drone_status__struct.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/drone_status__traits.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/drone_status__type_support.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/drone_status_update__builder.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/drone_status_update__struct.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/drone_status_update__traits.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/drone_status_update__type_support.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/drone_type_change__builder.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/drone_type_change__struct.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/drone_type_change__traits.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/drone_type_change__type_support.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/waypoint__builder.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/waypoint__struct.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/waypoint__traits.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/waypoint__type_support.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/waypoint_array__builder.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/waypoint_array__struct.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/waypoint_array__traits.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/waypoint_array__type_support.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/waypoint_request__builder.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/waypoint_request__struct.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/waypoint_request__traits.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/waypoint_request__type_support.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/waypoint_visited__builder.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/waypoint_visited__struct.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/waypoint_visited__traits.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/detail/waypoint_visited__type_support.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/drone_status.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/drone_status_update.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/drone_type_change.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/waypoint.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/waypoint_array.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/waypoint_request.hpp"
+  "rosidl_generator_cpp/drone_interfaces/msg/waypoint_visited.hpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/drone_interfaces__cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

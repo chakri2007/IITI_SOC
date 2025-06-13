@@ -1,0 +1,30 @@
+[2.644s] Invoking command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_1_manager': PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_1_manager build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/install.log --single-version-externally-managed install_data
+[3.742s] running egg_info
+[3.748s] writing ../../build/drone_1_manager/drone_1_manager.egg-info/PKG-INFO
+[3.752s] writing dependency_links to ../../build/drone_1_manager/drone_1_manager.egg-info/dependency_links.txt
+[3.757s] writing entry points to ../../build/drone_1_manager/drone_1_manager.egg-info/entry_points.txt
+[3.759s] writing requirements to ../../build/drone_1_manager/drone_1_manager.egg-info/requires.txt
+[3.761s] writing top-level names to ../../build/drone_1_manager/drone_1_manager.egg-info/top_level.txt
+[3.766s] reading manifest file '../../build/drone_1_manager/drone_1_manager.egg-info/SOURCES.txt'
+[3.772s] writing manifest file '../../build/drone_1_manager/drone_1_manager.egg-info/SOURCES.txt'
+[3.776s] running build
+[3.776s] running build_py
+[3.790s] copying drone_1_manager/mission_handler_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/build/lib/drone_1_manager
+[3.791s] running install
+[3.793s] running install_lib
+[3.796s] copying /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/build/lib/drone_1_manager/mission_handler_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages/drone_1_manager
+[3.799s] byte-compiling /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages/drone_1_manager/mission_handler_node.py to mission_handler_node.cpython-310.pyc
+[3.815s] running install_data
+[3.816s]   File "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages/drone_1_manager/mission_handler_node.py", line 195
+[3.816s]     def _send_vehicle_command(self, command, param1=0.0, param2=0.0, param2=0.0):
+[3.817s]                                                                      ^^^^^^
+[3.817s] SyntaxError: duplicate argument 'param2' in function definition
+[3.817s] 
+[3.818s] running install_egg_info
+[3.822s] removing '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages/drone_1_manager-0.0.0-py3.10.egg-info' (and everything under it)
+[3.828s] Copying ../../build/drone_1_manager/drone_1_manager.egg-info to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages/drone_1_manager-0.0.0-py3.10.egg-info
+[3.839s] running install_scripts
+[3.955s] Installing mission_handler_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/drone_1_manager
+[3.956s] Installing status_publisher_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/drone_1_manager
+[3.958s] writing list of installed files to '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/install.log'
+[4.650s] Invoked command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_1_manager' returned '0': PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_1_manager build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/install.log --single-version-externally-managed install_data

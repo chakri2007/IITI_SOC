@@ -1,0 +1,844 @@
+[0.000000] (-) TimerEvent: {}
+[0.000145] (drone_interfaces) JobQueued: {'identifier': 'drone_interfaces', 'dependencies': OrderedDict()}
+[0.000187] (drone_launch) JobQueued: {'identifier': 'drone_launch', 'dependencies': OrderedDict()}
+[0.000212] (mission_utils) JobQueued: {'identifier': 'mission_utils', 'dependencies': OrderedDict()}
+[0.000234] (drone_1_manager) JobQueued: {'identifier': 'drone_1_manager', 'dependencies': OrderedDict([('drone_interfaces', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces')])}
+[0.000259] (drone_2_manager) JobQueued: {'identifier': 'drone_2_manager', 'dependencies': OrderedDict([('drone_interfaces', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces')])}
+[0.000281] (gcs_controller) JobQueued: {'identifier': 'gcs_controller', 'dependencies': OrderedDict([('drone_interfaces', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces'), ('mission_utils', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils')])}
+[0.001064] (drone_interfaces) JobStarted: {'identifier': 'drone_interfaces'}
+[0.008275] (mission_utils) JobStarted: {'identifier': 'mission_utils'}
+[0.019256] (drone_interfaces) JobProgress: {'identifier': 'drone_interfaces', 'progress': 'cmake'}
+[0.019810] (drone_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces'], 'cwd': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'chakrapani'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/chakrapani'), ('OLDPWD', '/home/chakrapani/drone_files/IITI_SOC'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1064'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'chakrapani'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'chakrapani'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/chakrapani/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/chakrapani:@/tmp/.ICE-unix/1040,unix/chakrapani:/tmp/.ICE-unix/1040'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/45bdcfc3_9411_41a2_900e_89f06eefaa5f'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.80AZ72'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.103'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager:/opt/ros/humble')]), 'shell': False}
+[0.099741] (-) TimerEvent: {}
+[0.200010] (-) TimerEvent: {}
+[0.300294] (-) TimerEvent: {}
+[0.402884] (-) TimerEvent: {}
+[0.503740] (-) TimerEvent: {}
+[0.604024] (-) TimerEvent: {}
+[0.657365] (drone_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.704120] (-) TimerEvent: {}
+[0.767851] (mission_utils) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/mission_utils', 'build', '--build-base', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils/build', 'install', '--record', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/mission_utils', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_IN:en', 'USER': 'chakrapani', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/chakrapani', 'OLDPWD': '/home/chakrapani/drone_files/IITI_SOC', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1064', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'chakrapani', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'chakrapani', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/chakrapani/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/chakrapani:@/tmp/.ICE-unix/1040,unix/chakrapani:/tmp/.ICE-unix/1040', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/45bdcfc3_9411_41a2_900e_89f06eefaa5f', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.80AZ72', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.103', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces'}, 'shell': False}
+[0.804210] (-) TimerEvent: {}
+[0.904478] (-) TimerEvent: {}
+[1.005745] (-) TimerEvent: {}
+[1.045005] (mission_utils) StdoutLine: {'line': b'running egg_info\n'}
+[1.047715] (mission_utils) StdoutLine: {'line': b'creating ../../build/mission_utils/mission_utils.egg-info\n'}
+[1.049057] (mission_utils) StdoutLine: {'line': b'writing ../../build/mission_utils/mission_utils.egg-info/PKG-INFO\n'}
+[1.049220] (mission_utils) StdoutLine: {'line': b'writing dependency_links to ../../build/mission_utils/mission_utils.egg-info/dependency_links.txt\n'}
+[1.049315] (mission_utils) StdoutLine: {'line': b'writing entry points to ../../build/mission_utils/mission_utils.egg-info/entry_points.txt\n'}
+[1.049432] (mission_utils) StdoutLine: {'line': b'writing requirements to ../../build/mission_utils/mission_utils.egg-info/requires.txt\n'}
+[1.049507] (mission_utils) StdoutLine: {'line': b'writing top-level names to ../../build/mission_utils/mission_utils.egg-info/top_level.txt\n'}
+[1.049576] (mission_utils) StdoutLine: {'line': b"writing manifest file '../../build/mission_utils/mission_utils.egg-info/SOURCES.txt'\n"}
+[1.049703] (mission_utils) StdoutLine: {'line': b"reading manifest file '../../build/mission_utils/mission_utils.egg-info/SOURCES.txt'\n"}
+[1.050149] (mission_utils) StdoutLine: {'line': b"writing manifest file '../../build/mission_utils/mission_utils.egg-info/SOURCES.txt'\n"}
+[1.050404] (mission_utils) StdoutLine: {'line': b'running build\n'}
+[1.050482] (mission_utils) StdoutLine: {'line': b'running build_py\n'}
+[1.050613] (mission_utils) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils/build\n'}
+[1.050688] (mission_utils) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils/build/lib\n'}
+[1.050771] (mission_utils) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils/build/lib/mission_utils\n'}
+[1.050836] (mission_utils) StdoutLine: {'line': b'copying mission_utils/__init__.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils/build/lib/mission_utils\n'}
+[1.050898] (mission_utils) StdoutLine: {'line': b'running install\n'}
+[1.051570] (mission_utils) StdoutLine: {'line': b'running install_lib\n'}
+[1.051911] (mission_utils) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages/mission_utils\n'}
+[1.052049] (mission_utils) StdoutLine: {'line': b'copying /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils/build/lib/mission_utils/__init__.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages/mission_utils\n'}
+[1.052614] (mission_utils) StdoutLine: {'line': b'byte-compiling /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages/mission_utils/__init__.py to __init__.cpython-310.pyc\n'}
+[1.052848] (mission_utils) StdoutLine: {'line': b'running install_data\n'}
+[1.053142] (mission_utils) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/share/ament_index\n'}
+[1.053729] (mission_utils) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/share/ament_index/resource_index\n'}
+[1.053832] (mission_utils) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/share/ament_index/resource_index/packages\n'}
+[1.053900] (mission_utils) StdoutLine: {'line': b'copying resource/mission_utils -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/share/ament_index/resource_index/packages\n'}
+[1.055646] (mission_utils) StdoutLine: {'line': b'copying package.xml -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/share/mission_utils\n'}
+[1.055785] (mission_utils) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.055916] (mission_utils) StdoutLine: {'line': b'Copying ../../build/mission_utils/mission_utils.egg-info to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages/mission_utils-0.0.0-py3.10.egg-info\n'}
+[1.056631] (mission_utils) StdoutLine: {'line': b'running install_scripts\n'}
+[1.075242] (drone_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.083107] (mission_utils) StdoutLine: {'line': b"writing list of installed files to '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/mission_utils/install.log'\n"}
+[1.106349] (-) TimerEvent: {}
+[1.122783] (mission_utils) CommandEnded: {'returncode': 0}
+[1.133856] (mission_utils) JobEnded: {'identifier': 'mission_utils', 'rc': 0}
+[1.135067] (drone_launch) JobStarted: {'identifier': 'drone_launch'}
+[1.139316] (drone_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.206440] (-) TimerEvent: {}
+[1.306723] (-) TimerEvent: {}
+[1.313962] (drone_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.323795] (drone_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.324577] (drone_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.344777] (drone_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.353833] (drone_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.410769] (-) TimerEvent: {}
+[1.511076] (-) TimerEvent: {}
+[1.565752] (drone_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.572681] (drone_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.574734] (drone_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.574917] (drone_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.611177] (-) TimerEvent: {}
+[1.615706] (drone_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.711274] (-) TimerEvent: {}
+[1.811564] (-) TimerEvent: {}
+[1.911108] (drone_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.911632] (-) TimerEvent: {}
+[2.013744] (-) TimerEvent: {}
+[2.114845] (drone_launch) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/drone_launch', 'build', '--build-base', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch/build', 'install', '--record', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_launch', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_IN:en', 'USER': 'chakrapani', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/chakrapani', 'OLDPWD': '/home/chakrapani/drone_files/IITI_SOC', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1064', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'chakrapani', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'chakrapani', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/chakrapani/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/chakrapani:@/tmp/.ICE-unix/1040,unix/chakrapani:/tmp/.ICE-unix/1040', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/45bdcfc3_9411_41a2_900e_89f06eefaa5f', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.80AZ72', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.103', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces'}, 'shell': False}
+[2.115573] (-) TimerEvent: {}
+[2.184689] (drone_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[2.215737] (-) TimerEvent: {}
+[2.220413] (drone_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.229666] (drone_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[2.315829] (-) TimerEvent: {}
+[2.357738] (drone_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.406512] (drone_launch) StdoutLine: {'line': b'running egg_info\n'}
+[2.406739] (drone_launch) StdoutLine: {'line': b'creating ../../build/drone_launch/drone_launch.egg-info\n'}
+[2.408755] (drone_launch) StdoutLine: {'line': b'writing ../../build/drone_launch/drone_launch.egg-info/PKG-INFO\n'}
+[2.408876] (drone_launch) StdoutLine: {'line': b'writing dependency_links to ../../build/drone_launch/drone_launch.egg-info/dependency_links.txt\n'}
+[2.408958] (drone_launch) StdoutLine: {'line': b'writing entry points to ../../build/drone_launch/drone_launch.egg-info/entry_points.txt\n'}
+[2.409029] (drone_launch) StdoutLine: {'line': b'writing requirements to ../../build/drone_launch/drone_launch.egg-info/requires.txt\n'}
+[2.409097] (drone_launch) StdoutLine: {'line': b'writing top-level names to ../../build/drone_launch/drone_launch.egg-info/top_level.txt\n'}
+[2.409161] (drone_launch) StdoutLine: {'line': b"writing manifest file '../../build/drone_launch/drone_launch.egg-info/SOURCES.txt'\n"}
+[2.409936] (drone_launch) StdoutLine: {'line': b"reading manifest file '../../build/drone_launch/drone_launch.egg-info/SOURCES.txt'\n"}
+[2.410395] (drone_launch) StdoutLine: {'line': b"writing manifest file '../../build/drone_launch/drone_launch.egg-info/SOURCES.txt'\n"}
+[2.410611] (drone_launch) StdoutLine: {'line': b'running build\n'}
+[2.410800] (drone_launch) StdoutLine: {'line': b'running build_py\n'}
+[2.410947] (drone_launch) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch/build\n'}
+[2.411025] (drone_launch) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch/build/lib\n'}
+[2.411089] (drone_launch) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch/build/lib/drone_launch\n'}
+[2.411151] (drone_launch) StdoutLine: {'line': b'copying drone_launch/__init__.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch/build/lib/drone_launch\n'}
+[2.411212] (drone_launch) StdoutLine: {'line': b'running install\n'}
+[2.411812] (drone_launch) StdoutLine: {'line': b'running install_lib\n'}
+[2.412238] (drone_launch) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/python3.10/site-packages/drone_launch\n'}
+[2.412379] (drone_launch) StdoutLine: {'line': b'copying /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch/build/lib/drone_launch/__init__.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/python3.10/site-packages/drone_launch\n'}
+[2.412929] (drone_launch) StdoutLine: {'line': b'byte-compiling /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/python3.10/site-packages/drone_launch/__init__.py to __init__.cpython-310.pyc\n'}
+[2.413149] (drone_launch) StdoutLine: {'line': b'running install_data\n'}
+[2.413294] (drone_launch) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/share/ament_index\n'}
+[2.413553] (drone_launch) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/share/ament_index/resource_index\n'}
+[2.413771] (drone_launch) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/share/ament_index/resource_index/packages\n'}
+[2.415748] (drone_launch) StdoutLine: {'line': b'copying resource/drone_launch -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/share/ament_index/resource_index/packages\n'}
+[2.415856] (-) TimerEvent: {}
+[2.416077] (drone_launch) StdoutLine: {'line': b'copying package.xml -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/share/drone_launch\n'}
+[2.416177] (drone_launch) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/share/drone_launch/launch\n'}
+[2.416261] (drone_launch) StdoutLine: {'line': b'copying launch/drone.launch.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/share/drone_launch/launch\n'}
+[2.416334] (drone_launch) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.416450] (drone_launch) StdoutLine: {'line': b'Copying ../../build/drone_launch/drone_launch.egg-info to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/python3.10/site-packages/drone_launch-0.0.0-py3.10.egg-info\n'}
+[2.417260] (drone_launch) StdoutLine: {'line': b'running install_scripts\n'}
+[2.443374] (drone_launch) StdoutLine: {'line': b"writing list of installed files to '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch/install.log'\n"}
+[2.480078] (drone_launch) CommandEnded: {'returncode': 0}
+[2.486989] (drone_launch) JobEnded: {'identifier': 'drone_launch', 'rc': 0}
+[2.508789] (drone_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.516019] (-) TimerEvent: {}
+[2.616379] (-) TimerEvent: {}
+[2.716683] (-) TimerEvent: {}
+[2.817012] (-) TimerEvent: {}
+[2.917285] (-) TimerEvent: {}
+[2.978955] (drone_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[3.017509] (-) TimerEvent: {}
+[3.118155] (-) TimerEvent: {}
+[3.218470] (-) TimerEvent: {}
+[3.318784] (-) TimerEvent: {}
+[3.325398] (drone_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.418955] (-) TimerEvent: {}
+[3.519513] (-) TimerEvent: {}
+[3.620172] (-) TimerEvent: {}
+[3.709530] (drone_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.720278] (-) TimerEvent: {}
+[3.766634] (drone_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[3.776127] (drone_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[3.820396] (-) TimerEvent: {}
+[3.857497] (drone_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[3.857954] (drone_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.858125] (drone_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[3.858251] (drone_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[3.887888] (drone_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[3.920519] (-) TimerEvent: {}
+[4.022461] (-) TimerEvent: {}
+[4.055465] (drone_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[4.059911] (drone_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[4.093826] (drone_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[4.122566] (-) TimerEvent: {}
+[4.152820] (drone_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[4.164639] (drone_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces\n'}
+[4.174445] (drone_interfaces) CommandEnded: {'returncode': 0}
+[4.174963] (drone_interfaces) JobProgress: {'identifier': 'drone_interfaces', 'progress': 'build'}
+[4.175006] (drone_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces', '--', '-j2', '-l2'], 'cwd': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'chakrapani'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/chakrapani'), ('OLDPWD', '/home/chakrapani/drone_files/IITI_SOC'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1064'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'chakrapani'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'chakrapani'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/chakrapani/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/chakrapani:@/tmp/.ICE-unix/1040,unix/chakrapani:/tmp/.ICE-unix/1040'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/45bdcfc3_9411_41a2_900e_89f06eefaa5f'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.80AZ72'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.103'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager:/opt/ros/humble')]), 'shell': False}
+[4.221760] (drone_interfaces) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[4.223756] (-) TimerEvent: {}
+[4.232775] (drone_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[4.323850] (-) TimerEvent: {}
+[4.424238] (-) TimerEvent: {}
+[4.524625] (-) TimerEvent: {}
+[4.626839] (-) TimerEvent: {}
+[4.727231] (-) TimerEvent: {}
+[4.827601] (-) TimerEvent: {}
+[4.927991] (-) TimerEvent: {}
+[5.028434] (-) TimerEvent: {}
+[5.128849] (-) TimerEvent: {}
+[5.183286] (drone_interfaces) StdoutLine: {'line': b'[  2%] Built target drone_interfaces__cpp\n'}
+[5.229766] (-) TimerEvent: {}
+[5.235798] (drone_interfaces) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_copy_drone_interfaces\n'}
+[5.247064] (drone_interfaces) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[5.272041] (drone_interfaces) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/waypoint__functions.c.o\x1b[0m\n'}
+[5.329889] (-) TimerEvent: {}
+[5.430165] (-) TimerEvent: {}
+[5.530447] (-) TimerEvent: {}
+[5.567998] (drone_interfaces) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/waypoint_array__functions.c.o\x1b[0m\n'}
+[5.618482] (drone_interfaces) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/drone_status__functions.c.o\x1b[0m\n'}
+[5.630546] (-) TimerEvent: {}
+[5.681008] (drone_interfaces) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/waypoint_request__functions.c.o\x1b[0m\n'}
+[5.730656] (-) TimerEvent: {}
+[5.734494] (drone_interfaces) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/waypoint_visited__functions.c.o\x1b[0m\n'}
+[5.766423] (drone_interfaces) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/waypoint__type_support.cpp.o\x1b[0m\n'}
+[5.794848] (drone_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/drone_status_update__functions.c.o\x1b[0m\n'}
+[5.830771] (-) TimerEvent: {}
+[5.847964] (drone_interfaces) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/drone_type_change__functions.c.o\x1b[0m\n'}
+[5.897682] (drone_interfaces) StdoutLine: {'line': b'[ 15%] \x1b[32m\x1b[1mLinking C shared library libdrone_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[5.930919] (-) TimerEvent: {}
+[5.972798] (drone_interfaces) StdoutLine: {'line': b'[ 15%] Built target drone_interfaces__rosidl_generator_c\n'}
+[5.983582] (drone_interfaces) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/waypoint_array__type_support.cpp.o\x1b[0m\n'}
+[6.031084] (-) TimerEvent: {}
+[6.131557] (-) TimerEvent: {}
+[6.232090] (-) TimerEvent: {}
+[6.332735] (-) TimerEvent: {}
+[6.434613] (-) TimerEvent: {}
+[6.535258] (-) TimerEvent: {}
+[6.637833] (-) TimerEvent: {}
+[6.738441] (-) TimerEvent: {}
+[6.838761] (-) TimerEvent: {}
+[6.939035] (-) TimerEvent: {}
+[6.958488] (drone_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/drone_status__type_support.cpp.o\x1b[0m\n'}
+[6.961754] (drone_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[7.040758] (-) TimerEvent: {}
+[7.141034] (-) TimerEvent: {}
+[7.241306] (-) TimerEvent: {}
+[7.275957] (drone_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/waypoint_request__type_support.cpp.o\x1b[0m\n'}
+[7.341408] (-) TimerEvent: {}
+[7.441716] (-) TimerEvent: {}
+[7.542004] (-) TimerEvent: {}
+[7.609835] (drone_interfaces) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/waypoint_visited__type_support.cpp.o\x1b[0m\n'}
+[7.642110] (-) TimerEvent: {}
+[7.655171] (drone_interfaces) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/waypoint__type_support.cpp.o\x1b[0m\n'}
+[7.742233] (-) TimerEvent: {}
+[7.842556] (-) TimerEvent: {}
+[7.912198] (drone_interfaces) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/drone_status_update__type_support.cpp.o\x1b[0m\n'}
+[7.942680] (-) TimerEvent: {}
+[8.044759] (-) TimerEvent: {}
+[8.145136] (-) TimerEvent: {}
+[8.219456] (drone_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/drone_type_change__type_support.cpp.o\x1b[0m\n'}
+[8.245242] (-) TimerEvent: {}
+[8.345597] (-) TimerEvent: {}
+[8.445992] (-) TimerEvent: {}
+[8.470768] (drone_interfaces) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/waypoint_array__type_support.cpp.o\x1b[0m\n'}
+[8.533845] (drone_interfaces) StdoutLine: {'line': b'[ 27%] \x1b[32m\x1b[1mLinking CXX shared library libdrone_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[8.547366] (-) TimerEvent: {}
+[8.588082] (drone_interfaces) StdoutLine: {'line': b'[ 27%] Built target drone_interfaces__rosidl_typesupport_cpp\n'}
+[8.598018] (drone_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/drone_status__type_support.cpp.o\x1b[0m\n'}
+[8.647469] (-) TimerEvent: {}
+[8.747845] (-) TimerEvent: {}
+[8.848360] (-) TimerEvent: {}
+[8.949949] (-) TimerEvent: {}
+[9.035179] (drone_interfaces) StdoutLine: {'line': b'[ 30%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[9.050045] (-) TimerEvent: {}
+[9.109796] (drone_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/waypoint_request__type_support.cpp.o\x1b[0m\n'}
+[9.150143] (-) TimerEvent: {}
+[9.250534] (-) TimerEvent: {}
+[9.350947] (-) TimerEvent: {}
+[9.451348] (-) TimerEvent: {}
+[9.551765] (-) TimerEvent: {}
+[9.574743] (drone_interfaces) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/waypoint_visited__type_support.cpp.o\x1b[0m\n'}
+[9.651874] (-) TimerEvent: {}
+[9.673372] (drone_interfaces) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/waypoint__type_support.cpp.o\x1b[0m\n'}
+[9.751974] (-) TimerEvent: {}
+[9.852403] (-) TimerEvent: {}
+[9.954862] (-) TimerEvent: {}
+[10.040982] (drone_interfaces) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/drone_status_update__type_support.cpp.o\x1b[0m\n'}
+[10.054967] (-) TimerEvent: {}
+[10.155298] (-) TimerEvent: {}
+[10.255602] (-) TimerEvent: {}
+[10.260215] (drone_interfaces) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/waypoint_array__type_support.cpp.o\x1b[0m\n'}
+[10.355717] (-) TimerEvent: {}
+[10.456756] (-) TimerEvent: {}
+[10.508637] (drone_interfaces) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/drone_type_change__type_support.cpp.o\x1b[0m\n'}
+[10.556864] (-) TimerEvent: {}
+[10.657879] (-) TimerEvent: {}
+[10.759756] (-) TimerEvent: {}
+[10.777977] (drone_interfaces) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/drone_status__type_support.cpp.o\x1b[0m\n'}
+[10.859858] (-) TimerEvent: {}
+[10.954995] (drone_interfaces) StdoutLine: {'line': b'[ 40%] \x1b[32m\x1b[1mLinking CXX shared library libdrone_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[10.959960] (-) TimerEvent: {}
+[11.060287] (-) TimerEvent: {}
+[11.064232] (drone_interfaces) StdoutLine: {'line': b'[ 40%] Built target drone_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[11.160404] (-) TimerEvent: {}
+[11.226561] (drone_interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/waypoint_request__type_support.cpp.o\x1b[0m\n'}
+[11.260518] (-) TimerEvent: {}
+[11.360883] (-) TimerEvent: {}
+[11.461179] (-) TimerEvent: {}
+[11.561473] (-) TimerEvent: {}
+[11.623794] (drone_interfaces) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/waypoint_visited__type_support.cpp.o\x1b[0m\n'}
+[11.661594] (-) TimerEvent: {}
+[11.761925] (-) TimerEvent: {}
+[11.864555] (-) TimerEvent: {}
+[11.964864] (-) TimerEvent: {}
+[12.037322] (drone_interfaces) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/drone_status_update__type_support.cpp.o\x1b[0m\n'}
+[12.065486] (-) TimerEvent: {}
+[12.165755] (-) TimerEvent: {}
+[12.266783] (-) TimerEvent: {}
+[12.367092] (-) TimerEvent: {}
+[12.467465] (-) TimerEvent: {}
+[12.508549] (drone_interfaces) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/drone_type_change__type_support.cpp.o\x1b[0m\n'}
+[12.567586] (-) TimerEvent: {}
+[12.669861] (-) TimerEvent: {}
+[12.770189] (-) TimerEvent: {}
+[12.871312] (-) TimerEvent: {}
+[12.957409] (drone_interfaces) StdoutLine: {'line': b'[ 46%] \x1b[32m\x1b[1mLinking CXX shared library libdrone_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[12.971422] (-) TimerEvent: {}
+[13.053162] (drone_interfaces) StdoutLine: {'line': b'[ 46%] Built target drone_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[13.071781] (-) TimerEvent: {}
+[13.172070] (-) TimerEvent: {}
+[13.272342] (-) TimerEvent: {}
+[13.341818] (drone_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[13.342590] (drone_interfaces) StdoutLine: {'line': b'creating drone_interfaces.egg-info\n'}
+[13.342846] (drone_interfaces) StdoutLine: {'line': b'writing drone_interfaces.egg-info/PKG-INFO\n'}
+[13.343026] (drone_interfaces) StdoutLine: {'line': b'writing dependency_links to drone_interfaces.egg-info/dependency_links.txt\n'}
+[13.343233] (drone_interfaces) StdoutLine: {'line': b'writing top-level names to drone_interfaces.egg-info/top_level.txt\n'}
+[13.343459] (drone_interfaces) StdoutLine: {'line': b"writing manifest file 'drone_interfaces.egg-info/SOURCES.txt'\n"}
+[13.345782] (drone_interfaces) StdoutLine: {'line': b"reading manifest file 'drone_interfaces.egg-info/SOURCES.txt'\n"}
+[13.346361] (drone_interfaces) StdoutLine: {'line': b"writing manifest file 'drone_interfaces.egg-info/SOURCES.txt'\n"}
+[13.372449] (-) TimerEvent: {}
+[13.382620] (drone_interfaces) StdoutLine: {'line': b'[ 46%] Built target ament_cmake_python_build_drone_interfaces_egg\n'}
+[13.393470] (drone_interfaces) StdoutLine: {'line': b'[ 48%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[13.472556] (-) TimerEvent: {}
+[13.572823] (-) TimerEvent: {}
+[13.673103] (-) TimerEvent: {}
+[13.773377] (-) TimerEvent: {}
+[13.873668] (-) TimerEvent: {}
+[13.973997] (-) TimerEvent: {}
+[14.011942] (drone_interfaces) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/waypoint__type_support_c.cpp.o\x1b[0m\n'}
+[14.074137] (-) TimerEvent: {}
+[14.174465] (-) TimerEvent: {}
+[14.274818] (-) TimerEvent: {}
+[14.375447] (-) TimerEvent: {}
+[14.434132] (drone_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/waypoint_array__type_support_c.cpp.o\x1b[0m\n'}
+[14.475565] (-) TimerEvent: {}
+[14.575863] (-) TimerEvent: {}
+[14.676145] (-) TimerEvent: {}
+[14.776423] (-) TimerEvent: {}
+[14.783574] (drone_interfaces) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/drone_status__type_support_c.cpp.o\x1b[0m\n'}
+[14.876541] (-) TimerEvent: {}
+[14.976848] (-) TimerEvent: {}
+[15.013856] (drone_interfaces) StdoutLine: {'line': b'[ 53%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[15.076941] (-) TimerEvent: {}
+[15.178565] (-) TimerEvent: {}
+[15.180591] (drone_interfaces) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/waypoint_request__type_support_c.cpp.o\x1b[0m\n'}
+[15.278664] (-) TimerEvent: {}
+[15.378971] (-) TimerEvent: {}
+[15.479254] (-) TimerEvent: {}
+[15.580845] (-) TimerEvent: {}
+[15.590094] (drone_interfaces) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/waypoint_visited__type_support_c.cpp.o\x1b[0m\n'}
+[15.673815] (drone_interfaces) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/waypoint__type_support.c.o\x1b[0m\n'}
+[15.680946] (-) TimerEvent: {}
+[15.710214] (drone_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/waypoint_array__type_support.c.o\x1b[0m\n'}
+[15.767751] (drone_interfaces) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/drone_status__type_support.c.o\x1b[0m\n'}
+[15.781052] (-) TimerEvent: {}
+[15.804681] (drone_interfaces) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/waypoint_request__type_support.c.o\x1b[0m\n'}
+[15.842783] (drone_interfaces) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/waypoint_visited__type_support.c.o\x1b[0m\n'}
+[15.877650] (drone_interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/drone_status_update__type_support.c.o\x1b[0m\n'}
+[15.881795] (-) TimerEvent: {}
+[15.913535] (drone_interfaces) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/drone_type_change__type_support.c.o\x1b[0m\n'}
+[15.950145] (drone_interfaces) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking C shared library libdrone_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[15.981899] (-) TimerEvent: {}
+[15.987687] (drone_interfaces) StdoutLine: {'line': b'[ 67%] Built target drone_interfaces__rosidl_typesupport_introspection_c\n'}
+[15.988161] (drone_interfaces) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/drone_status_update__type_support_c.cpp.o\x1b[0m\n'}
+[15.998689] (drone_interfaces) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/drone_type_change__type_support_c.cpp.o\x1b[0m\n'}
+[16.083761] (-) TimerEvent: {}
+[16.184106] (-) TimerEvent: {}
+[16.284389] (-) TimerEvent: {}
+[16.382820] (drone_interfaces) StdoutLine: {'line': b'[ 69%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[16.383005] (drone_interfaces) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libdrone_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[16.384470] (-) TimerEvent: {}
+[16.481048] (drone_interfaces) StdoutLine: {'line': b'[ 70%] Built target drone_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[16.484752] (-) TimerEvent: {}
+[16.585685] (-) TimerEvent: {}
+[16.685953] (-) TimerEvent: {}
+[16.786235] (-) TimerEvent: {}
+[16.829086] (drone_interfaces) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/waypoint_array__type_support.cpp.o\x1b[0m\n'}
+[16.829307] (drone_interfaces) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/waypoint__type_support.cpp.o\x1b[0m\n'}
+[16.869348] (drone_interfaces) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/drone_status__type_support.cpp.o\x1b[0m\n'}
+[16.870110] (drone_interfaces) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/waypoint_request__type_support.cpp.o\x1b[0m\n'}
+[16.887757] (-) TimerEvent: {}
+[16.901504] (drone_interfaces) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/waypoint_visited__type_support.cpp.o\x1b[0m\n'}
+[16.934151] (drone_interfaces) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/drone_status_update__type_support.cpp.o\x1b[0m\n'}
+[16.970449] (drone_interfaces) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/drone_type_change__type_support.cpp.o\x1b[0m\n'}
+[16.987859] (-) TimerEvent: {}
+[17.004976] (drone_interfaces) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX shared library libdrone_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[17.052940] (drone_interfaces) StdoutLine: {'line': b'[ 81%] Built target drone_interfaces__rosidl_typesupport_c\n'}
+[17.073847] (drone_interfaces) StdoutLine: {'line': b'[ 81%] Built target drone_interfaces\n'}
+[17.087961] (-) TimerEvent: {}
+[17.096254] (drone_interfaces) StdoutLine: {'line': b'[ 82%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[17.188061] (-) TimerEvent: {}
+[17.288354] (-) TimerEvent: {}
+[17.388703] (-) TimerEvent: {}
+[17.489051] (-) TimerEvent: {}
+[17.589330] (-) TimerEvent: {}
+[17.689604] (-) TimerEvent: {}
+[17.789885] (-) TimerEvent: {}
+[17.890165] (-) TimerEvent: {}
+[17.991761] (-) TimerEvent: {}
+[18.074607] (drone_interfaces) StdoutLine: {'line': b'[ 82%] Built target drone_interfaces__py\n'}
+[18.091871] (-) TimerEvent: {}
+[18.096891] (drone_interfaces) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_waypoint_s.c.o\x1b[0m\n'}
+[18.097103] (drone_interfaces) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_waypoint_array_s.c.o\x1b[0m\n'}
+[18.192085] (-) TimerEvent: {}
+[18.292802] (-) TimerEvent: {}
+[18.393567] (-) TimerEvent: {}
+[18.494098] (-) TimerEvent: {}
+[18.595463] (-) TimerEvent: {}
+[18.696928] (-) TimerEvent: {}
+[18.745154] (drone_interfaces) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_drone_status_s.c.o\x1b[0m\n'}
+[18.746659] (drone_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_waypoint_request_s.c.o\x1b[0m\n'}
+[18.797920] (-) TimerEvent: {}
+[18.866884] (drone_interfaces) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_waypoint_visited_s.c.o\x1b[0m\n'}
+[18.867509] (drone_interfaces) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_drone_status_update_s.c.o\x1b[0m\n'}
+[18.899517] (-) TimerEvent: {}
+[18.981306] (drone_interfaces) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_drone_type_change_s.c.o\x1b[0m\n'}
+[18.999634] (-) TimerEvent: {}
+[19.090723] (drone_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/drone_interfaces/libdrone_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[19.099769] (-) TimerEvent: {}
+[19.140479] (drone_interfaces) StdoutLine: {'line': b'[ 92%] Built target drone_interfaces__rosidl_generator_py\n'}
+[19.165444] (drone_interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[19.165655] (drone_interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[19.201754] (-) TimerEvent: {}
+[19.299765] (drone_interfaces) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/drone_interfaces/drone_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[19.301844] (-) TimerEvent: {}
+[19.302267] (drone_interfaces) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/drone_interfaces/drone_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[19.342904] (drone_interfaces) StdoutLine: {'line': b'[ 97%] Built target drone_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[19.349752] (drone_interfaces) StdoutLine: {'line': b'[ 97%] Built target drone_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[19.366424] (drone_interfaces) StdoutLine: {'line': b'[ 98%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[19.401966] (-) TimerEvent: {}
+[19.485327] (drone_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/drone_interfaces/drone_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[19.502782] (-) TimerEvent: {}
+[19.523549] (drone_interfaces) StdoutLine: {'line': b'[100%] Built target drone_interfaces__rosidl_typesupport_c__pyext\n'}
+[19.540527] (drone_interfaces) CommandEnded: {'returncode': 0}
+[19.541168] (drone_interfaces) JobProgress: {'identifier': 'drone_interfaces', 'progress': 'install'}
+[19.553509] (drone_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces'], 'cwd': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'chakrapani'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/chakrapani'), ('OLDPWD', '/home/chakrapani/drone_files/IITI_SOC'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1064'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'chakrapani'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'chakrapani'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/chakrapani/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/chakrapani:@/tmp/.ICE-unix/1040,unix/chakrapani:/tmp/.ICE-unix/1040'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/45bdcfc3_9411_41a2_900e_89f06eefaa5f'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.80AZ72'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.103'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager:/opt/ros/humble')]), 'shell': False}
+[19.561635] (drone_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[19.562013] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/ament_index/resource_index/rosidl_interfaces/drone_interfaces\n'}
+[19.562197] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces\n'}
+[19.562581] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg\n'}
+[19.562880] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail\n'}
+[19.562995] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__struct.h\n'}
+[19.563146] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__struct.h\n'}
+[19.563225] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__type_support.h\n'}
+[19.563352] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__functions.h\n'}
+[19.563563] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__functions.c\n'}
+[19.563666] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__functions.h\n'}
+[19.563777] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__struct.h\n'}
+[19.563927] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__functions.c\n'}
+[19.564184] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__functions.h\n'}
+[19.564292] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__type_support.h\n'}
+[19.564400] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__type_support.h\n'}
+[19.564526] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__functions.c\n'}
+[19.564664] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__struct.h\n'}
+[19.564933] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__functions.c\n'}
+[19.565030] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__functions.h\n'}
+[19.565150] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__type_support.h\n'}
+[19.565289] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__functions.h\n'}
+[19.565538] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__type_support.h\n'}
+[19.565639] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__functions.c\n'}
+[19.565748] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__struct.h\n'}
+[19.565890] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__functions.c\n'}
+[19.566151] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__functions.c\n'}
+[19.566248] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__struct.h\n'}
+[19.566340] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__type_support.h\n'}
+[19.566476] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__functions.h\n'}
+[19.566621] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__type_support.h\n'}
+[19.566903] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__struct.h\n'}
+[19.567005] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__functions.h\n'}
+[19.567110] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/drone_type_change.h\n'}
+[19.567220] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[19.567365] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/waypoint.h\n'}
+[19.567603] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/waypoint_visited.h\n'}
+[19.567679] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/waypoint_array.h\n'}
+[19.567802] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/drone_status_update.h\n'}
+[19.567926] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/drone_status.h\n'}
+[19.568079] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/waypoint_request.h\n'}
+[19.568478] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/environment/library_path.sh\n'}
+[19.568576] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/environment/library_path.dsv\n'}
+[19.568746] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_generator_c.so\n'}
+[19.569453] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_generator_c.so" to ""\n'}
+[19.569654] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces\n'}
+[19.570101] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg\n'}
+[19.570189] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail\n'}
+[19.570263] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__rosidl_typesupport_fastrtps_c.h\n'}
+[19.570514] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__rosidl_typesupport_fastrtps_c.h\n'}
+[19.570627] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__rosidl_typesupport_fastrtps_c.h\n'}
+[19.571022] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__rosidl_typesupport_fastrtps_c.h\n'}
+[19.571146] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__rosidl_typesupport_fastrtps_c.h\n'}
+[19.571531] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__rosidl_typesupport_fastrtps_c.h\n'}
+[19.571655] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__rosidl_typesupport_fastrtps_c.h\n'}
+[19.572108] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[19.572237] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[19.572836] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[19.573203] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces\n'}
+[19.573290] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg\n'}
+[19.573615] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail\n'}
+[19.573711] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__rosidl_typesupport_introspection_c.h\n'}
+[19.573982] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__rosidl_typesupport_introspection_c.h\n'}
+[19.574096] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__type_support.c\n'}
+[19.574343] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__type_support.c\n'}
+[19.574598] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__rosidl_typesupport_introspection_c.h\n'}
+[19.574852] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__type_support.c\n'}
+[19.575119] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__rosidl_typesupport_introspection_c.h\n'}
+[19.575505] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__type_support.c\n'}
+[19.575621] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__rosidl_typesupport_introspection_c.h\n'}
+[19.575875] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__rosidl_typesupport_introspection_c.h\n'}
+[19.576271] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__type_support.c\n'}
+[19.576386] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__type_support.c\n'}
+[19.576718] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__type_support.c\n'}
+[19.577046] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__rosidl_typesupport_introspection_c.h\n'}
+[19.577161] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[19.577723] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[19.578079] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[19.578310] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_c.so\n'}
+[19.578947] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[19.579165] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces\n'}
+[19.579343] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg\n'}
+[19.579452] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail\n'}
+[19.579794] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__traits.hpp\n'}
+[19.579920] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__type_support.hpp\n'}
+[19.580169] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__struct.hpp\n'}
+[19.580558] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__builder.hpp\n'}
+[19.580673] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__type_support.hpp\n'}
+[19.581065] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__type_support.hpp\n'}
+[19.581307] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__traits.hpp\n'}
+[19.581665] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__traits.hpp\n'}
+[19.581795] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__struct.hpp\n'}
+[19.581915] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__builder.hpp\n'}
+[19.582020] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__builder.hpp\n'}
+[19.582137] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__struct.hpp\n'}
+[19.582239] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__type_support.hpp\n'}
+[19.582366] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__builder.hpp\n'}
+[19.582460] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__struct.hpp\n'}
+[19.582563] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__struct.hpp\n'}
+[19.582672] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__traits.hpp\n'}
+[19.582790] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__builder.hpp\n'}
+[19.582897] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__traits.hpp\n'}
+[19.583009] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__traits.hpp\n'}
+[19.583117] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__type_support.hpp\n'}
+[19.583223] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__builder.hpp\n'}
+[19.583327] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__builder.hpp\n'}
+[19.583437] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__struct.hpp\n'}
+[19.583549] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__struct.hpp\n'}
+[19.583657] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__type_support.hpp\n'}
+[19.583777] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__traits.hpp\n'}
+[19.583885] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__type_support.hpp\n'}
+[19.583999] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/drone_status.hpp\n'}
+[19.584096] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/waypoint_request.hpp\n'}
+[19.584194] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/drone_status_update.hpp\n'}
+[19.584291] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/waypoint_array.hpp\n'}
+[19.584395] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[19.584494] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/waypoint_visited.hpp\n'}
+[19.584592] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/waypoint.hpp\n'}
+[19.584699] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/drone_type_change.hpp\n'}
+[19.584856] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces\n'}
+[19.584971] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg\n'}
+[19.585037] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail\n'}
+[19.585107] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/dds_fastrtps\n'}
+[19.585201] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.585265] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.585362] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.585452] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.585556] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.585652] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.585910] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.586021] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[19.586185] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[19.587611] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[19.587746] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces\n'}
+[19.587829] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg\n'}
+[19.587900] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail\n'}
+[19.587990] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__type_support.cpp\n'}
+[19.588087] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.588171] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__type_support.cpp\n'}
+[19.588243] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__type_support.cpp\n'}
+[19.588326] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.588425] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_array__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.588521] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.588620] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_visited__type_support.cpp\n'}
+[19.589498] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_type_change__type_support.cpp\n'}
+[19.589632] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__type_support.cpp\n'}
+[19.589753] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.589866] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/waypoint_request__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.589967] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.590065] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/drone_status_update__type_support.cpp\n'}
+[19.590243] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[19.591839] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[19.591977] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_cpp.so\n'}
+[19.592281] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[19.592715] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/environment/pythonpath.sh\n'}
+[19.593042] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/environment/pythonpath.dsv\n'}
+[19.593365] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info\n'}
+[19.594177] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[19.594367] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[19.594469] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[19.594557] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[19.594627] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces\n'}
+[19.594729] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[19.594859] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/__init__.py\n'}
+[19.594949] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg\n'}
+[19.595012] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/__init__.py\n'}
+[19.595105] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_waypoint_visited.py\n'}
+[19.595195] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_drone_status_s.c\n'}
+[19.595267] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_waypoint.py\n'}
+[19.595349] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_waypoint_array_s.c\n'}
+[19.595417] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_waypoint_request.py\n'}
+[19.595476] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_waypoint_request_s.c\n'}
+[19.595569] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_waypoint_s.c\n'}
+[19.595631] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_drone_type_change_s.c\n'}
+[19.595737] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_waypoint_array.py\n'}
+[19.595817] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_drone_status_update_s.c\n'}
+[19.595902] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_waypoint_visited_s.c\n'}
+[19.595995] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_drone_status.py\n'}
+[19.596055] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_drone_type_change.py\n'}
+[19.596113] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_drone_status_update.py\n'}
+[19.596170] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[19.596233] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[19.596292] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[19.596349] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/libdrone_interfaces__rosidl_generator_py.so\n'}
+[19.596406] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[19.596463] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[19.602870] (-) TimerEvent: {}
+[19.643191] (drone_interfaces) StdoutLine: {'line': b"Listing '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces'...\n"}
+[19.643424] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/__init__.py'...\n"}
+[19.643548] (drone_interfaces) StdoutLine: {'line': b"Listing '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg'...\n"}
+[19.643650] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/__init__.py'...\n"}
+[19.643772] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_drone_status.py'...\n"}
+[19.643862] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_drone_status_update.py'...\n"}
+[19.643941] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_drone_type_change.py'...\n"}
+[19.644015] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_waypoint.py'...\n"}
+[19.644084] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_waypoint_array.py'...\n"}
+[19.644151] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_waypoint_request.py'...\n"}
+[19.644215] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_waypoint_visited.py'...\n"}
+[19.652670] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[19.652954] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[19.653204] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[19.653582] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[19.653817] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[19.654210] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[19.654326] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_generator_py.so\n'}
+[19.654841] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib/libdrone_interfaces__rosidl_generator_py.so" to ""\n'}
+[19.655147] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/Waypoint.idl\n'}
+[19.655232] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/WaypointArray.idl\n'}
+[19.655300] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/DroneStatus.idl\n'}
+[19.655811] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/WaypointRequest.idl\n'}
+[19.655909] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/WaypointVisited.idl\n'}
+[19.656020] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/DroneStatusUpdate.idl\n'}
+[19.656100] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/DroneTypeChange.idl\n'}
+[19.656188] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/Waypoint.msg\n'}
+[19.656283] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/WaypointArray.msg\n'}
+[19.656346] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/DroneStatus.msg\n'}
+[19.656444] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/WaypointRequest.msg\n'}
+[19.656518] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/WaypointVisited.msg\n'}
+[19.656601] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/DroneStatusUpdate.msg\n'}
+[19.656706] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/msg/DroneTypeChange.msg\n'}
+[19.656907] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/ament_index/resource_index/package_run_dependencies/drone_interfaces\n'}
+[19.657085] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/ament_index/resource_index/parent_prefix_path/drone_interfaces\n'}
+[19.657216] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/environment/ament_prefix_path.sh\n'}
+[19.657360] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/environment/ament_prefix_path.dsv\n'}
+[19.657510] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/environment/path.sh\n'}
+[19.657652] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/environment/path.dsv\n'}
+[19.657801] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/local_setup.bash\n'}
+[19.657940] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/local_setup.sh\n'}
+[19.658091] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/local_setup.zsh\n'}
+[19.658237] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/local_setup.dsv\n'}
+[19.658368] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/package.dsv\n'}
+[19.658560] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/ament_index/resource_index/packages/drone_interfaces\n'}
+[19.658772] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_cExport.cmake\n'}
+[19.658932] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[19.659087] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[19.659240] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[19.659404] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[19.659563] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[19.659730] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[19.659880] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[19.660047] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_cppExport.cmake\n'}
+[19.660213] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[19.660413] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[19.660536] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[19.660688] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[19.660872] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[19.661017] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[19.661178] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_pyExport.cmake\n'}
+[19.661331] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[19.661483] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[19.661619] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[19.661787] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[19.661938] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[19.662090] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[19.662228] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[19.662380] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[19.662525] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfacesConfig.cmake\n'}
+[19.662636] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfacesConfig-version.cmake\n'}
+[19.662794] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/share/drone_interfaces/package.xml\n'}
+[19.665310] (drone_interfaces) CommandEnded: {'returncode': 0}
+[19.682596] (drone_interfaces) JobEnded: {'identifier': 'drone_interfaces', 'rc': 0}
+[19.683252] (drone_1_manager) JobStarted: {'identifier': 'drone_1_manager'}
+[19.689009] (drone_2_manager) JobStarted: {'identifier': 'drone_2_manager'}
+[19.702977] (-) TimerEvent: {}
+[19.803293] (-) TimerEvent: {}
+[19.903581] (-) TimerEvent: {}
+[20.003870] (-) TimerEvent: {}
+[20.104189] (-) TimerEvent: {}
+[20.204598] (-) TimerEvent: {}
+[20.304914] (-) TimerEvent: {}
+[20.405748] (-) TimerEvent: {}
+[20.506022] (-) TimerEvent: {}
+[20.606325] (-) TimerEvent: {}
+[20.707773] (-) TimerEvent: {}
+[20.756052] (drone_1_manager) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/drone_1_manager', 'build', '--build-base', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/build', 'install', '--record', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_1_manager', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_IN:en', 'USER': 'chakrapani', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/chakrapani', 'OLDPWD': '/home/chakrapani/drone_files/IITI_SOC', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1064', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'chakrapani', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'chakrapani', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/chakrapani/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/chakrapani:@/tmp/.ICE-unix/1040,unix/chakrapani:/tmp/.ICE-unix/1040', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/45bdcfc3_9411_41a2_900e_89f06eefaa5f', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.80AZ72', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.103', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces'}, 'shell': False}
+[20.776810] (drone_2_manager) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/drone_2_manager', 'build', '--build-base', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build', 'install', '--record', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_2_manager', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_IN:en', 'USER': 'chakrapani', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/chakrapani', 'OLDPWD': '/home/chakrapani/drone_files/IITI_SOC', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1064', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'chakrapani', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'chakrapani', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/chakrapani/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/chakrapani:@/tmp/.ICE-unix/1040,unix/chakrapani:/tmp/.ICE-unix/1040', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/45bdcfc3_9411_41a2_900e_89f06eefaa5f', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.80AZ72', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.103', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces'}, 'shell': False}
+[20.807869] (-) TimerEvent: {}
+[20.908727] (-) TimerEvent: {}
+[21.015746] (-) TimerEvent: {}
+[21.116024] (-) TimerEvent: {}
+[21.220744] (-) TimerEvent: {}
+[21.291636] (drone_2_manager) StdoutLine: {'line': b'running egg_info\n'}
+[21.293751] (drone_2_manager) StdoutLine: {'line': b'creating ../../build/drone_2_manager/drone_2_manager.egg-info\n'}
+[21.294372] (drone_2_manager) StdoutLine: {'line': b'writing ../../build/drone_2_manager/drone_2_manager.egg-info/PKG-INFO\n'}
+[21.299622] (drone_2_manager) StdoutLine: {'line': b'writing dependency_links to ../../build/drone_2_manager/drone_2_manager.egg-info/dependency_links.txt\n'}
+[21.299819] (drone_2_manager) StdoutLine: {'line': b'writing entry points to ../../build/drone_2_manager/drone_2_manager.egg-info/entry_points.txt\n'}
+[21.299925] (drone_2_manager) StdoutLine: {'line': b'writing requirements to ../../build/drone_2_manager/drone_2_manager.egg-info/requires.txt\n'}
+[21.300011] (drone_2_manager) StdoutLine: {'line': b'writing top-level names to ../../build/drone_2_manager/drone_2_manager.egg-info/top_level.txt\n'}
+[21.300091] (drone_2_manager) StdoutLine: {'line': b"writing manifest file '../../build/drone_2_manager/drone_2_manager.egg-info/SOURCES.txt'\n"}
+[21.302084] (drone_2_manager) StdoutLine: {'line': b"reading manifest file '../../build/drone_2_manager/drone_2_manager.egg-info/SOURCES.txt'\n"}
+[21.303231] (drone_2_manager) StdoutLine: {'line': b"writing manifest file '../../build/drone_2_manager/drone_2_manager.egg-info/SOURCES.txt'\n"}
+[21.303567] (drone_2_manager) StdoutLine: {'line': b'running build\n'}
+[21.303804] (drone_2_manager) StdoutLine: {'line': b'running build_py\n'}
+[21.304187] (drone_2_manager) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build\n'}
+[21.304422] (drone_2_manager) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build/lib\n'}
+[21.304727] (drone_2_manager) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build/lib/drone_2_manager\n'}
+[21.304911] (drone_2_manager) StdoutLine: {'line': b'copying drone_2_manager/__init__.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build/lib/drone_2_manager\n'}
+[21.305474] (drone_2_manager) StdoutLine: {'line': b'copying drone_2_manager/status_publisher_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build/lib/drone_2_manager\n'}
+[21.305614] (drone_2_manager) StdoutLine: {'line': b'running install\n'}
+[21.306223] (drone_2_manager) StdoutLine: {'line': b'running install_lib\n'}
+[21.309642] (drone_2_manager) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager\n'}
+[21.310220] (drone_2_manager) StdoutLine: {'line': b'copying /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build/lib/drone_2_manager/__init__.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager\n'}
+[21.310395] (drone_2_manager) StdoutLine: {'line': b'copying /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build/lib/drone_2_manager/status_publisher_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager\n'}
+[21.312787] (drone_2_manager) StdoutLine: {'line': b'byte-compiling /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager/__init__.py to __init__.cpython-310.pyc\n'}
+[21.313729] (drone_2_manager) StdoutLine: {'line': b'byte-compiling /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager/status_publisher_node.py to status_publisher_node.cpython-310.pyc\n'}
+[21.314771] (drone_2_manager) StdoutLine: {'line': b'running install_data\n'}
+[21.320201] (drone_2_manager) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/share/ament_index\n'}
+[21.320401] (drone_2_manager) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/share/ament_index/resource_index\n'}
+[21.320500] (drone_2_manager) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/share/ament_index/resource_index/packages\n'}
+[21.320580] (drone_2_manager) StdoutLine: {'line': b'copying resource/drone_2_manager -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/share/ament_index/resource_index/packages\n'}
+[21.323580] (drone_2_manager) StdoutLine: {'line': b'copying package.xml -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/share/drone_2_manager\n'}
+[21.323761] (-) TimerEvent: {}
+[21.325765] (drone_2_manager) StdoutLine: {'line': b'running install_egg_info\n'}
+[21.328285] (drone_2_manager) StdoutLine: {'line': b'Copying ../../build/drone_2_manager/drone_2_manager.egg-info to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager-0.0.0-py3.10.egg-info\n'}
+[21.330786] (drone_1_manager) StdoutLine: {'line': b'running egg_info\n'}
+[21.330976] (drone_1_manager) StdoutLine: {'line': b'creating ../../build/drone_1_manager/drone_1_manager.egg-info\n'}
+[21.331074] (drone_1_manager) StdoutLine: {'line': b'writing ../../build/drone_1_manager/drone_1_manager.egg-info/PKG-INFO\n'}
+[21.331152] (drone_1_manager) StdoutLine: {'line': b'writing dependency_links to ../../build/drone_1_manager/drone_1_manager.egg-info/dependency_links.txt\n'}
+[21.331225] (drone_1_manager) StdoutLine: {'line': b'writing entry points to ../../build/drone_1_manager/drone_1_manager.egg-info/entry_points.txt\n'}
+[21.331292] (drone_1_manager) StdoutLine: {'line': b'writing requirements to ../../build/drone_1_manager/drone_1_manager.egg-info/requires.txt\n'}
+[21.331357] (drone_1_manager) StdoutLine: {'line': b'writing top-level names to ../../build/drone_1_manager/drone_1_manager.egg-info/top_level.txt\n'}
+[21.331420] (drone_1_manager) StdoutLine: {'line': b"writing manifest file '../../build/drone_1_manager/drone_1_manager.egg-info/SOURCES.txt'\n"}
+[21.335471] (drone_1_manager) StdoutLine: {'line': b"reading manifest file '../../build/drone_1_manager/drone_1_manager.egg-info/SOURCES.txt'\n"}
+[21.335721] (drone_1_manager) StdoutLine: {'line': b"writing manifest file '../../build/drone_1_manager/drone_1_manager.egg-info/SOURCES.txt'\n"}
+[21.335835] (drone_2_manager) StdoutLine: {'line': b'running install_scripts\n'}
+[21.335924] (drone_1_manager) StdoutLine: {'line': b'running build\n'}
+[21.335996] (drone_1_manager) StdoutLine: {'line': b'running build_py\n'}
+[21.339814] (drone_1_manager) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/build\n'}
+[21.342081] (drone_1_manager) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/build/lib\n'}
+[21.342274] (drone_1_manager) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/build/lib/drone_1_manager\n'}
+[21.342462] (drone_1_manager) StdoutLine: {'line': b'copying drone_1_manager/__init__.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/build/lib/drone_1_manager\n'}
+[21.342579] (drone_1_manager) StdoutLine: {'line': b'copying drone_1_manager/status_publisher_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/build/lib/drone_1_manager\n'}
+[21.342664] (drone_1_manager) StdoutLine: {'line': b'copying drone_1_manager/mission_handler_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/build/lib/drone_1_manager\n'}
+[21.342747] (drone_1_manager) StdoutLine: {'line': b'running install\n'}
+[21.342815] (drone_1_manager) StdoutLine: {'line': b'running install_lib\n'}
+[21.342877] (drone_1_manager) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages/drone_1_manager\n'}
+[21.342939] (drone_1_manager) StdoutLine: {'line': b'copying /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/build/lib/drone_1_manager/__init__.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages/drone_1_manager\n'}
+[21.343003] (drone_1_manager) StdoutLine: {'line': b'copying /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/build/lib/drone_1_manager/status_publisher_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages/drone_1_manager\n'}
+[21.343066] (drone_1_manager) StdoutLine: {'line': b'copying /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/build/lib/drone_1_manager/mission_handler_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages/drone_1_manager\n'}
+[21.346405] (drone_1_manager) StdoutLine: {'line': b'byte-compiling /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages/drone_1_manager/__init__.py to __init__.cpython-310.pyc\n'}
+[21.346568] (drone_1_manager) StdoutLine: {'line': b'byte-compiling /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages/drone_1_manager/status_publisher_node.py to status_publisher_node.cpython-310.pyc\n'}
+[21.349633] (drone_1_manager) StdoutLine: {'line': b'byte-compiling /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages/drone_1_manager/mission_handler_node.py to mission_handler_node.cpython-310.pyc\n'}
+[21.353830] (drone_1_manager) StdoutLine: {'line': b'running install_data\n'}
+[21.354141] (drone_1_manager) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/share/ament_index\n'}
+[21.354291] (drone_1_manager) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/share/ament_index/resource_index\n'}
+[21.356766] (drone_1_manager) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/share/ament_index/resource_index/packages\n'}
+[21.357776] (drone_1_manager) StdoutLine: {'line': b'copying resource/drone_1_manager -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/share/ament_index/resource_index/packages\n'}
+[21.357908] (drone_1_manager) StdoutLine: {'line': b'copying package.xml -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/share/drone_1_manager\n'}
+[21.357998] (drone_1_manager) StdoutLine: {'line': b'running install_egg_info\n'}
+[21.360797] (drone_1_manager) StdoutLine: {'line': b'Copying ../../build/drone_1_manager/drone_1_manager.egg-info to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages/drone_1_manager-0.0.0-py3.10.egg-info\n'}
+[21.364786] (drone_1_manager) StdoutLine: {'line': b'running install_scripts\n'}
+[21.407778] (drone_1_manager) StdoutLine: {'line': b'Installing mission_handler_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/drone_1_manager\n'}
+[21.408051] (drone_1_manager) StdoutLine: {'line': b'Installing status_publisher_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/drone_1_manager\n'}
+[21.409751] (drone_1_manager) StdoutLine: {'line': b"writing list of installed files to '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/install.log'\n"}
+[21.410899] (drone_2_manager) StdoutLine: {'line': b'Installing mission_handler_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/drone_2_manager\n'}
+[21.411785] (drone_2_manager) StdoutLine: {'line': b'Installing status_publisher_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/drone_2_manager\n'}
+[21.412925] (drone_2_manager) StdoutLine: {'line': b"writing list of installed files to '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/install.log'\n"}
+[21.423871] (-) TimerEvent: {}
+[21.492826] (drone_1_manager) CommandEnded: {'returncode': 0}
+[21.514766] (drone_1_manager) JobEnded: {'identifier': 'drone_1_manager', 'rc': 0}
+[21.515187] (gcs_controller) JobStarted: {'identifier': 'gcs_controller'}
+[21.523992] (-) TimerEvent: {}
+[21.546791] (drone_2_manager) CommandEnded: {'returncode': 0}
+[21.563598] (drone_2_manager) JobEnded: {'identifier': 'drone_2_manager', 'rc': 0}
+[21.624746] (-) TimerEvent: {}
+[21.726750] (-) TimerEvent: {}
+[21.827014] (-) TimerEvent: {}
+[21.927271] (-) TimerEvent: {}
+[22.027609] (-) TimerEvent: {}
+[22.128747] (-) TimerEvent: {}
+[22.229751] (-) TimerEvent: {}
+[22.330885] (-) TimerEvent: {}
+[22.376275] (gcs_controller) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/gcs_controller', 'build', '--build-base', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/build', 'install', '--record', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/gcs_controller', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_IN:en', 'USER': 'chakrapani', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/chakrapani', 'OLDPWD': '/home/chakrapani/drone_files/IITI_SOC', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1064', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'chakrapani', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'chakrapani', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/chakrapani/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/chakrapani:@/tmp/.ICE-unix/1040,unix/chakrapani:/tmp/.ICE-unix/1040', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/45bdcfc3_9411_41a2_900e_89f06eefaa5f', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.80AZ72', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.103', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/mission_utils/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces'}, 'shell': False}
+[22.432747] (-) TimerEvent: {}
+[22.533173] (-) TimerEvent: {}
+[22.633549] (-) TimerEvent: {}
+[22.715718] (gcs_controller) StdoutLine: {'line': b'running egg_info\n'}
+[22.717320] (gcs_controller) StdoutLine: {'line': b'creating ../../build/gcs_controller/gcs_controller.egg-info\n'}
+[22.717930] (gcs_controller) StdoutLine: {'line': b'writing ../../build/gcs_controller/gcs_controller.egg-info/PKG-INFO\n'}
+[22.718709] (gcs_controller) StdoutLine: {'line': b'writing dependency_links to ../../build/gcs_controller/gcs_controller.egg-info/dependency_links.txt\n'}
+[22.719377] (gcs_controller) StdoutLine: {'line': b'writing entry points to ../../build/gcs_controller/gcs_controller.egg-info/entry_points.txt\n'}
+[22.719667] (gcs_controller) StdoutLine: {'line': b'writing requirements to ../../build/gcs_controller/gcs_controller.egg-info/requires.txt\n'}
+[22.720161] (gcs_controller) StdoutLine: {'line': b'writing top-level names to ../../build/gcs_controller/gcs_controller.egg-info/top_level.txt\n'}
+[22.720301] (gcs_controller) StdoutLine: {'line': b"writing manifest file '../../build/gcs_controller/gcs_controller.egg-info/SOURCES.txt'\n"}
+[22.722744] (gcs_controller) StdoutLine: {'line': b"reading manifest file '../../build/gcs_controller/gcs_controller.egg-info/SOURCES.txt'\n"}
+[22.724073] (gcs_controller) StdoutLine: {'line': b"writing manifest file '../../build/gcs_controller/gcs_controller.egg-info/SOURCES.txt'\n"}
+[22.724521] (gcs_controller) StdoutLine: {'line': b'running build\n'}
+[22.724776] (gcs_controller) StdoutLine: {'line': b'running build_py\n'}
+[22.724882] (gcs_controller) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/build\n'}
+[22.725215] (gcs_controller) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/build/lib\n'}
+[22.725313] (gcs_controller) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/build/lib/gcs_controller\n'}
+[22.725602] (gcs_controller) StdoutLine: {'line': b'copying gcs_controller/__init__.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/build/lib/gcs_controller\n'}
+[22.725735] (gcs_controller) StdoutLine: {'line': b'copying gcs_controller/geotag_manager_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/build/lib/gcs_controller\n'}
+[22.726016] (gcs_controller) StdoutLine: {'line': b'copying gcs_controller/swarm_supervisor_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/build/lib/gcs_controller\n'}
+[22.727195] (gcs_controller) StdoutLine: {'line': b'copying gcs_controller/waypoint_manager_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/build/lib/gcs_controller\n'}
+[22.727399] (gcs_controller) StdoutLine: {'line': b'running install\n'}
+[22.728024] (gcs_controller) StdoutLine: {'line': b'running install_lib\n'}
+[22.729201] (gcs_controller) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller\n'}
+[22.729719] (gcs_controller) StdoutLine: {'line': b'copying /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/build/lib/gcs_controller/__init__.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller\n'}
+[22.730066] (gcs_controller) StdoutLine: {'line': b'copying /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/build/lib/gcs_controller/geotag_manager_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller\n'}
+[22.730222] (gcs_controller) StdoutLine: {'line': b'copying /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/build/lib/gcs_controller/swarm_supervisor_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller\n'}
+[22.730524] (gcs_controller) StdoutLine: {'line': b'copying /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/build/lib/gcs_controller/waypoint_manager_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller\n'}
+[22.731805] (gcs_controller) StdoutLine: {'line': b'byte-compiling /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller/__init__.py to __init__.cpython-310.pyc\n'}
+[22.732040] (gcs_controller) StdoutLine: {'line': b'byte-compiling /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller/geotag_manager_node.py to geotag_manager_node.cpython-310.pyc\n'}
+[22.732460] (gcs_controller) StdoutLine: {'line': b'byte-compiling /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller/swarm_supervisor_node.py to swarm_supervisor_node.cpython-310.pyc\n'}
+[22.733749] (-) TimerEvent: {}
+[22.736930] (gcs_controller) StdoutLine: {'line': b'byte-compiling /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller/waypoint_manager_node.py to waypoint_manager_node.cpython-310.pyc\n'}
+[22.740112] (gcs_controller) StdoutLine: {'line': b'running install_data\n'}
+[22.740825] (gcs_controller) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/share/ament_index\n'}
+[22.740985] (gcs_controller) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/share/ament_index/resource_index\n'}
+[22.742747] (gcs_controller) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/share/ament_index/resource_index/packages\n'}
+[22.743001] (gcs_controller) StdoutLine: {'line': b'copying resource/gcs_controller -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/share/ament_index/resource_index/packages\n'}
+[22.743116] (gcs_controller) StdoutLine: {'line': b'copying package.xml -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/share/gcs_controller\n'}
+[22.743200] (gcs_controller) StdoutLine: {'line': b'creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/share/gcs_controller/launch\n'}
+[22.743290] (gcs_controller) StdoutLine: {'line': b'copying launch/gcs.launch.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/share/gcs_controller/launch\n'}
+[22.743362] (gcs_controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[22.745911] (gcs_controller) StdoutLine: {'line': b'Copying ../../build/gcs_controller/gcs_controller.egg-info to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller-0.0.0-py3.10.egg-info\n'}
+[22.747297] (gcs_controller) StdoutLine: {'line': b'running install_scripts\n'}
+[22.777168] (gcs_controller) StdoutLine: {'line': b'Installing geotag_manager_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/gcs_controller\n'}
+[22.777598] (gcs_controller) StdoutLine: {'line': b'Installing swarm_supervisor_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/gcs_controller\n'}
+[22.777783] (gcs_controller) StdoutLine: {'line': b'Installing waypoint_manager_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/gcs_controller/lib/gcs_controller\n'}
+[22.779730] (gcs_controller) StdoutLine: {'line': b"writing list of installed files to '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/gcs_controller/install.log'\n"}
+[22.820474] (gcs_controller) CommandEnded: {'returncode': 0}
+[22.827088] (gcs_controller) JobEnded: {'identifier': 'gcs_controller', 'rc': 0}
+[22.827920] (-) EventReactorShutdown: {}
