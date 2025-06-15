@@ -1,5 +1,0 @@
-  File "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages/drone_1_manager/mission_handler_node.py", line 195
-    def _send_vehicle_command(self, command, param1=0.0, param2=0.0, param2=0.0):
-                                                                     ^^^^^^
-SyntaxError: duplicate argument 'param2' in function definition
-
