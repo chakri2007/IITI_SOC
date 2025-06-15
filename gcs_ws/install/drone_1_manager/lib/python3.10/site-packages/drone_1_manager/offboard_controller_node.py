@@ -1,20 +1,16 @@
+#!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
-from px4_msgs.msg import OffboardControlMode, TrajectorySetpoint, VehicleCommand, VehicleLocalPosition, VehicleStatus
+from px4_msgs.msg import OffboardControlMode, TrajectorySetpoint, VehicleCommand, VehicleLocalPosition, VehicleStatus, VehicleOdometry, VehicleCommandAck
 from geometry_msgs.msg import PoseStamped
-from scipy.spatial.transform import Rotation as R  # ✅ Replaces tf_transformations
+import numpy as np
 
 
 class OffboardControl(Node):
-    STATE_ARMING_OFFBOARD = 0
-    STATE_TAKEOFF = 1
-    STATE_HOLD_AND_LISTEN = 2
-    STATE_MISSION = 3
-    STATE_LANDING = 4
 
     def __init__(self) -> None:
-        super().__init__('offboard_controller_node')
+        super().__init__('offboard_control_takeoff_and_land')
 
         qos_profile = QoSProfile(
             reliability=ReliabilityPolicy.BEST_EFFORT,
@@ -30,24 +26,30 @@ class OffboardControl(Node):
         self.vehicle_command_publisher = self.create_publisher(
             VehicleCommand, '/fmu/in/vehicle_command', qos_profile)
 
-        self.vehicle_local_position_subscriber = self.create_subscription(
+        self.create_subscription(
             VehicleLocalPosition, '/fmu/out/vehicle_local_position', self.vehicle_local_position_callback, qos_profile)
-        self.vehicle_status_subscriber = self.create_subscription(
+        self.create_subscription(
             VehicleStatus, '/fmu/out/vehicle_status', self.vehicle_status_callback, qos_profile)
-        self.dynamic_setpoint_subscriber = self.create_subscription(
-            PoseStamped, '/offboard_setpoint_pose', self.dynamic_setpoint_callback, 10)
+        self.create_subscription(
+            VehicleOdometry, '/fmu/out/vehicle_odometry', self.vehicle_odometry_callback, qos_profile)
+        self.create_subscription(
+            VehicleCommandAck, '/fmu/out/vehicle_command_ack', self.vehicle_command_ack_callback, qos_profile)
+        
+        # Dynamic waypoint subscriber (after takeoff)
+        self.create_subscription(
+            PoseStamped, '/offboard_setpoint_pose', self.dynamic_waypoint_callback, 10)
 
-        self.offboard_setpoint_counter = 0
         self.vehicle_local_position = VehicleLocalPosition()
         self.vehicle_status = VehicleStatus()
-        self.takeoff_height = -5.0
+        self.vehicle_odometry = VehicleOdometry()
+        self.vehicle_command_ack = VehicleCommandAck()
 
-        self.target_x = 0.0
-        self.target_y = 0.0
-        self.target_z = self.takeoff_height
-        self.target_yaw = 1.57079  # ~90 degrees
+        self.takeoff_height = -30.0
+        self.offboard_setpoint_counter = 0
+        self.taken_off = None
 
-        self.current_state = self.STATE_ARMING_OFFBOARD
+        self.current_dynamic_pose = None
+        self.tracking_dynamic_waypoint = False
 
         self.timer = self.create_timer(0.1, self.timer_callback)
 
@@ -57,34 +59,25 @@ class OffboardControl(Node):
     def vehicle_status_callback(self, msg):
         self.vehicle_status = msg
 
-    def dynamic_setpoint_callback(self, msg: PoseStamped):
-        if self.current_state in [self.STATE_HOLD_AND_LISTEN, self.STATE_MISSION]:
-            self.target_x = msg.pose.position.x
-            self.target_y = msg.pose.position.y
-            self.target_z = msg.pose.position.z
+    def vehicle_odometry_callback(self, msg):
+        self.vehicle_odometry = msg
 
-            orientation_q = msg.pose.orientation
-            quaternion = [orientation_q.x, orientation_q.y, orientation_q.z, orientation_q.w]
-            rotation = R.from_quat(quaternion)
-            _, _, self.target_yaw = rotation.as_euler('xyz', degrees=False)
+    def vehicle_command_ack_callback(self, msg):
+        self.vehicle_command_ack = msg
 
-            if self.current_state == self.STATE_HOLD_AND_LISTEN:
-                self.current_state = self.STATE_MISSION
-                self.get_logger().info("Received first dynamic setpoint. Transitioned to MISSION state.")
-
-            self.get_logger().info(
-                f"Received dynamic setpoint: Pos=[{self.target_x:.2f}, {self.target_y:.2f}, {self.target_z:.2f}], Yaw={self.target_yaw:.2f} rad")
-        else:
-            self.get_logger().warn(
-                f"Ignoring dynamic setpoint: Vehicle not in correct state. Current state: {self.current_state}")
+    def dynamic_waypoint_callback(self, msg: PoseStamped):
+        if self.taken_off:  # Only accept waypoints after takeoff
+            self.current_dynamic_pose = msg
+            self.tracking_dynamic_waypoint = True
+            self.get_logger().info(f"Received dynamic waypoint: ({msg.pose.position.x}, {msg.pose.position.y}, {msg.pose.position.z})")
 
     def arm(self):
         self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_COMPONENT_ARM_DISARM, param1=1.0)
-        self.get_logger().info("Arm command sent")
+        self.get_logger().info('Arm command sent')
 
     def disarm(self):
         self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_COMPONENT_ARM_DISARM, param1=0.0)
-        self.get_logger().info("Disarm command sent")
+        self.get_logger().info('Disarm command sent')
 
     def engage_offboard_mode(self):
         self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_DO_SET_MODE, param1=1.0, param2=6.0)
@@ -104,14 +97,15 @@ class OffboardControl(Node):
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.offboard_control_mode_publisher.publish(msg)
 
-    def publish_position_setpoint(self, x: float, y: float, z: float, yaw: float):
+    def publish_position_setpoint(self, x: float, y: float, z: float):
         msg = TrajectorySetpoint()
         msg.position = [x, y, z]
-        msg.yaw = yaw
+        msg.yaw = 1.57079
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.trajectory_setpoint_publisher.publish(msg)
+        self.get_logger().info(f"Publishing position setpoints {[x, y, z]}")
 
-    def publish_vehicle_command(self, command: int, **params):
+    def publish_vehicle_command(self, command, **params):
         msg = VehicleCommand()
         msg.command = command
         msg.param1 = params.get("param1", 0.0)
@@ -132,57 +126,41 @@ class OffboardControl(Node):
     def timer_callback(self):
         self.publish_offboard_control_heartbeat_signal()
 
-        if self.current_state == self.STATE_ARMING_OFFBOARD:
-            if self.offboard_setpoint_counter < 10:
-                self.publish_position_setpoint(0.0, 0.0, self.takeoff_height, self.target_yaw)
-                self.offboard_setpoint_counter += 1
-            else:
-                self.engage_offboard_mode()
-                self.arm()
-                self.current_state = self.STATE_TAKEOFF
-                self.get_logger().info("Transitioned to TAKEOFF state.")
-                self.target_x = 0.0
-                self.target_y = 0.0
-                self.target_z = self.takeoff_height
+        if self.offboard_setpoint_counter == 10:
+            self.engage_offboard_mode()
+            self.arm()
 
-        elif self.current_state == self.STATE_TAKEOFF:
-            self.publish_position_setpoint(0.0, 0.0, self.takeoff_height, self.target_yaw)
+        if (self.vehicle_local_position.z > self.takeoff_height and
+            self.vehicle_status.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD and
+            self.taken_off is None):
+            print("publishing takeoff")
+            self.publish_position_setpoint(0.0, 0.0, self.takeoff_height)
+            if self.vehicle_local_position.z < self.takeoff_height + 0.5:
+                self.taken_off = True
+                print("taken off")
 
-            if abs(self.vehicle_local_position.z - self.takeoff_height) < 0.2:
-                self.get_logger().info(f"Reached takeoff height. Holding position.")
-                self.current_state = self.STATE_HOLD_AND_LISTEN
-                self.target_x = self.vehicle_local_position.x
-                self.target_y = self.vehicle_local_position.y
-                self.target_z = self.vehicle_local_position.z
-                self.get_logger().info("Transitioned to HOLD_AND_LISTEN state.")
+        # 🆕 After takeoff: follow dynamic waypoints
+        if self.taken_off and self.tracking_dynamic_waypoint and self.current_dynamic_pose:
+            x = self.current_dynamic_pose.pose.position.x
+            y = self.current_dynamic_pose.pose.position.y
+            z = self.current_dynamic_pose.pose.position.z
+            self.publish_position_setpoint(x, y, z)
 
-        elif self.current_state == self.STATE_HOLD_AND_LISTEN:
-            self.publish_position_setpoint(self.target_x, self.target_y, self.target_z, self.target_yaw)
-
-        elif self.current_state == self.STATE_MISSION:
-            self.publish_position_setpoint(self.target_x, self.target_y, self.target_z, self.target_yaw)
-
-            if self.target_z > -0.5 and abs(self.vehicle_local_position.z) < 1.0:
-                self.get_logger().info("Target Z near ground. Initiating landing.")
-                self.current_state = self.STATE_LANDING
-
-        elif self.current_state == self.STATE_LANDING:
-            self.land()
+        if self.offboard_setpoint_counter < 11:
+            self.offboard_setpoint_counter += 1
 
 
 def main(args=None):
-    print("Starting offboard control node with dynamic setpoints...")
+    print('Starting offboard control node...')
     rclpy.init(args=args)
     node = OffboardControl()
-    try:
-        rclpy.spin(node)
-    except KeyboardInterrupt:
-        pass
-    finally:
-        node.destroy_node()
-        rclpy.shutdown()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
 
 
 if __name__ == '__main__':
-    main()
-
+    try:
+        main()
+    except Exception as e:
+        print(e)

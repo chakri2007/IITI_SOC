@@ -1,0 +1,4 @@
+Invoking command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces -- -j2 -l2
+Invoked command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces -- -j2 -l2
+Invoking command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces
+Invoked command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces

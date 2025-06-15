@@ -1,0 +1,26 @@
+[1.753s] Invoking command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_1_manager': PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_1_manager build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/install.log --single-version-externally-managed install_data
+[2.475s] running egg_info
+[2.477s] writing ../../build/drone_1_manager/drone_1_manager.egg-info/PKG-INFO
+[2.477s] writing dependency_links to ../../build/drone_1_manager/drone_1_manager.egg-info/dependency_links.txt
+[2.481s] writing entry points to ../../build/drone_1_manager/drone_1_manager.egg-info/entry_points.txt
+[2.481s] writing requirements to ../../build/drone_1_manager/drone_1_manager.egg-info/requires.txt
+[2.481s] writing top-level names to ../../build/drone_1_manager/drone_1_manager.egg-info/top_level.txt
+[2.483s] reading manifest file '../../build/drone_1_manager/drone_1_manager.egg-info/SOURCES.txt'
+[2.484s] writing manifest file '../../build/drone_1_manager/drone_1_manager.egg-info/SOURCES.txt'
+[2.492s] running build
+[2.492s] running build_py
+[2.503s] copying drone_1_manager/offboard_controller_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/build/lib/drone_1_manager
+[2.503s] running install
+[2.504s] running install_lib
+[2.505s] copying /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/build/lib/drone_1_manager/offboard_controller_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages/drone_1_manager
+[2.511s] byte-compiling /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages/drone_1_manager/offboard_controller_node.py to offboard_controller_node.cpython-310.pyc
+[2.511s] running install_data
+[2.511s] running install_egg_info
+[2.516s] removing '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages/drone_1_manager-0.0.0-py3.10.egg-info' (and everything under it)
+[2.516s] Copying ../../build/drone_1_manager/drone_1_manager.egg-info to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages/drone_1_manager-0.0.0-py3.10.egg-info
+[2.518s] running install_scripts
+[2.591s] Installing mission_handler_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/drone_1_manager
+[2.591s] Installing offboard_controller_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/drone_1_manager
+[2.592s] Installing status_publisher_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/drone_1_manager
+[2.592s] writing list of installed files to '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/install.log'
+[2.806s] Invoked command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_1_manager' returned '0': PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_1_manager build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_1_manager/install.log --single-version-externally-managed install_data

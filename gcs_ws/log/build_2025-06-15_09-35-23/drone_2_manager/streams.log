@@ -1,0 +1,22 @@
+[3.798s] Invoking command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_2_manager': AMENT_PREFIX_PATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces LD_LIBRARY_PATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_2_manager build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/install.log --single-version-externally-managed install_data
+[4.454s] running egg_info
+[4.461s] writing ../../build/drone_2_manager/drone_2_manager.egg-info/PKG-INFO
+[4.461s] writing dependency_links to ../../build/drone_2_manager/drone_2_manager.egg-info/dependency_links.txt
+[4.461s] writing entry points to ../../build/drone_2_manager/drone_2_manager.egg-info/entry_points.txt
+[4.461s] writing requirements to ../../build/drone_2_manager/drone_2_manager.egg-info/requires.txt
+[4.461s] writing top-level names to ../../build/drone_2_manager/drone_2_manager.egg-info/top_level.txt
+[4.462s] reading manifest file '../../build/drone_2_manager/drone_2_manager.egg-info/SOURCES.txt'
+[4.469s] writing manifest file '../../build/drone_2_manager/drone_2_manager.egg-info/SOURCES.txt'
+[4.470s] running build
+[4.471s] running build_py
+[4.474s] running install
+[4.480s] running install_lib
+[4.481s] running install_data
+[4.484s] running install_egg_info
+[4.494s] removing '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager-0.0.0-py3.10.egg-info' (and everything under it)
+[4.494s] Copying ../../build/drone_2_manager/drone_2_manager.egg-info to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager-0.0.0-py3.10.egg-info
+[4.501s] running install_scripts
+[4.737s] Installing mission_handler_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/drone_2_manager
+[4.738s] Installing status_publisher_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/drone_2_manager
+[4.738s] writing list of installed files to '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/install.log'
+[5.011s] Invoked command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_2_manager' returned '0': AMENT_PREFIX_PATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces LD_LIBRARY_PATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_2_manager build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/install.log --single-version-externally-managed install_data

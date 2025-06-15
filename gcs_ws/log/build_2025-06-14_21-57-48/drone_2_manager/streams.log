@@ -1,0 +1,22 @@
+[2.327s] Invoking command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_2_manager': PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_2_manager build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/install.log --single-version-externally-managed install_data
+[4.759s] running egg_info
+[4.768s] writing ../../build/drone_2_manager/drone_2_manager.egg-info/PKG-INFO
+[4.776s] writing dependency_links to ../../build/drone_2_manager/drone_2_manager.egg-info/dependency_links.txt
+[4.779s] writing entry points to ../../build/drone_2_manager/drone_2_manager.egg-info/entry_points.txt
+[4.787s] writing requirements to ../../build/drone_2_manager/drone_2_manager.egg-info/requires.txt
+[4.787s] writing top-level names to ../../build/drone_2_manager/drone_2_manager.egg-info/top_level.txt
+[4.808s] reading manifest file '../../build/drone_2_manager/drone_2_manager.egg-info/SOURCES.txt'
+[4.812s] writing manifest file '../../build/drone_2_manager/drone_2_manager.egg-info/SOURCES.txt'
+[4.816s] running build
+[4.823s] running build_py
+[4.823s] running install
+[4.824s] running install_lib
+[4.859s] running install_data
+[4.859s] running install_egg_info
+[4.867s] removing '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager-0.0.0-py3.10.egg-info' (and everything under it)
+[4.871s] Copying ../../build/drone_2_manager/drone_2_manager.egg-info to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager-0.0.0-py3.10.egg-info
+[4.889s] running install_scripts
+[5.071s] Installing mission_handler_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/drone_2_manager
+[5.071s] Installing status_publisher_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/drone_2_manager
+[5.074s] writing list of installed files to '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/install.log'
+[5.647s] Invoked command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_2_manager' returned '0': PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_2_manager build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/install.log --single-version-externally-managed install_data
