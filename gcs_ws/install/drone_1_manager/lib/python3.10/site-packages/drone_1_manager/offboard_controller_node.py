@@ -97,13 +97,13 @@ class OffboardControl(Node):
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.offboard_control_mode_publisher.publish(msg)
 
-    def publish_position_setpoint(self, x: float, y: float, z: float):
+    def publish_position_setpoint(self, x: float, y: float, z: float, yaw: float = 1.57079):
         msg = TrajectorySetpoint()
         msg.position = [x, y, z]
-        msg.yaw = 1.57079
+        msg.yaw = yaw
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.trajectory_setpoint_publisher.publish(msg)
-        self.get_logger().info(f"Publishing position setpoints {[x, y, z]}")
+        self.get_logger().info(f"Publishing position setpoints {[x, y, z]} with yaw {yaw:.2f}")
 
     def publish_vehicle_command(self, command, **params):
         msg = VehicleCommand()
@@ -123,6 +123,11 @@ class OffboardControl(Node):
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.vehicle_command_publisher.publish(msg)
 
+    def compute_yaw_towards_target(self, x_target, y_target):
+        dx = x_target - self.vehicle_local_position.x
+        dy = y_target - self.vehicle_local_position.y
+        return np.arctan2(dy, dx)
+
     def timer_callback(self):
         self.publish_offboard_control_heartbeat_signal()
 
@@ -139,12 +144,14 @@ class OffboardControl(Node):
                 self.taken_off = True
                 print("taken off")
 
-        # 🆕 After takeoff: follow dynamic waypoints
+        # After takeoff: follow dynamic waypoints with yaw aligned to direction
         if self.taken_off and self.tracking_dynamic_waypoint and self.current_dynamic_pose:
             x = self.current_dynamic_pose.pose.position.x
             y = self.current_dynamic_pose.pose.position.y
             z = self.current_dynamic_pose.pose.position.z
-            self.publish_position_setpoint(x, y, z)
+
+            yaw = self.compute_yaw_towards_target(x, y)
+            self.publish_position_setpoint(x, y, z, yaw)
 
         if self.offboard_setpoint_counter < 11:
             self.offboard_setpoint_counter += 1
