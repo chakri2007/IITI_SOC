@@ -20,11 +20,13 @@ class GlobalGeotagLogger(Node):
         self.get_logger().info(f"Origin set to: lat={self.origin_lat}, lon={self.origin_lon}, alt={self.origin_alt}")
 
         self.geotags = []
-        self.output_file = 'geotags_global.json'
+        self.declare_parameter('geotag_file_path', 'geotags.json')
+        self.output_file = self.get_parameter('geotag_file_path').get_parameter_value().string_value
+
 
         self.subscription = self.create_subscription(
             Geotag,
-            '/geotag_generated',
+            '/drone_1/geotag_generated',
             self.geotag_callback,
             10
         )

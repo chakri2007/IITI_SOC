@@ -1,6 +1,4 @@
 from setuptools import find_packages, setup
-import os
-from glob import glob
 
 package_name = 'gcs_controller'
 
@@ -13,8 +11,6 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/launch', ['launch/gcs.launch.py']),
-        (os.path.join('share', package_name, 'mission_files'),
-        glob('mission_files/*.json') + glob('mission_files/*.kml')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,

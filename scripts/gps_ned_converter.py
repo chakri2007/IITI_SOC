@@ -98,8 +98,8 @@ def save_json_to_file(data, output_filepath):
         print(f"Error saving JSON: {e}")
 
 if __name__ == "__main__":
-    input_kml_file = "/home/chakrapani/drone_files/IITI_SOC/mission_files/iit_survey.kml"
-    output_json_file = "/home/chakrapani/drone_files/IITI_SOC/mission_files/iiti_waypoints.json"
+    input_kml_file = "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/mission_files/iit_survey.kml"
+    output_json_file = "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/mission_files/iiti_waypoints.json"
 
     extracted_waypoints = kml_to_ned_waypoints_json(input_kml_file)
 

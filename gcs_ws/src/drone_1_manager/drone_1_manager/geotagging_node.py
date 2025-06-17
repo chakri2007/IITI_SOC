@@ -2,6 +2,7 @@ import rclpy
 from rclpy.node import Node
 import math
 import random
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
 
 from px4_msgs.msg import VehicleLocalPosition
 from drone_interfaces.msg import DroneStatus, Geotag
@@ -21,6 +22,13 @@ class GeotaggingNode(Node):
         self.last_tag_position = None
         self.geotag_id = 0
 
+        qos_profile = QoSProfile(
+            reliability=ReliabilityPolicy.BEST_EFFORT,
+            durability=DurabilityPolicy.TRANSIENT_LOCAL,
+            history=HistoryPolicy.KEEP_LAST,
+            depth=1
+        )
+
         # Subscribe to status updates
         self.subscription_status = self.create_subscription(
             DroneStatus,
@@ -34,7 +42,7 @@ class GeotaggingNode(Node):
             VehicleLocalPosition,
             '/fmu/out/vehicle_local_position',
             self.position_callback,
-            10
+            qos_profile
         )
 
         self.publisher = self.create_publisher(Geotag, '/drone_1/geotag_generated', 10)

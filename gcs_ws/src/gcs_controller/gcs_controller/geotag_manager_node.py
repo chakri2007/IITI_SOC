@@ -19,7 +19,7 @@ class GeotagNode(Node):
         self.lock = threading.Lock()
         self.geotag_list = []  # stores received geotags
         self.sent_indices = {}  # (drone_id, direction) -> index
-        self.publishers = {}
+        self._pub_cache = {}  # Avoid name conflict with rclpy.Node's internal 'publishers'
 
         self.subscriber = self.create_subscription(
             Geotag,
@@ -99,10 +99,10 @@ class GeotagNode(Node):
         geotag_array.geotags = batch
 
         topic_name = f"/drone_{drone_id}/geotags"
-        if topic_name not in self.publishers:
-            self.publishers[topic_name] = self.create_publisher(GeotagArray, topic_name, 10)
+        if topic_name not in self._pub_cache:
+            self._pub_cache[topic_name] = self.create_publisher(GeotagArray, topic_name, 10)
 
-        self.publishers[topic_name].publish(geotag_array)
+        self._pub_cache[topic_name].publish(geotag_array)
         self.get_logger().info(f"Sent geotag IDs {[g.id for g in batch]} to {topic_name} ({direction})")
 
 
