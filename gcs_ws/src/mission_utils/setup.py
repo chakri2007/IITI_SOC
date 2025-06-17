@@ -20,6 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'waypoints_dataset = mission_utils.waypoints_dataset:main',
+            'geotags_dataset = mission_utils.geotags_dataset:main',
         ],
     },
 )

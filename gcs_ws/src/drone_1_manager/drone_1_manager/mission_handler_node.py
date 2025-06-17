@@ -12,10 +12,6 @@ class MissionHandlerNode(Node):
     def __init__(self):
         super().__init__('mission_handler_node')
         self.get_logger().info("Mission Handler Node: Initializing...")
-
-        # QoS Profile for PX4 topics (best effort for sensor data)
-        # Note: Your WaypointArray subscription doesn't use this specific QoS,
-        # it uses the default, which is usually reliable.
         qos_profile = QoSProfile(
             reliability=ReliabilityPolicy.BEST_EFFORT,
             durability=DurabilityPolicy.TRANSIENT_LOCAL,
@@ -28,7 +24,7 @@ class MissionHandlerNode(Node):
         self.current_waypoints = []
         self.current_index = 0
         self.active = False
-        self.drone_id = 'drone_1' # Crucial: Ensure this matches the ID used by the WaypointPublisher's request!
+        self.drone_id = 'drone_1' 
         self.reached_threshold = 1.0  # meters
         self.current_target = None  # Waypoint currently being tracked
         self.get_logger().info(f"Mission Handler Node: Drone ID set to '{self.drone_id}'.")
@@ -40,8 +36,7 @@ class MissionHandlerNode(Node):
             WaypointArray,
             waypoints_topic,
             self.waypoint_callback,
-            10 # Default QoS for this subscription (ReliabilityPolicy.RELIABLE, DurabilityPolicy.VOLATILE, HistoryPolicy.KEEP_LAST)
-        )
+            10 )
         self.get_logger().info(f"Mission Handler Node: Subscription to '{waypoints_topic}' created.")
 
         self.get_logger().info("Mission Handler Node: Attempting to subscribe to '/fmu/out/vehicle_local_position'...")

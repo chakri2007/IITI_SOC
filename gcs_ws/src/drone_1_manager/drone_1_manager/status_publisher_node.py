@@ -8,11 +8,6 @@ from drone_interfaces.msg import DroneTypeChange, DroneStatusUpdate
 
 
 class StatusPublisher(Node):
-    """
-    A ROS 2 node that publishes the current status of a drone,
-    including its ID, operational status, and type. It can update
-    its status and type based on messages from other nodes.
-    """
 
     def __init__(self):
         super().__init__('status_publisher_node')
@@ -23,8 +18,6 @@ class StatusPublisher(Node):
         self.drone_status = 'idle'       # Initial status
         self.drone_type = 'surveillance' # Initial type
 
-        # --- Publisher for DroneStatus messages ---
-        # This node publishes the current status of drone_1 on a dedicated topic.
         self.status_publisher = self.create_publisher(
             DroneStatus,
             f'/drone_1/status', # Topic includes drone_id for specificity
@@ -32,8 +25,6 @@ class StatusPublisher(Node):
         )
         self.get_logger().info(f'Publishing drone status to /drone_1/status.')
 
-        # --- Subscriber for QGC Commands (to change drone type) ---
-        # Listens for commands from a Quality Ground Control (QGC) station to update drone type.
         self.qgc_command_subscriber = self.create_subscription(
             DroneTypeChange,
             '/qgc/command', # Topic for QGC commands
@@ -42,8 +33,6 @@ class StatusPublisher(Node):
         )
         self.get_logger().info('Subscribing to /qgc/command for drone type updates.')
 
-        # --- Subscriber for Mission Handler Status (to change drone status) ---
-        # Listens for status updates from a mission handler node to change operational status.
         self.mission_status_subscriber = self.create_subscription(
             DroneStatusUpdate,
             '/drone_1/update_status', # Topic for mission handler status updates
@@ -51,35 +40,20 @@ class StatusPublisher(Node):
             10
         )
         self.get_logger().info('Subscribing to /mission_handler/status for drone status updates.')
-
-        # --- Timer for periodic status publishing ---
-        # Publishes the current drone status every 2 seconds.
         self.timer = self.create_timer(2.0, self.publish_drone_status)
         self.get_logger().info('Status publishing timer initialized.')
 
     def qgc_command_callback(self, msg):
-        """
-        Callback function for DroneTypeChange messages.
-        Updates the drone's type based on the received command.
-        """
         old_drone_type = self.drone_type
         self.drone_type = msg.new_drone_type.upper() # Store type in uppercase for consistency
         self.get_logger().info(f'QGC changed drone_type from "{old_drone_type}" to "{self.drone_type}".')
 
     def mission_status_callback(self, msg):
-        """
-        Callback function for MissionStatus messages.
-        Updates the drone's operational status based on the received message.
-        """
         old_drone_status = self.drone_status
         self.drone_status = msg.status.upper() # Store status in uppercase
         self.get_logger().info(f'Mission Handler changed drone_status from "{old_drone_status}" to "{self.drone_status}".')
 
     def publish_drone_status(self):
-        """
-        Creates and publishes a DroneStatus message with the current
-        drone_id, drone_status, and drone_type.
-        """
         status_msg = DroneStatus()
         status_msg.drone_id = self.drone_id
         status_msg.status = self.drone_status

@@ -1,7 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from rclpy.duration import Duration
-from drone_interfaces.msg import DroneStatus, WaypointRequest
+from drone_interfaces.msg import DroneStatus, WaypointRequest, GeotagRequest
 
 
 class SwarmSupervisorNode(Node):
@@ -23,7 +23,7 @@ class SwarmSupervisorNode(Node):
 
         # Publishers
         self.waypoint_pub = self.create_publisher(WaypointRequest, '/waypoint_manager/request', 10)
-        self.geotag_pub = self.create_publisher(WaypointRequest, '/geotag_manager/request', 10)
+        self.geotag_pub = self.create_publisher(GeotagRequest, '/geotag_manager/request', 10)
 
         # Timer
         self.create_timer(2.0, self.check_for_unpaired_drones)
