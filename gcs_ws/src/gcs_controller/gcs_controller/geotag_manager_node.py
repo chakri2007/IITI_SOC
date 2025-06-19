@@ -98,7 +98,7 @@ class GeotagNode(Node):
         geotag_array = GeotagArray()
         geotag_array.geotags = batch
 
-        topic_name = f"/drone_{drone_id}/geotags"
+        topic_name = f"/geotags_array"
         if topic_name not in self._pub_cache:
             self._pub_cache[topic_name] = self.create_publisher(GeotagArray, topic_name, 10)
 

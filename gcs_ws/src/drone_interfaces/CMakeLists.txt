@@ -35,6 +35,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Geotag.msg"
   "msg/GeotagArray.msg"
   "msg/GeotagRequest.msg"
+
+  "srv/GetSeverityScore.srv"
 )
 
 ament_package()
