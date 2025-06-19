@@ -39,19 +39,19 @@ class GeotaggingNode(Node):
 
         self.subscription_status = self.create_subscription(
             DroneStatus,
-            '/drone_1/status',
+            '/drone_2/status',
             self.status_callback,
             10
         )
 
         self.subscription_position = self.create_subscription(
             VehicleLocalPosition,
-            '/px4_1/fmu/out/vehicle_local_position',
+            '/px4_2/fmu/out/vehicle_local_position',
             self.position_callback,
             qos_profile
         )
 
-        self.publisher = self.create_publisher(Geotag, '/drone_1/geotag_generated', 10)
+        self.publisher = self.create_publisher(Geotag, '/drone_2/geotag_generated', 10)
 
         self.get_logger().info("GPS-based geotagging node started.")
 

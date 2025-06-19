@@ -20,24 +20,24 @@ class OffboardControl(Node):
         )
 
         self.offboard_control_mode_publisher = self.create_publisher(
-            OffboardControlMode, '/px4_1/fmu/in/offboard_control_mode', qos_profile)
+            OffboardControlMode, '/px4_2/fmu/in/offboard_control_mode', qos_profile)
         self.trajectory_setpoint_publisher = self.create_publisher(
-            TrajectorySetpoint, '/px4_1/fmu/in/trajectory_setpoint', qos_profile)
+            TrajectorySetpoint, '/px4_2/fmu/in/trajectory_setpoint', qos_profile)
         self.vehicle_command_publisher = self.create_publisher(
-            VehicleCommand, '/px4_1/fmu/in/vehicle_command', qos_profile)
+            VehicleCommand, '/px4_2/fmu/in/vehicle_command', qos_profile)
 
         self.create_subscription(
-            VehicleLocalPosition, '/px4_1/fmu/out/vehicle_local_position', self.vehicle_local_position_callback, qos_profile)
+            VehicleLocalPosition, '/px4_2/fmu/out/vehicle_local_position', self.vehicle_local_position_callback, qos_profile)
         self.create_subscription(
-            VehicleStatus, '/px4_1/fmu/out/vehicle_status', self.vehicle_status_callback, qos_profile)
+            VehicleStatus, '/px4_2/fmu/out/vehicle_status', self.vehicle_status_callback, qos_profile)
         self.create_subscription(
-            VehicleOdometry, '/px4_1/fmu/out/vehicle_odometry', self.vehicle_odometry_callback, qos_profile)
+            VehicleOdometry, '/px4_2/fmu/out/vehicle_odometry', self.vehicle_odometry_callback, qos_profile)
         self.create_subscription(
-            VehicleCommandAck, '/px4_1/fmu/out/vehicle_command_ack', self.vehicle_command_ack_callback, qos_profile)
+            VehicleCommandAck, '/px4_2/fmu/out/vehicle_command_ack', self.vehicle_command_ack_callback, qos_profile)
         
         # Dynamic waypoint subscriber (after takeoff)
         self.create_subscription(
-            PoseStamped, '/drone_1/offboard_setpoint_pose', self.dynamic_waypoint_callback, 10)
+            PoseStamped, '/drone_2/offboard_setpoint_pose', self.dynamic_waypoint_callback, 10)
 
         self.vehicle_local_position = VehicleLocalPosition()
         self.vehicle_status = VehicleStatus()

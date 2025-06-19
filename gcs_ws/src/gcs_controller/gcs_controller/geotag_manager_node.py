@@ -17,10 +17,11 @@ class GeotagNode(Node):
         self.declare_parameter('batch_size', 5)
 
         self.lock = threading.Lock()
-        self.geotag_list = []  # stores received geotags
-        self.sent_indices = {}  # (drone_id, direction) -> index
-        self._pub_cache = {}  # Avoid name conflict with rclpy.Node's internal 'publishers'
+        self.geotag_list = []  # Stores all received geotags
+        self.sent_indices = {}  # (drone_id, direction) -> index of last sent
+        self._pub_cache = {}  # Caches publishers per drone topic
 
+        # Subscriptions
         self.subscriber = self.create_subscription(
             Geotag,
             '/geotag_generated',
@@ -35,11 +36,10 @@ class GeotagNode(Node):
             10
         )
 
-        self.get_logger().info("Geotag Node started with ID filtering from JSON.")
+        self.get_logger().info("Geotag Node started.")
 
     def geotag_callback(self, msg: Geotag):
         with self.lock:
-            # Avoid duplicates (check by ID)
             if not any(g.id == msg.id for g in self.geotag_list):
                 self.geotag_list.append(msg)
                 self.get_logger().info(f"Stored Geotag ID {msg.id}")
@@ -67,7 +67,7 @@ class GeotagNode(Node):
         batch_size = self.get_parameter('batch_size').get_parameter_value().integer_value
 
         with self.lock:
-            # Filter out irrigated points based on JSON file
+            # Filter irrigated geotags
             irrigated_ids = self.get_irrigated_ids_from_json()
             before = len(self.geotag_list)
             self.geotag_list = [g for g in self.geotag_list if g.id not in irrigated_ids]
@@ -78,10 +78,11 @@ class GeotagNode(Node):
                 self.get_logger().warn("No geotags to send after filtering.")
                 return
 
+            # Sort geotags based on direction
             sorted_geotags = sorted(
                 self.geotag_list,
                 key=lambda g: g.id,
-                reverse=(direction == 'bottom')
+                reverse=(direction == 'bottom')  # True: descending, False: ascending
             )
 
             start_idx = self.sent_indices.get(key, 0)
@@ -94,16 +95,16 @@ class GeotagNode(Node):
             batch = sorted_geotags[start_idx:end_idx]
             self.sent_indices[key] = end_idx
 
-        # Publish the batch
+        # Prepare and publish batch
         geotag_array = GeotagArray()
         geotag_array.geotags = batch
 
-        topic_name = f"/geotags_array"
+        topic_name = f"/{drone_id}/geotag_generated"
         if topic_name not in self._pub_cache:
             self._pub_cache[topic_name] = self.create_publisher(GeotagArray, topic_name, 10)
 
         self._pub_cache[topic_name].publish(geotag_array)
-        self.get_logger().info(f"Sent geotag IDs {[g.id for g in batch]} to {topic_name} ({direction})")
+        self.get_logger().info(f"Sent geotag IDs {[g.id for g in batch]} to {topic_name}")
 
 
 def main(args=None):

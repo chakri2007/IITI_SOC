@@ -25,8 +25,8 @@ class MissionHandlerNode(Node):
         )
 
         # Mission state
-        self.drone_id = 'drone_1'
-        self.drone_type = 'surveillance'  # Default, can be updated
+        self.drone_id = 'drone_2'
+        self.drone_type = 'irrigation'  # Default, can be updated
         self.drone_status = 'executing'
         self.current_waypoints = []
         self.current_index = 0
@@ -45,10 +45,10 @@ class MissionHandlerNode(Node):
 
         # Subscriptions
         self.create_subscription(DroneStatusMsg, f'/{self.drone_id}/status', self.status_callback, 10)
-        self.create_subscription(VehicleLocalPosition, '/px4_1/fmu/out/vehicle_local_position', self.position_callback, qos_profile)
+        self.create_subscription(VehicleLocalPosition, '/px4_2/fmu/out/vehicle_local_position', self.position_callback, qos_profile)
 
         # Publishers
-        self.setpoint_pub = self.create_publisher(PoseStamped, '/drone_1/offboard_setpoint_pose', 10)
+        self.setpoint_pub = self.create_publisher(PoseStamped, '/drone_2/offboard_setpoint_pose', 10)
         self.waypoint_update_pub = self.create_publisher(WaypointVisited, '/mission_handler/waypoint_visited', 10)
         status_topic = f'/{self.drone_id}/update_status'
         self.status_update_pub = self.create_publisher(DroneStatusUpdate, status_topic, 10)
@@ -69,7 +69,7 @@ class MissionHandlerNode(Node):
         self.drone_status = msg.status
 
         if self.drone_type == 'irrigation':
-            topic = '/drone_1/geotag_array'
+            topic = '/geotag_array'
         else:
             topic = f'/drone/{self.drone_id}/waypoints'
 
