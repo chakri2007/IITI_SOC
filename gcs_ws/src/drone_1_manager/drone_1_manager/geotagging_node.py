@@ -6,6 +6,7 @@ from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPo
 
 from px4_msgs.msg import VehicleLocalPosition
 from drone_interfaces.msg import DroneStatus, Geotag
+from pyproj import Proj, transform
 
 
 def euclidean(p1, p2):
@@ -22,6 +23,13 @@ class GeotaggingNode(Node):
         self.last_tag_position = None
         self.geotag_id = 0
 
+        self.origin_set = False
+        self.origin_lat = None
+        self.origin_lon = None
+        self.origin_alt = None
+        self.local_proj = None
+        self.global_proj = Proj(proj='latlong', datum='WGS84')
+
         qos_profile = QoSProfile(
             reliability=ReliabilityPolicy.BEST_EFFORT,
             durability=DurabilityPolicy.TRANSIENT_LOCAL,
@@ -29,7 +37,6 @@ class GeotaggingNode(Node):
             depth=1
         )
 
-        # Subscribe to status updates
         self.subscription_status = self.create_subscription(
             DroneStatus,
             '/drone_1/status',
@@ -37,7 +44,6 @@ class GeotaggingNode(Node):
             10
         )
 
-        # Subscribe to PX4 local position
         self.subscription_position = self.create_subscription(
             VehicleLocalPosition,
             '/fmu/out/vehicle_local_position',
@@ -47,46 +53,67 @@ class GeotaggingNode(Node):
 
         self.publisher = self.create_publisher(Geotag, '/drone_1/geotag_generated', 10)
 
-        self.get_logger().info("PX4-based local geotagging node started.")
+        self.get_logger().info("GPS-based geotagging node started.")
 
     def status_callback(self, msg):
         self.active = (msg.type.lower() == 'surveillance' and msg.status.lower() == 'executing')
 
     def position_callback(self, msg):
-        if not self.active:
+        if not self.active or not msg.xy_valid:
             return
 
-        # Check if position data is valid (according to PX4)
-        if not msg.xy_valid:
-            self.get_logger().warn("Local XY position not valid.")
+        if not self.origin_set and msg.ref_lat != 0.0 and msg.ref_lon != 0.0:
+            self.origin_lat = msg.ref_lat
+            self.origin_lon = msg.ref_lon
+            self.origin_alt = msg.ref_alt
+            self.local_proj = Proj(proj='aeqd', lat_0=self.origin_lat, lon_0=self.origin_lon, datum='WGS84')
+            self.origin_set = True
+            self.get_logger().info(f"Geotagging origin set to: lat={self.origin_lat}, lon={self.origin_lon}, alt={self.origin_alt}")
+
+        if not self.origin_set:
+            self.get_logger().warn("Waiting for origin GPS to be set...")
             return
 
-        current_pos = (msg.x, msg.y, msg.z)
+        current_local = (msg.x, msg.y, msg.z)
 
         if self.last_tag_position is None:
-            self.save_geotag(current_pos)
+            self.save_geotag(current_local)
             return
 
-        distance = euclidean(current_pos, self.last_tag_position)
+        distance = euclidean(current_local, self.last_tag_position)
 
         if distance >= 25.0:
-            self.save_geotag(current_pos)
+            self.save_geotag(current_local)
 
-    def save_geotag(self, position):
-        geotag = Geotag()
-        geotag.id = self.geotag_id
-        geotag.x = position[0]
-        geotag.y = position[1]
-        geotag.z = position[2]
-        geotag.severity_score = random.randint(1, 5)
+    def save_geotag(self, local_pos):
+        x, y, z = local_pos
 
-        self.publisher.publish(geotag)
-        self.last_tag_position = position
-        self.geotag_id += 1
+        try:
+            # Convert local ENU to GPS (lat, lon)
+            lon, lat = transform(
+                self.local_proj,
+                self.global_proj,
+                y, x  # ENU: x = East, y = North => pyproj: x=E, y=N
+            )
+            alt = self.origin_alt - z  # Convert down to up
 
-        self.get_logger().info(
-            f"Published geotag {geotag.id} at x={geotag.x:.2f}, y={geotag.y:.2f}, z={geotag.z:.2f}, severity={geotag.severity_score}"
-        )
+            geotag = Geotag()
+            geotag.id = self.geotag_id
+            geotag.lat = lat
+            geotag.lon = lon
+            geotag.alt = alt
+            geotag.severity_score = random.randint(1, 5)
+
+            self.publisher.publish(geotag)
+            self.last_tag_position = local_pos
+            self.geotag_id += 1
+
+            self.get_logger().info(
+                f"Published geotag {geotag.id}: lat={lat:.6f}, lon={lon:.6f}, alt={alt:.2f}, severity={geotag.severity_score}"
+            )
+
+        except Exception as e:
+            self.get_logger().error(f"Failed to convert local to GPS: {str(e)}")
 
 
 def main(args=None):
