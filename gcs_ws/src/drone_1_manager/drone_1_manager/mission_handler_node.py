@@ -2,7 +2,7 @@ import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import PoseStamped
 from px4_msgs.msg import VehicleLocalPosition
-from drone_interfaces.msg import Waypoint, WaypointArray, WaypointVisited, DroneStatusUpdate, Geotag, GeotagArray
+from drone_interfaces.msg import Waypoint, WaypointArray, WaypointVisited, DroneStatus, DroneStatusUpdate, Geotag, GeotagArray
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
 from pyproj import Proj, transform
 import math
@@ -29,7 +29,8 @@ class MissionHandlerNode(Node):
         self.active = False
         self.reached_threshold = 1.0  # meters
         self.current_target = None
-        self.waiting_until = None  # ROS time in nanoseconds
+        self.target_local_pos = None
+        self.waiting_until = None
         self.origin_set = False
         self.origin_lat = None
         self.origin_lon = None
@@ -42,7 +43,7 @@ class MissionHandlerNode(Node):
         self.subscribed_to_waypoints = False
 
         # Subscriptions
-        self.create_subscription(DroneStatusUpdate, f'/{self.drone_id}/status', self.status_callback, 10)
+        self.create_subscription(DroneStatus, f'/{self.drone_id}/status', self.status_callback, 10)
         self.create_subscription(VehicleLocalPosition, '/fmu/out/vehicle_local_position', self.position_callback, qos_profile)
 
         # Publishers
@@ -60,7 +61,7 @@ class MissionHandlerNode(Node):
         self.status_update_pub.publish(msg)
         self.get_logger().info(f"Status update: '{status}'")
 
-    def status_callback(self, msg: DroneStatusUpdate):
+    def status_callback(self, msg: DroneStatus):
         if msg.drone_id != self.drone_id:
             return
 
@@ -124,6 +125,7 @@ class MissionHandlerNode(Node):
             self._send_status_update("idle")
             self.active = False
             self.current_target = None
+            self.target_local_pos = None
             return
 
         if not self.origin_set:
@@ -136,6 +138,9 @@ class MissionHandlerNode(Node):
         try:
             x_east, y_north = transform(self.geodetic_proj, self.enu_proj, wp.lon, wp.lat)
             z_down = -(wp.alt - self.origin_alt)
+
+            # Save for distance check
+            self.target_local_pos = (y_north, x_east, z_down)
 
             pose = PoseStamped()
             pose.header.stamp = self.get_clock().now().to_msg()
@@ -162,12 +167,12 @@ class MissionHandlerNode(Node):
                 f"Origin set at (Lat: {self.origin_lat}, Lon: {self.origin_lon}, Alt: {self.origin_alt})"
             )
 
-        if not self.active or self.current_target is None or not self.origin_set:
+        if not self.active or self.current_target is None or not self.origin_set or self.target_local_pos is None:
             return
 
-        dx = self.current_target.lat - msg.x
-        dy = self.current_target.lon - msg.y
-        dz = self.current_target.alt - msg.z
+        dx = self.target_local_pos[0] - msg.x
+        dy = self.target_local_pos[1] - msg.y
+        dz = self.target_local_pos[2] - msg.z
         dist = math.sqrt(dx ** 2 + dy ** 2 + dz ** 2)
 
         if dist <= self.reached_threshold:
