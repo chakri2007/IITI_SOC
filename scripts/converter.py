@@ -82,8 +82,8 @@ def save_json_to_file(data, output_filepath):
 if __name__ == "__main__":
     # --- How to use ---
     # Replace these with your actual file paths
-    input_kml_file = "/home/chakrapani/drone_files/IITI_SOC/mission_files/iit_survey.kml"
-    output_json_file = "/home/chakrapani/drone_files/IITI_SOC/mission_files/iiti_waypoints.json"
+    input_kml_file = "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/mission_files/iit_survey.kml"
+    output_json_file = "/home/chakrapani/drone_files/IITI_SOC//gcs_ws/mission_files/iiti_waypoints.json"
 
     # Convert the KML and get the waypoints list
     extracted_waypoints = kml_to_waypoints_json(input_kml_file)

@@ -1,0 +1,11 @@
+/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/Waypoint.idl
+/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/WaypointArray.idl
+/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/DroneStatus.idl
+/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/WaypointRequest.idl
+/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/WaypointVisited.idl
+/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/DroneStatusUpdate.idl
+/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/DroneTypeChange.idl
+/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/Geotag.idl
+/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/GeotagArray.idl
+/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/GeotagRequest.idl
+/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:srv/GetSeverityScore.idl

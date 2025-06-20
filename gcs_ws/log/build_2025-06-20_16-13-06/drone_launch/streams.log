@@ -1,0 +1,20 @@
+[4.378s] Invoking command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_launch': PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_launch build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch/install.log --single-version-externally-managed install_data
+[5.995s] running egg_info
+[6.006s] writing ../../build/drone_launch/drone_launch.egg-info/PKG-INFO
+[6.011s] writing dependency_links to ../../build/drone_launch/drone_launch.egg-info/dependency_links.txt
+[6.012s] writing entry points to ../../build/drone_launch/drone_launch.egg-info/entry_points.txt
+[6.012s] writing requirements to ../../build/drone_launch/drone_launch.egg-info/requires.txt
+[6.012s] writing top-level names to ../../build/drone_launch/drone_launch.egg-info/top_level.txt
+[6.025s] reading manifest file '../../build/drone_launch/drone_launch.egg-info/SOURCES.txt'
+[6.028s] writing manifest file '../../build/drone_launch/drone_launch.egg-info/SOURCES.txt'
+[6.031s] running build
+[6.031s] running build_py
+[6.033s] running install
+[6.037s] running install_lib
+[6.051s] running install_data
+[6.055s] running install_egg_info
+[6.074s] removing '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/python3.10/site-packages/drone_launch-0.0.0-py3.10.egg-info' (and everything under it)
+[6.074s] Copying ../../build/drone_launch/drone_launch.egg-info to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/python3.10/site-packages/drone_launch-0.0.0-py3.10.egg-info
+[6.085s] running install_scripts
+[6.218s] writing list of installed files to '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch/install.log'
+[6.460s] Invoked command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_launch' returned '0': PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_launch/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_launch build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_launch/install.log --single-version-externally-managed install_data

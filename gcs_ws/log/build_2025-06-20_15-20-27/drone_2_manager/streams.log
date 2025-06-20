@@ -1,0 +1,49 @@
+[4.175s] Invoking command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_2_manager': PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_2_manager build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/install.log --single-version-externally-managed install_data
+[5.879s] running egg_info
+[5.884s] creating ../../build/drone_2_manager/drone_2_manager.egg-info
+[5.890s] writing ../../build/drone_2_manager/drone_2_manager.egg-info/PKG-INFO
+[5.890s] writing dependency_links to ../../build/drone_2_manager/drone_2_manager.egg-info/dependency_links.txt
+[5.891s] writing entry points to ../../build/drone_2_manager/drone_2_manager.egg-info/entry_points.txt
+[5.891s] writing requirements to ../../build/drone_2_manager/drone_2_manager.egg-info/requires.txt
+[5.891s] writing top-level names to ../../build/drone_2_manager/drone_2_manager.egg-info/top_level.txt
+[5.891s] writing manifest file '../../build/drone_2_manager/drone_2_manager.egg-info/SOURCES.txt'
+[5.898s] reading manifest file '../../build/drone_2_manager/drone_2_manager.egg-info/SOURCES.txt'
+[5.899s] writing manifest file '../../build/drone_2_manager/drone_2_manager.egg-info/SOURCES.txt'
+[5.903s] running build
+[5.909s] running build_py
+[5.912s] creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build
+[5.914s] creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build/lib
+[5.914s] creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build/lib/drone_2_manager
+[5.914s] copying drone_2_manager/__init__.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build/lib/drone_2_manager
+[5.922s] copying drone_2_manager/status_publisher_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build/lib/drone_2_manager
+[5.922s] copying drone_2_manager/offboard_controller_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build/lib/drone_2_manager
+[5.922s] copying drone_2_manager/geotagging_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build/lib/drone_2_manager
+[5.922s] copying drone_2_manager/mission_handler_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build/lib/drone_2_manager
+[5.922s] running install
+[5.923s] running install_lib
+[5.936s] creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager
+[5.937s] copying /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build/lib/drone_2_manager/__init__.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager
+[5.937s] copying /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build/lib/drone_2_manager/status_publisher_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager
+[5.937s] copying /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build/lib/drone_2_manager/offboard_controller_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager
+[5.941s] copying /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build/lib/drone_2_manager/geotagging_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager
+[5.942s] copying /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build/lib/drone_2_manager/mission_handler_node.py -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager
+[5.946s] byte-compiling /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager/__init__.py to __init__.cpython-310.pyc
+[5.946s] byte-compiling /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager/status_publisher_node.py to status_publisher_node.cpython-310.pyc
+[5.957s] byte-compiling /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager/offboard_controller_node.py to offboard_controller_node.cpython-310.pyc
+[5.968s] byte-compiling /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager/geotagging_node.py to geotagging_node.cpython-310.pyc
+[5.978s] byte-compiling /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager/mission_handler_node.py to mission_handler_node.cpython-310.pyc
+[5.985s] running install_data
+[5.986s] creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/share/ament_index
+[5.987s] creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/share/ament_index/resource_index
+[5.987s] creating /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/share/ament_index/resource_index/packages
+[5.987s] copying resource/drone_2_manager -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/share/ament_index/resource_index/packages
+[5.992s] copying package.xml -> /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/share/drone_2_manager
+[5.999s] running install_egg_info
+[6.018s] Copying ../../build/drone_2_manager/drone_2_manager.egg-info to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager-0.0.0-py3.10.egg-info
+[6.033s] running install_scripts
+[6.110s] Installing geotagging_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/drone_2_manager
+[6.110s] Installing mission_handler_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/drone_2_manager
+[6.111s] Installing offboard_controller_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/drone_2_manager
+[6.111s] Installing status_publisher_node script to /home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/drone_2_manager
+[6.111s] writing list of installed files to '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/install.log'
+[6.398s] Invoked command in '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_2_manager' returned '0': PYTHONPATH=/home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chakrapani/drone_files/IITI_SOC/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_2_manager build --build-base /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/build install --record /home/chakrapani/drone_files/IITI_SOC/gcs_ws/build/drone_2_manager/install.log --single-version-externally-managed install_data

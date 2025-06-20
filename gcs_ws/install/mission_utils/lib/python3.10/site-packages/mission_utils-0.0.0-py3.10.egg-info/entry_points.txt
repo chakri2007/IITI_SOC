@@ -1,0 +1,4 @@
+[console_scripts]
+geotags_dataset = mission_utils.geotags_dataset:main
+waypoints_dataset = mission_utils.waypoints_dataset:main
+

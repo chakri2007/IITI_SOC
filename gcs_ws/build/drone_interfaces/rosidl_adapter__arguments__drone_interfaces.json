@@ -1,0 +1,16 @@
+{
+  "package_name": "drone_interfaces",
+  "non_idl_tuples": [
+    "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_interfaces:msg/Waypoint.msg",
+    "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_interfaces:msg/WaypointArray.msg",
+    "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_interfaces:msg/DroneStatus.msg",
+    "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_interfaces:msg/WaypointRequest.msg",
+    "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_interfaces:msg/WaypointVisited.msg",
+    "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_interfaces:msg/DroneStatusUpdate.msg",
+    "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_interfaces:msg/DroneTypeChange.msg",
+    "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_interfaces:msg/Geotag.msg",
+    "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_interfaces:msg/GeotagArray.msg",
+    "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_interfaces:msg/GeotagRequest.msg",
+    "/home/chakrapani/drone_files/IITI_SOC/gcs_ws/src/drone_interfaces:srv/GetSeverityScore.srv"
+  ]
+}
