@@ -3,8 +3,7 @@ from rclpy.node import Node
 from geometry_msgs.msg import PoseStamped
 from px4_msgs.msg import VehicleLocalPosition
 from drone_interfaces.msg import Waypoint, WaypointArray, WaypointVisited, DroneStatusUpdate
-from drone_interfaces.srv import GetSeverityScore
-from drone_interfaces.msg import DroneStatusUpdate as DroneStatusMsg
+from drone_interfaces.msg import Geotag, GeotagArray
 import math
 import time
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
@@ -24,18 +23,17 @@ class MissionHandlerNode(Node):
             depth=1
         )
 
-        # Mission state
         self.drone_id = 'drone_1'
-        self.drone_type = 'surveillance'  # Default, can be updated
+        self.drone_type = 'surveillance'
         self.drone_status = 'executing'
         self.current_waypoints = []
+        self.severity_scores = {}  # Map: waypoint_id -> severity_score
         self.current_index = 0
         self.active = False
         self.reached_threshold = 1.0  # meters
         self.current_target = None
         self.waiting_until = None
 
-        # Origin
         self.origin_set = False
         self.origin_lat = None
         self.origin_lon = None
@@ -43,25 +41,17 @@ class MissionHandlerNode(Node):
         self.geodetic_proj = Proj(proj='latlong', datum='WGS84')
         self.enu_proj = None
 
-        # Subscriptions
-        self.create_subscription(DroneStatusMsg, f'/{self.drone_id}/status', self.status_callback, 10)
+        self.create_subscription(DroneStatusUpdate, f'/{self.drone_id}/status', self.status_callback, 10)
         self.create_subscription(VehicleLocalPosition, '/fmu/out/vehicle_local_position', self.position_callback, qos_profile)
 
-        # Publishers
         self.setpoint_pub = self.create_publisher(PoseStamped, '/offboard_setpoint_pose', 10)
         self.waypoint_update_pub = self.create_publisher(WaypointVisited, '/mission_handler/waypoint_visited', 10)
-        status_topic = f'/{self.drone_id}/update_status'
-        self.status_update_pub = self.create_publisher(DroneStatusUpdate, status_topic, 10)
-
-        # Service client
-        self.severity_client = self.create_client(GetSeverityScore, '/get_severity_score')
-        while not self.severity_client.wait_for_service(timeout_sec=1.0):
-            self.get_logger().warn('Waiting for severity score service...')
+        self.status_update_pub = self.create_publisher(DroneStatusUpdate, f'/{self.drone_id}/update_status', 10)
 
         self._send_status_update("idle")
         self.get_logger().info("Mission Handler Node: Initialization complete.")
 
-    def status_callback(self, msg: DroneStatusMsg):
+    def status_callback(self, msg: DroneStatusUpdate):
         if msg.drone_id != self.drone_id:
             return
 
@@ -70,15 +60,17 @@ class MissionHandlerNode(Node):
 
         if self.drone_type == 'irrigation':
             topic = '/geotag_array'
+            self.create_subscription(GeotagArray, topic, self.geotag_callback, 10)
         else:
             topic = f'/drone/{self.drone_id}/waypoints'
+            self.create_subscription(WaypointArray, topic, self.waypoint_callback, 10)
 
-        self.create_subscription(WaypointArray, topic, self.waypoint_callback, 10)
         self.get_logger().info(f"Subscribed to: {topic} based on type '{self.drone_type}'")
 
     def _send_status_update(self, status: str):
         msg = DroneStatusUpdate()
         msg.status = status
+        msg.drone_id = self.drone_id
         self.status_update_pub.publish(msg)
         self.get_logger().info(f"Status update: '{status}'")
 
@@ -93,6 +85,35 @@ class MissionHandlerNode(Node):
 
         self.get_logger().info(f"Received {len(msg.waypoints)} waypoints. Starting mission.")
         self.current_waypoints = msg.waypoints
+        self.severity_scores.clear()  # Not used for surveillance
+        self.current_index = 0
+        self.active = True
+        self._send_status_update("executing")
+        self._publish_next_waypoint()
+
+    def geotag_callback(self, msg: GeotagArray):
+        self.get_logger().info(">>> GEOTAG CALLBACK TRIGGERED <<<")
+
+        if not msg.geotags:
+            self.get_logger().warn("Received empty geotag list. Setting status to idle.")
+            self._send_status_update("idle")
+            self.active = False
+            return
+
+        self.get_logger().info(f"Received {len(msg.geotags)} geotags. Converting to waypoints.")
+        self.current_waypoints = []
+        self.severity_scores = {}
+
+        for geotag in msg.geotags:
+            waypoint = Waypoint()
+            waypoint.id = int(geotag.id)
+            waypoint.lat = geotag.lat
+            waypoint.lon = geotag.lon
+            waypoint.alt = geotag.alt
+            waypoint.visited = False
+            self.current_waypoints.append(waypoint)
+            self.severity_scores[waypoint.id] = geotag.severity_score
+
         self.current_index = 0
         self.active = True
         self._send_status_update("executing")
@@ -164,19 +185,10 @@ class MissionHandlerNode(Node):
                 self.get_logger().info(f"Reached waypoint ID {self.current_target.id} (Distance: {dist:.2f}m)")
 
                 if self.drone_type == 'irrigation':
-                    request = GetSeverityScore.Request()
-                    request.geotag_id = self.current_target.id
-                    future = self.severity_client.call_async(request)
-                    rclpy.spin_until_future_complete(self, future)
-
-                    if future.result() is not None:
-                        score = future.result().score
-                        wait_time = score * 10
-                        self.waiting_until = time.time() + wait_time
-                        self.get_logger().info(f"Waiting {wait_time} seconds at waypoint due to severity score {score}")
-                    else:
-                        self.waiting_until = time.time() + 10  # default
-                        self.get_logger().warn("Failed to get severity score. Default wait time 10s")
+                    score = self.severity_scores.get(self.current_target.id, 1)
+                    wait_time = score * 10
+                    self.waiting_until = time.time() + wait_time
+                    self.get_logger().info(f"Waiting {wait_time} seconds at waypoint due to severity score {score}")
                 else:
                     self.waiting_until = time.time()  # no wait for surveillance
             elif time.time() >= self.waiting_until:
