@@ -50,7 +50,7 @@ class StatusPublisher(Node):
 
     def mission_status_callback(self, msg):
         old_drone_status = self.drone_status
-        self.drone_status = msg.status.upper() # Store status in uppercase
+        self.drone_status = msg.status
         self.get_logger().info(f'Mission Handler changed drone_status from "{old_drone_status}" to "{self.drone_status}".')
 
     def publish_drone_status(self):
