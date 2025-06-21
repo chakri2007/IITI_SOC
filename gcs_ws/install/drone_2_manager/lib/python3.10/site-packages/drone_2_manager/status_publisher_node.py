@@ -14,16 +14,16 @@ class StatusPublisher(Node):
         self.get_logger().info('StatusPublisher node started for drone_1.')
 
         # --- Drone State Variables ---
-        self.drone_id = 'drone_1'
+        self.drone_id = 'drone_2'
         self.drone_status = 'idle'       # Initial status
-        self.drone_type = 'surveillance' # Initial type
+        self.drone_type = 'irrigation' # Initial type
 
         self.status_publisher = self.create_publisher(
             DroneStatus,
-            f'/drone_1/status', # Topic includes drone_id for specificity
+            f'/drone_2/status', # Topic includes drone_id for specificity
             10                                # QoS history depth
         )
-        self.get_logger().info(f'Publishing drone status to /drone_1/status.')
+        self.get_logger().info(f'Publishing drone status to /drone_2/status.')
 
         self.qgc_command_subscriber = self.create_subscription(
             DroneTypeChange,
@@ -35,7 +35,7 @@ class StatusPublisher(Node):
 
         self.mission_status_subscriber = self.create_subscription(
             DroneStatusUpdate,
-            '/drone_1/update_status', # Topic for mission handler status updates
+            '/drone_2/update_status', # Topic for mission handler status updates
             self.mission_status_callback,
             10
         )

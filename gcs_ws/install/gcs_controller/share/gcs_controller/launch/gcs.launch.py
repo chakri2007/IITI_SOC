@@ -21,7 +21,10 @@ def generate_launch_description():
             package='gcs_controller',
             executable='geotag_manager_node',
             name='geotag_manager_node',
-            output='screen'
+            output='screen',
+            parameters=[
+                {'geotag_file_path': geotag_file_path},
+                ]
         ),
         Node(
             package='gcs_controller',
@@ -49,7 +52,6 @@ def generate_launch_description():
             output='screen',
             parameters=[
                 {'geotag_file_path': geotag_file_path},
-                {'kml_file_path' : kml_file_path},
                 ]
         ),
     ])

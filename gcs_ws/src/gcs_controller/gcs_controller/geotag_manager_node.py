@@ -13,7 +13,7 @@ class GeotagNode(Node):
     def __init__(self):
         super().__init__('geotag_node')
 
-        self.declare_parameter('json_file_path', '')
+        self.declare_parameter('geotag_file_path', '')
         self.declare_parameter('batch_size', 5)
 
         self.lock = threading.Lock()
@@ -47,7 +47,7 @@ class GeotagNode(Node):
                 self.get_logger().info(f"Duplicate Geotag ID {msg.id} ignored")
 
     def get_irrigated_ids_from_json(self):
-        path = self.get_parameter('json_file_path').get_parameter_value().string_value
+        path = self.get_parameter('geotag_file_path').get_parameter_value().string_value
         if not os.path.exists(path):
             self.get_logger().error(f"Geotag JSON file not found at {path}")
             return set()
