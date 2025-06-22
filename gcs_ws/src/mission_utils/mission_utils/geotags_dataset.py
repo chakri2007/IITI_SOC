@@ -30,7 +30,8 @@ class GlobalGeotagLogger(Node):
             "lat": msg.lat,
             "lon": msg.lon,
             "alt": msg.alt,
-            "severity_score": msg.severity_score
+            "severity_score": msg.severity_score,
+            "irrigated": False
         }
 
         self.geotags.append(tag)

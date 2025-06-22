@@ -1,9 +1,9 @@
 import rclpy
 from rclpy.node import Node
 from rclpy.executors import MultiThreadedExecutor
-import threading
 import json
 import os
+import threading
 
 from drone_interfaces.msg import Geotag, GeotagArray, GeotagRequest
 
@@ -13,22 +13,15 @@ class GeotagNode(Node):
     def __init__(self):
         super().__init__('geotag_node')
 
-        self.declare_parameter('geotag_file_path', '')
+        # Declare parameters
+        self.declare_parameter('geotag_file_path', '/home/chakrapani/drone_files/IITI_SOC//gcs_ws/mission_files/geotags.json')
         self.declare_parameter('batch_size', 5)
 
         self.lock = threading.Lock()
-        self.geotag_list = []  # Stores all received geotags
-        self.sent_indices = {}  # (drone_id, direction) -> index of last sent
-        self._pub_cache = {}  # Caches publishers per drone topic
+        self.sent_indices = {}   # (drone_id, direction) -> index
+        self._pub_cache = {}     # drone_id -> publisher
 
-        # Subscriptions
-        self.subscriber = self.create_subscription(
-            Geotag,
-            '/geotag_generated',
-            self.geotag_callback,
-            10
-        )
-
+        # Subscription for batch request
         self.request_subscriber = self.create_subscription(
             GeotagRequest,
             '/geotag_manager/request',
@@ -36,70 +29,71 @@ class GeotagNode(Node):
             10
         )
 
-        self.get_logger().info("Geotag Node started.")
+        self.get_logger().info("Geotag Node initialized (file-based).")
 
-    def geotag_callback(self, msg: Geotag):
-        with self.lock:
-            if not any(g.id == msg.id for g in self.geotag_list):
-                self.geotag_list.append(msg)
-                self.get_logger().info(f"Stored Geotag ID {msg.id}")
-            else:
-                self.get_logger().info(f"Duplicate Geotag ID {msg.id} ignored")
-
-    def get_irrigated_ids_from_json(self):
+    def load_unirrigated_geotags_from_file(self):
+        """Load geotags from file and return only unirrigated ones (irrigated: false)."""
         path = self.get_parameter('geotag_file_path').get_parameter_value().string_value
         if not os.path.exists(path):
             self.get_logger().error(f"Geotag JSON file not found at {path}")
-            return set()
+            return []
 
         try:
             with open(path, 'r') as f:
                 data = json.load(f)
-            return {item['id'] for item in data if item.get('irrigated') is True}
+
+            unirrigated = []
+            for item in data:
+                if not item.get('irrigated', False):
+                    g = Geotag()
+                    g.id = item['id']
+                    g.lat = item['lat']
+                    g.lon = item['lon']
+                    g.alt = item['alt']
+                    g.severity_score = item['severity_score']
+                    unirrigated.append(g)
+
+            self.get_logger().info(f"Found {len(unirrigated)} unirrigated geotags.")
+            return unirrigated
         except Exception as e:
-            self.get_logger().error(f"Error reading irrigated geotag IDs: {e}")
-            return set()
+            self.get_logger().error(f"Error reading geotags from file: {e}")
+            return []
 
     def request_callback(self, msg: GeotagRequest):
+        """Handle incoming batch request for unirrigated geotags."""
         drone_id = msg.drone_id
         direction = msg.direction.lower()
         key = (drone_id, direction)
         batch_size = self.get_parameter('batch_size').get_parameter_value().integer_value
 
         with self.lock:
-            # Filter irrigated geotags
-            irrigated_ids = self.get_irrigated_ids_from_json()
-            before = len(self.geotag_list)
-            self.geotag_list = [g for g in self.geotag_list if g.id not in irrigated_ids]
-            after = len(self.geotag_list)
-            self.get_logger().info(f"Filtered {before - after} irrigated geotags. Remaining: {after}")
-
-            if not self.geotag_list:
-                self.get_logger().warn("No geotags to send after filtering.")
+            all_unirrigated = self.load_unirrigated_geotags_from_file()
+            if not all_unirrigated:
+                self.get_logger().warn("No unirrigated geotags to send.")
                 return
 
-            # Sort geotags based on direction
+            # Sort geotags by ID (ascending or descending)
             sorted_geotags = sorted(
-                self.geotag_list,
+                all_unirrigated,
                 key=lambda g: g.id,
-                reverse=(direction == 'bottom')  # True: descending, False: ascending
+                reverse=(direction == 'bottom')
             )
 
             start_idx = self.sent_indices.get(key, 0)
             end_idx = start_idx + batch_size
 
             if start_idx >= len(sorted_geotags):
-                self.get_logger().info(f"No more geotags for drone {drone_id} in direction {direction}")
+                self.get_logger().info(f"No more geotags for drone {drone_id} in direction '{direction}'")
                 return
 
             batch = sorted_geotags[start_idx:end_idx]
-            self.sent_indices[key] = end_idx
+            self.sent_indices[key] = end_idx  # update for next request
 
-        # Prepare and publish batch
+        # Publish batch to the drone-specific topic
         geotag_array = GeotagArray()
         geotag_array.geotags = batch
 
-        topic_name = f"/{drone_id}/geotag_generated"
+        topic_name = f"/{drone_id}/geotag_array"
         if topic_name not in self._pub_cache:
             self._pub_cache[topic_name] = self.create_publisher(GeotagArray, topic_name, 10)
 
