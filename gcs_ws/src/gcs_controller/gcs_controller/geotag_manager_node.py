@@ -8,17 +8,16 @@ import threading
 from drone_interfaces.msg import Geotag, GeotagArray, GeotagRequest
 
 
-class GeotagNode(Node):
+class GeotagManagerNode(Node):
 
     def __init__(self):
-        super().__init__('geotag_node')
+        super().__init__('geotag_manager_node')
 
         # Declare parameters
         self.declare_parameter('geotag_file_path', '/home/chakrapani/drone_files/IITI_SOC//gcs_ws/mission_files/geotags.json')
         self.declare_parameter('batch_size', 5)
 
         self.lock = threading.Lock()
-        self.sent_indices = {}   # (drone_id, direction) -> index
         self._pub_cache = {}     # drone_id -> publisher
 
         # Subscription for batch request
@@ -29,7 +28,7 @@ class GeotagNode(Node):
             10
         )
 
-        self.get_logger().info("Geotag Node initialized (file-based).")
+        self.get_logger().info("Geotag Manager Node initialized.")
 
     def load_unirrigated_geotags_from_file(self):
         """Load geotags from file and return only unirrigated ones (irrigated: false)."""
@@ -63,7 +62,6 @@ class GeotagNode(Node):
         """Handle incoming batch request for unirrigated geotags."""
         drone_id = msg.drone_id
         direction = msg.direction.lower()
-        key = (drone_id, direction)
         batch_size = self.get_parameter('batch_size').get_parameter_value().integer_value
 
         with self.lock:
@@ -72,22 +70,16 @@ class GeotagNode(Node):
                 self.get_logger().warn("No unirrigated geotags to send.")
                 return
 
-            # Sort geotags by ID (ascending or descending)
             sorted_geotags = sorted(
                 all_unirrigated,
                 key=lambda g: g.id,
                 reverse=(direction == 'bottom')
             )
 
-            start_idx = self.sent_indices.get(key, 0)
-            end_idx = start_idx + batch_size
-
-            if start_idx >= len(sorted_geotags):
-                self.get_logger().info(f"No more geotags for drone {drone_id} in direction '{direction}'")
+            batch = sorted_geotags[:batch_size]
+            if not batch:
+                self.get_logger().info(f"No unirrigated geotags available for drone {drone_id} in direction '{direction}'")
                 return
-
-            batch = sorted_geotags[start_idx:end_idx]
-            self.sent_indices[key] = end_idx  # update for next request
 
         # Publish batch to the drone-specific topic
         geotag_array = GeotagArray()
@@ -103,7 +95,7 @@ class GeotagNode(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = GeotagNode()
+    node = GeotagManagerNode()
     executor = MultiThreadedExecutor()
     executor.add_node(node)
     executor.spin()

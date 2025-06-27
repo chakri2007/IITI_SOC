@@ -2,7 +2,16 @@ import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import PoseStamped
 from px4_msgs.msg import VehicleLocalPosition
-from drone_interfaces.msg import Waypoint, WaypointArray, WaypointVisited, DroneStatus, DroneStatusUpdate, Geotag, GeotagArray
+from drone_interfaces.msg import (
+    Waypoint,
+    WaypointArray,
+    WaypointVisited,
+    DroneStatus,
+    DroneStatusUpdate,
+    Geotag,
+    GeotagArray,
+    GeotagVisited
+)
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
 from pyproj import Proj, transform
 import math
@@ -49,6 +58,7 @@ class MissionHandlerNode(Node):
         # Publishers
         self.setpoint_pub = self.create_publisher(PoseStamped, '/drone_2/offboard_setpoint_pose', 10)
         self.waypoint_update_pub = self.create_publisher(WaypointVisited, '/mission_handler/waypoint_visited', 10)
+        self.geotag_update_pub = self.create_publisher(GeotagVisited, '/mission_handler/geotag_visited', 10)
         self.status_update_pub = self.create_publisher(DroneStatusUpdate, f'/{self.drone_id}/update_status', 10)
 
         self._send_status_update("idle")
@@ -182,16 +192,22 @@ class MissionHandlerNode(Node):
 
                 if self.drone_type == 'irrigation':
                     severity = self.severity_scores.get(self.current_target.id, 1)
-                    wait_time_sec = severity * 10
+                    wait_time_sec = severity * 1
                     self.waiting_until = now + int(wait_time_sec * 1e9)
                     self.get_logger().info(f"Waiting {wait_time_sec} seconds at waypoint due to severity {severity}")
                 else:
                     self.waiting_until = now  # No wait
             elif now >= self.waiting_until:
-                visited = WaypointVisited()
-                visited.drone_id = self.drone_id
-                visited.waypoint_id = self.current_target.id
-                self.waypoint_update_pub.publish(visited)
+                if self.drone_type == 'irrigation':
+                    geotag_visited = GeotagVisited()
+                    geotag_visited.drone_id = self.drone_id
+                    geotag_visited.geotag_id = self.current_target.id
+                    self.geotag_update_pub.publish(geotag_visited)
+                else:
+                    visited = WaypointVisited()
+                    visited.drone_id = self.drone_id
+                    visited.waypoint_id = self.current_target.id
+                    self.waypoint_update_pub.publish(visited)
 
                 self.waiting_until = None
                 self.current_index += 1

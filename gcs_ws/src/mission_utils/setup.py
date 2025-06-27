@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
             'waypoints_dataset = mission_utils.waypoints_dataset:main',
             'geotags_dataset = mission_utils.geotags_dataset:main',
+            'geotags_visited_updater = mission_utils.geotags_visited_updater:main',
         ],
     },
 )

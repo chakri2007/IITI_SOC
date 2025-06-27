@@ -54,4 +54,13 @@ def generate_launch_description():
                 {'geotag_file_path': geotag_file_path},
                 ]
         ),
+        Node(
+            package='mission_utils',
+            executable='geotags_visited_updater',
+            name='geotags_visited_updater',
+            output='screen',
+            parameters=[
+                {'geotag_file_path': geotag_file_path},
+                ]
+        ),
     ])
