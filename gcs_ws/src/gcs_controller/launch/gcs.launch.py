@@ -1,9 +1,5 @@
 from launch import LaunchDescription
 from launch_ros.actions import Node
-<<<<<<< HEAD
-
-def generate_launch_description():
-=======
 from ament_index_python.packages import get_package_share_directory
 import os
 
@@ -14,7 +10,6 @@ def generate_launch_description():
     kml_file_path = os.path.join(mission_path, 'iit_survey.kml')
     waypoint_file_path = os.path.join(mission_path, 'iiti_waypoints.json')
     geotag_file_path = os.path.join(mission_path, 'geotags.json')
->>>>>>> dual_drone
     return LaunchDescription([
         Node(
             package='gcs_controller',
@@ -26,23 +21,15 @@ def generate_launch_description():
             package='gcs_controller',
             executable='geotag_manager_node',
             name='geotag_manager_node',
-<<<<<<< HEAD
-            output='screen'
-=======
             output='screen',
             parameters=[
                 {'geotag_file_path': geotag_file_path},
                 ]
->>>>>>> dual_drone
         ),
         Node(
             package='gcs_controller',
             executable='waypoint_manager_node',
             name='waypoint_manager_node',
-<<<<<<< HEAD
-            output='screen'
-        )
-=======
             output='screen',
             parameters=[
                 {'json_file_path': waypoint_file_path},
@@ -76,5 +63,4 @@ def generate_launch_description():
                 {'geotag_file_path': geotag_file_path},
                 ]
         ),
->>>>>>> dual_drone
     ])
