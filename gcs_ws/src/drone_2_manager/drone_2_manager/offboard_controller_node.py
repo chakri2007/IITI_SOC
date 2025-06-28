@@ -4,7 +4,14 @@ from rclpy.node import Node
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
 from px4_msgs.msg import OffboardControlMode, TrajectorySetpoint, VehicleCommand, VehicleLocalPosition, VehicleStatus, VehicleOdometry, VehicleCommandAck
 from geometry_msgs.msg import PoseStamped
+from drone_interfaces.msg import DroneStatusUpdate
 import numpy as np
+
+
+def quaternion_to_yaw(qx, qy, qz, qw):
+    numerator = 2.0 * (qx * qy + qw * qz)
+    denominator = qw * qw + qx * qx - qy * qy - qz * qz
+    return np.arctan2(numerator, denominator)
 
 
 class OffboardControl(Node):
@@ -26,6 +33,10 @@ class OffboardControl(Node):
         self.vehicle_command_publisher = self.create_publisher(
             VehicleCommand, '/px4_2/fmu/in/vehicle_command', qos_profile)
 
+        self.mission_status_publisher = self.create_publisher(
+            DroneStatusUpdate, '/drone_2/update_status', 10
+        )
+
         self.create_subscription(
             VehicleLocalPosition, '/px4_2/fmu/out/vehicle_local_position', self.vehicle_local_position_callback, qos_profile)
         self.create_subscription(
@@ -34,10 +45,10 @@ class OffboardControl(Node):
             VehicleOdometry, '/px4_2/fmu/out/vehicle_odometry', self.vehicle_odometry_callback, qos_profile)
         self.create_subscription(
             VehicleCommandAck, '/px4_2/fmu/out/vehicle_command_ack', self.vehicle_command_ack_callback, qos_profile)
-        
-        # Dynamic waypoint subscriber (after takeoff)
         self.create_subscription(
             PoseStamped, '/drone_2/offboard_setpoint_pose', self.dynamic_waypoint_callback, 10)
+        self.mission_status_subscriber = self.create_subscription(
+            DroneStatusUpdate, '/drone_2/update_status', self.mission_status_callback, 10)
 
         self.vehicle_local_position = VehicleLocalPosition()
         self.vehicle_status = VehicleStatus()
@@ -46,10 +57,12 @@ class OffboardControl(Node):
 
         self.takeoff_height = -30.0
         self.offboard_setpoint_counter = 0
-        self.taken_off = None
+        self.taken_off = False
 
         self.current_dynamic_pose = None
         self.tracking_dynamic_waypoint = False
+        self.status_updated = False
+        self.current_status = ""
 
         self.timer = self.create_timer(0.1, self.timer_callback)
 
@@ -66,10 +79,31 @@ class OffboardControl(Node):
         self.vehicle_command_ack = msg
 
     def dynamic_waypoint_callback(self, msg: PoseStamped):
-        if self.taken_off:  # Only accept waypoints after takeoff
+        if self.taken_off:
             self.current_dynamic_pose = msg
             self.tracking_dynamic_waypoint = True
             self.get_logger().info(f"Received dynamic waypoint: ({msg.pose.position.x}, {msg.pose.position.y}, {msg.pose.position.z})")
+
+    def mission_status_callback(self, msg: DroneStatusUpdate):
+        status = msg.status.lower().strip()
+        self.current_status = status
+        self.get_logger().info(f"Received mission status: {status}")
+
+        if status == "charging":
+            self.disarm()
+            self.taken_off = False
+            self.status_updated = False
+            self.get_logger().info("Drone is charging. Disarmed and taken_off set to False.")
+
+        elif status == "charged":
+            self.status_updated = True
+            self.get_logger().info("Drone is charged. Will initiate takeoff.")
+
+    def publish_status(self, new_status: str):
+        msg = DroneStatusUpdate()
+        msg.status = new_status
+        self.mission_status_publisher.publish(msg)
+        self.get_logger().info(f"Published drone status: {new_status}")
 
     def arm(self):
         self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_COMPONENT_ARM_DISARM, param1=1.0)
@@ -123,34 +157,37 @@ class OffboardControl(Node):
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.vehicle_command_publisher.publish(msg)
 
-    def compute_yaw_towards_target(self, x_target, y_target):
-        dx = x_target - self.vehicle_local_position.x
-        dy = y_target - self.vehicle_local_position.y
-        return np.arctan2(dy, dx)
+    def compute_yaw_from_odometry(self):
+        q = self.vehicle_odometry.q
+        return quaternion_to_yaw(q[0], q[1], q[2], q[3])
 
     def timer_callback(self):
         self.publish_offboard_control_heartbeat_signal()
 
-        if self.offboard_setpoint_counter == 10:
+        if self.offboard_setpoint_counter == 10 and self.current_status == "idle":
             self.engage_offboard_mode()
             self.arm()
 
+        # Handle takeoff after "charged" status
+        if self.status_updated and not self.taken_off and self.current_status == "idle":
+            self.publish_position_setpoint(0.0, 0.0, self.takeoff_height)
+
+        # Confirm takeoff and publish idle
         if (self.vehicle_local_position.z > self.takeoff_height and
             self.vehicle_status.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD and
-            self.taken_off is None):
-            print("publishing takeoff")
-            self.publish_position_setpoint(0.0, 0.0, self.takeoff_height)
+            not self.taken_off):
             if self.vehicle_local_position.z < self.takeoff_height + 0.5:
                 self.taken_off = True
-                print("taken off")
+                self.status_updated = False
+                self.publish_status("idle")
+                self.get_logger().info("Takeoff complete. Status set to idle.")
 
-        # After takeoff: follow dynamic waypoints with yaw aligned to direction
+        # Track waypoint after takeoff
         if self.taken_off and self.tracking_dynamic_waypoint and self.current_dynamic_pose:
             x = self.current_dynamic_pose.pose.position.x
             y = self.current_dynamic_pose.pose.position.y
             z = self.current_dynamic_pose.pose.position.z
-
-            yaw = self.compute_yaw_towards_target(x, y)
+            yaw = self.compute_yaw_from_odometry()  # <-- using quaternionToYaw logic
             self.publish_position_setpoint(x, y, z, yaw)
 
         if self.offboard_setpoint_counter < 11:
