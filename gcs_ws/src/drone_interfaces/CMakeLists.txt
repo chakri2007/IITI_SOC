@@ -32,6 +32,15 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/WaypointVisited.msg"
   "msg/DroneStatusUpdate.msg"
   "msg/DroneTypeChange.msg"
+<<<<<<< HEAD
+=======
+  "msg/Geotag.msg"
+  "msg/GeotagArray.msg"
+  "msg/GeotagRequest.msg"
+  "msg/GeotagVisited.msg"
+
+  "srv/GetSeverityScore.srv"
+>>>>>>> dual_drone
 )
 
 ament_package()

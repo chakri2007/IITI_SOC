@@ -1,11 +1,5 @@
 import rclpy
 from rclpy.node import Node
-<<<<<<< HEAD
-
-from drone_interfaces.msg import Waypoint, WaypointArray, WaypointVisited, DroneStatusUpdate
-from px4_msgs.msg import VehicleCommand
-
-=======
 from geometry_msgs.msg import PoseStamped
 from px4_msgs.msg import VehicleLocalPosition
 from drone_interfaces.msg import (
@@ -21,30 +15,11 @@ from drone_interfaces.msg import (
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
 from pyproj import Proj, transform
 import math
->>>>>>> dual_drone
 
 class MissionHandlerNode(Node):
 
     def __init__(self):
         super().__init__('mission_handler_node')
-<<<<<<< HEAD
-        self.get_logger().info("Mission Handler Node Started.")
-
-        self.current_waypoints = []
-        self.current_index = 0
-        self.active = False
-        self.drone_id = 'drone_1'
-
-        self.create_subscription(WaypointArray, f'/drone/{self.drone_id}/waypoints', self.waypoint_callback, 10)
-
-        self.px4_command_pub = self.create_publisher(VehicleCommand, '/fmu/in/vehicle_command', 10)
-        self.waypoint_update_pub = self.create_publisher(WaypointVisited, '/mission_handler/waypoint_visited', 10)
-        self.status_update_pub = self.create_publisher(DroneStatusUpdate, f'/{self.drone_id}/update_status', 10)
-
-        self.timer = self.create_timer(2.0, self.execute_mission)
-
-        self._send_status_update("idle")  # Initial state
-=======
         self.get_logger().info("Mission Handler Node: Initializing...")
 
         qos_profile = QoSProfile(
@@ -55,10 +30,10 @@ class MissionHandlerNode(Node):
         )
 
         # State
-        self.drone_id = 'drone_1'
+        self.drone_id = 'drone_2'
         self.drone_type = None
         self.current_waypoints = []
-        self.severity_scores = {}
+        self.severity_scores = {}  # waypoint_id -> severity
         self.current_index = 0
         self.active = False
         self.reached_threshold = 1.0  # meters
@@ -78,75 +53,20 @@ class MissionHandlerNode(Node):
 
         # Subscriptions
         self.create_subscription(DroneStatus, f'/{self.drone_id}/status', self.status_callback, 10)
-        self.create_subscription(VehicleLocalPosition, '/px4_1/fmu/out/vehicle_local_position', self.position_callback, qos_profile)
+        self.create_subscription(VehicleLocalPosition, '/px4_2/fmu/out/vehicle_local_position', self.position_callback, qos_profile)
 
         # Publishers
-        self.setpoint_pub = self.create_publisher(PoseStamped, '/drone_1/offboard_setpoint_pose', 10)
+        self.setpoint_pub = self.create_publisher(PoseStamped, '/drone_2/offboard_setpoint_pose', 10)
         self.waypoint_update_pub = self.create_publisher(WaypointVisited, '/mission_handler/waypoint_visited', 10)
         self.geotag_update_pub = self.create_publisher(GeotagVisited, '/mission_handler/geotag_visited', 10)
         self.status_update_pub = self.create_publisher(DroneStatusUpdate, f'/{self.drone_id}/update_status', 10)
 
         self._send_status_update("idle")
         self.get_logger().info("Mission Handler Node: Initialization complete.")
->>>>>>> dual_drone
 
     def _send_status_update(self, status: str):
         msg = DroneStatusUpdate()
         msg.status = status
-<<<<<<< HEAD
-        self.status_update_pub.publish(msg)
-        self.get_logger().info(f"[{self.drone_id}] Published status update: {status}")
-
-    def waypoint_callback(self, msg: WaypointArray):
-        if not msg.waypoints:
-            self.get_logger().warn("Received empty waypoint list.")
-            self._send_status_update("idle")
-            return
-
-        self.get_logger().info(f"Received {len(msg.waypoints)} waypoints. Starting mission.")
-        self.current_waypoints = msg.waypoints
-        self.current_index = 0
-        self.active = True
-        self._send_status_update("executing")
-
-    def execute_mission(self):
-        if not self.active or self.current_index >= len(self.current_waypoints):
-            if not self.active and self.current_index > 0:
-                self.get_logger().debug(f"[{self.drone_id}] Mission complete.")
-            return
-
-        waypoint = self.current_waypoints[self.current_index]
-        self.get_logger().info(f"Going to waypoint {self.current_index + 1}/{len(self.current_waypoints)}: "
-                               f"[Lat: {waypoint.lat}, Lon: {waypoint.lon}, Alt: {waypoint.alt}]")
-
-        cmd = VehicleCommand()
-        cmd.param5 = float(waypoint.lat)
-        cmd.param6 = float(waypoint.lon)
-        cmd.param7 = float(waypoint.alt)
-        cmd.command = VehicleCommand.VEHICLE_CMD_NAV_WAYPOINT
-        cmd.target_system = 1
-        cmd.target_component = 1
-        cmd.source_system = 1
-        cmd.source_component = 1
-        cmd.from_external = True
-        cmd.timestamp = int(self.get_clock().now().nanoseconds / 1000)
-
-        self.px4_command_pub.publish(cmd)
-
-        self.get_logger().info(f"Reached waypoint {waypoint.id} (simulated)")
-
-        update = WaypointVisited()
-        update.drone_id = self.drone_id
-        update.waypoint_id = waypoint.id
-        self.waypoint_update_pub.publish(update)
-
-        self.current_index += 1
-
-        if self.current_index >= len(self.current_waypoints):
-            self.get_logger().info(f"[{self.drone_id}] All waypoints visited.")
-            self._send_status_update("idle")
-            self.active = False
-=======
         msg.drone_id = self.drone_id
         self.status_update_pub.publish(msg)
         self.get_logger().info(f"Status update: '{status}'")
@@ -160,9 +80,9 @@ class MissionHandlerNode(Node):
             self.get_logger().info(f"Drone type set to: {self.drone_type}")
 
             if self.drone_type == 'irrigation' and not self.subscribed_to_geotag:
-                self.create_subscription(GeotagArray, '/drone_1/geotag_array', self.geotag_callback, 10)
+                self.create_subscription(GeotagArray, '/drone_2/geotag_array', self.geotag_callback, 10)
                 self.subscribed_to_geotag = True
-                self.get_logger().info("Subscribed to /drone_1/geotag_array")
+                self.get_logger().info("Subscribed to /drone_2/geotag_array")
             elif self.drone_type == 'surveillance' and not self.subscribed_to_waypoints:
                 self.create_subscription(WaypointArray, f'/drone/{self.drone_id}/waypoints', self.waypoint_callback, 10)
                 self.subscribed_to_waypoints = True
@@ -292,17 +212,11 @@ class MissionHandlerNode(Node):
                 self.waiting_until = None
                 self.current_index += 1
                 self._publish_next_waypoint()
->>>>>>> dual_drone
 
 
 def main(args=None):
     rclpy.init(args=args)
     node = MissionHandlerNode()
-<<<<<<< HEAD
-    rclpy.spin(node)
-    node.destroy_node()
-    rclpy.shutdown()
-=======
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
@@ -311,7 +225,6 @@ def main(args=None):
         node.destroy_node()
         rclpy.shutdown()
         node.get_logger().info("Node destroyed and rclpy shut down.")
->>>>>>> dual_drone
 
 
 if __name__ == '__main__':

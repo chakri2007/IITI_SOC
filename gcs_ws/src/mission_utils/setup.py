@@ -20,6 +20,12 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+<<<<<<< HEAD
+=======
+            'waypoints_dataset = mission_utils.waypoints_dataset:main',
+            'geotags_dataset = mission_utils.geotags_dataset:main',
+            'geotags_visited_updater = mission_utils.geotags_visited_updater:main',
+>>>>>>> dual_drone
         ],
     },
 )

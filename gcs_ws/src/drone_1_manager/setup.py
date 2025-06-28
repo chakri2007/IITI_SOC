@@ -22,6 +22,11 @@ setup(
         'console_scripts': [
             'mission_handler_node = drone_1_manager.mission_handler_node:main',
             'status_publisher_node = drone_1_manager.status_publisher_node:main',
+<<<<<<< HEAD
+=======
+            'offboard_controller_node = drone_1_manager.offboard_controller_node:main',
+            'geotagging_node = drone_1_manager.geotagging_node:main',
+>>>>>>> dual_drone
         ],
     },
 )
