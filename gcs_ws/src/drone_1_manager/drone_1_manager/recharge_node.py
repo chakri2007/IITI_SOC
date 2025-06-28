@@ -48,7 +48,7 @@ class DroneNode(Node):
 
     def write_simulated_battery_percentage(self, percentage):
         try:
-            with open("/tmp/sim_voltage.txt", "w") as f:
+            with open("/tmp/sim_voltage0.txt", "w") as f:
                 f.write(f"{percentage:.3f}")
         except Exception as e:
             self.get_logger().error(f"Failed to write battery % to file: {e}")
@@ -86,7 +86,7 @@ class DroneNode(Node):
                 self.recharge_history.append(self.time)
 
                 try:
-                    os.remove("/tmp/sim_voltage.txt")
+                    os.remove("/tmp/sim_voltage0.txt")
                 except Exception:
                     pass
 
