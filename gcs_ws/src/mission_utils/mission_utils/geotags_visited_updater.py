@@ -13,7 +13,7 @@ class GeotagUpdaterNode(Node):
     def __init__(self):
         super().__init__('geotags_visited_updater')
 
-        self.declare_parameter('geotag_file_path', '/home/chakrapani/drone_files/IITI_SOC//gcs_ws/mission_files/geotags.json')
+        self.declare_parameter('geotag_file_path', '/home/chakrapani/drone_files/IITI_SOC/gcs_ws/mission_files/geotags.json')
 
         self.lock = threading.Lock()
 
