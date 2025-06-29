@@ -2,16 +2,25 @@
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
-from px4_msgs.msg import OffboardControlMode, TrajectorySetpoint, VehicleCommand, VehicleLocalPosition, VehicleStatus, VehicleOdometry, VehicleCommandAck
+from px4_msgs.msg import (
+    OffboardControlMode,
+    TrajectorySetpoint,
+    VehicleCommand,
+    VehicleLocalPosition,
+    VehicleStatus,
+    VehicleOdometry,
+    VehicleCommandAck,
+    VehicleLandDetected
+)
 from geometry_msgs.msg import PoseStamped
-from drone_interfaces.msg import DroneStatusUpdate
+from drone_interfaces.msg import DroneStatusUpdate, DroneStatus
 import numpy as np
 
 
 def quaternion_to_yaw(qx, qy, qz, qw):
     numerator = 2.0 * (qx * qy + qw * qz)
     denominator = qw * qw + qx * qx - qy * qy - qz * qz
-    return np.arctan2(numerator, denominator)
+    return float(np.arctan2(numerator, denominator))
 
 
 class OffboardControl(Node):
@@ -26,17 +35,18 @@ class OffboardControl(Node):
             depth=1
         )
 
+        # Publishers
         self.offboard_control_mode_publisher = self.create_publisher(
             OffboardControlMode, '/px4_1/fmu/in/offboard_control_mode', qos_profile)
         self.trajectory_setpoint_publisher = self.create_publisher(
             TrajectorySetpoint, '/px4_1/fmu/in/trajectory_setpoint', qos_profile)
         self.vehicle_command_publisher = self.create_publisher(
             VehicleCommand, '/px4_1/fmu/in/vehicle_command', qos_profile)
-
         self.mission_status_publisher = self.create_publisher(
             DroneStatusUpdate, '/drone_1/update_status', 10
         )
 
+        # Subscriptions
         self.create_subscription(
             VehicleLocalPosition, '/px4_1/fmu/out/vehicle_local_position', self.vehicle_local_position_callback, qos_profile)
         self.create_subscription(
@@ -46,14 +56,18 @@ class OffboardControl(Node):
         self.create_subscription(
             VehicleCommandAck, '/px4_1/fmu/out/vehicle_command_ack', self.vehicle_command_ack_callback, qos_profile)
         self.create_subscription(
+            VehicleLandDetected, '/px4_1/fmu/out/vehicle_land_detected', self.vehicle_land_detected_callback, qos_profile)
+        self.create_subscription(
             PoseStamped, '/drone_1/offboard_setpoint_pose', self.dynamic_waypoint_callback, 10)
         self.mission_status_subscriber = self.create_subscription(
-            DroneStatusUpdate, '/drone_1/update_status', self.mission_status_callback, 10)
+            DroneStatus, '/drone_1/status', self.mission_status_callback, 10)
 
+        # State holders
         self.vehicle_local_position = VehicleLocalPosition()
         self.vehicle_status = VehicleStatus()
         self.vehicle_odometry = VehicleOdometry()
         self.vehicle_command_ack = VehicleCommandAck()
+        self.vehicle_land_detected = VehicleLandDetected()
 
         self.takeoff_height = -30.0
         self.offboard_setpoint_counter = 0
@@ -64,7 +78,10 @@ class OffboardControl(Node):
         self.status_updated = False
         self.current_status = ""
 
+        # Timer
         self.timer = self.create_timer(0.1, self.timer_callback)
+
+    # ========== Callbacks ==========
 
     def vehicle_local_position_callback(self, msg):
         self.vehicle_local_position = msg
@@ -78,26 +95,35 @@ class OffboardControl(Node):
     def vehicle_command_ack_callback(self, msg):
         self.vehicle_command_ack = msg
 
+    def vehicle_land_detected_callback(self, msg):
+        self.vehicle_land_detected = msg
+
     def dynamic_waypoint_callback(self, msg: PoseStamped):
         if self.taken_off:
             self.current_dynamic_pose = msg
             self.tracking_dynamic_waypoint = True
-            self.get_logger().info(f"Received dynamic waypoint: ({msg.pose.position.x}, {msg.pose.position.y}, {msg.pose.position.z})")
+            self.get_logger().info(
+                f"Received dynamic waypoint: ({msg.pose.position.x}, {msg.pose.position.y}, {msg.pose.position.z})"
+            )
 
-    def mission_status_callback(self, msg: DroneStatusUpdate):
+    def mission_status_callback(self, msg: DroneStatus):
         status = msg.status.lower().strip()
         self.current_status = status
-        self.get_logger().info(f"Received mission status: {status}")
+        self.get_logger().info(f"Received mission status node 1: {status}")
 
         if status == "charging":
-            self.disarm()
+            self.land()
+            self.offboard_setpoint_counter = 11
             self.taken_off = False
             self.status_updated = False
-            self.get_logger().info("Drone is charging. Disarmed and taken_off set to False.")
+            self.get_logger().info("Drone is charging. Sent LAND command. Will disarm after landing.")
 
         elif status == "charged":
             self.status_updated = True
+            self.offboard_setpoint_counter = 0
             self.get_logger().info("Drone is charged. Will initiate takeoff.")
+
+    # ========== Publishing helpers ==========
 
     def publish_status(self, new_status: str):
         msg = DroneStatusUpdate()
@@ -161,15 +187,20 @@ class OffboardControl(Node):
         q = self.vehicle_odometry.q
         return quaternion_to_yaw(q[0], q[1], q[2], q[3])
 
+    # ========== Timer ==========
+
     def timer_callback(self):
         self.publish_offboard_control_heartbeat_signal()
 
-        if self.offboard_setpoint_counter == 10 and self.current_status == "idle":
+        if self.current_status == "charging":
+         return
+
+        if self.offboard_setpoint_counter == 10:
             self.engage_offboard_mode()
             self.arm()
 
         # Handle takeoff after "charged" status
-        if not self.taken_off and self.current_status == "idle":
+        if not self.taken_off:
             self.publish_position_setpoint(0.0, 0.0, self.takeoff_height)
 
         # Confirm takeoff and publish idle
@@ -187,12 +218,21 @@ class OffboardControl(Node):
             x = self.current_dynamic_pose.pose.position.x
             y = self.current_dynamic_pose.pose.position.y
             z = self.current_dynamic_pose.pose.position.z
-            yaw = self.compute_yaw_from_odometry()  # <-- using quaternionToYaw logic
+            yaw = self.compute_yaw_from_odometry()
             self.publish_position_setpoint(x, y, z, yaw)
+
+        # Automatically disarm once landed during charging
+        if (self.current_status == "charging" and
+            self.vehicle_land_detected.landed and
+            self.vehicle_status.arming_state != VehicleStatus.ARMING_STATE_DISARMED):
+            self.get_logger().info("Detected landed. Sending disarm.")
+            self.disarm()
 
         if self.offboard_setpoint_counter < 11:
             self.offboard_setpoint_counter += 1
 
+
+# ========== Main ==========
 
 def main(args=None):
     print('Starting offboard control node...')
