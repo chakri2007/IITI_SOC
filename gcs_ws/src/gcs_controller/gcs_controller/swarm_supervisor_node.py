@@ -56,12 +56,14 @@ class SwarmSupervisorNode(Node):
 
             if other_status == 'idle' and other_type in ['surveillance', 'irrigation']:
                 if other_type == drone_type:
+                    # SAME TYPE → assign different directions
                     new_direction = 'bottom' if other_direction == 'top' else 'top'
                     self.send_request(drone_type, drone_id, new_direction)
                     self.send_request(other_type, other.drone_id, other_direction)
                 else:
-                    self.send_request(drone_type, drone_id, direction)
-                    self.send_request(other_type, other.drone_id, other_direction)
+                    # DIFFERENT TYPES → assign same direction
+                    self.send_request(drone_type, drone_id, 'top')
+                    self.send_request(other_type, other.drone_id, 'top')
 
                 self.actively_dispatched.add(drone_id)
                 self.actively_dispatched.add(other.drone_id)
