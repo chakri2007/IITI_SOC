@@ -26,6 +26,12 @@ def generate_launch_description():
             name='geotagging_node',
             output='screen'
         ),
+        Node(
+            package='drone_1_manager',    
+            executable='recharge_node',  
+            name='recharge_node',
+            output='screen'
+        ),
          Node(
             package='drone_2_manager',     
             executable='mission_handler_node', 
@@ -48,6 +54,12 @@ def generate_launch_description():
             package='drone_2_manager',     
             executable='geotagging_node', 
             name='geotagging_node',
+            output='screen'
+        ),
+         Node(
+            package='drone_2_manager',     
+            executable='recharge_node', 
+            name='recharge_node',
             output='screen'
         ),
     ])
