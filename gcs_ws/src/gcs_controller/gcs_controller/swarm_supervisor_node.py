@@ -13,7 +13,6 @@ class SwarmSupervisorNode(Node):
         self.drone_status = {}
         self.last_seen = {}
         self.actively_dispatched = set()
-
         self.timeout_sec = 10.0
 
         # Subscriptions

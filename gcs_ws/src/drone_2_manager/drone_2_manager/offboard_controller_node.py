@@ -169,7 +169,7 @@ class OffboardControl(Node):
             self.arm()
 
         # Handle takeoff after "charged" status
-        if self.status_updated and not self.taken_off and self.current_status == "idle":
+        if not self.taken_off and self.current_status == "idle":
             self.publish_position_setpoint(0.0, 0.0, self.takeoff_height)
 
         # Confirm takeoff and publish idle

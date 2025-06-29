@@ -17,6 +17,7 @@ class StatusPublisher(Node):
         self.drone_id = 'drone_1'
         self.drone_status = 'idle'       # Initial status
         self.drone_type = 'surveillance' # Initial type
+
         self.status_publisher = self.create_publisher(
             DroneStatus,
             f'/drone_1/status', # Topic includes drone_id for specificity
@@ -31,6 +32,7 @@ class StatusPublisher(Node):
             10
         )
         self.get_logger().info('Subscribing to /qgc/command for drone type updates.')
+
         self.mission_status_subscriber = self.create_subscription(
             DroneStatusUpdate,
             '/drone_1/update_status', # Topic for mission handler status updates
@@ -38,7 +40,6 @@ class StatusPublisher(Node):
             10
         )
         self.get_logger().info('Subscribing to /mission_handler/status for drone status updates.')
-
         self.timer = self.create_timer(2.0, self.publish_drone_status)
         self.get_logger().info('Status publishing timer initialized.')
 
@@ -48,13 +49,11 @@ class StatusPublisher(Node):
         self.get_logger().info(f'QGC changed drone_type from "{old_drone_type}" to "{self.drone_type}".')
 
     def mission_status_callback(self, msg):
-
         old_drone_status = self.drone_status
         self.drone_status = msg.status
         self.get_logger().info(f'Mission Handler changed drone_status from "{old_drone_status}" to "{self.drone_status}".')
 
     def publish_drone_status(self):
-
         status_msg = DroneStatus()
         status_msg.drone_id = self.drone_id
         status_msg.status = self.drone_status
