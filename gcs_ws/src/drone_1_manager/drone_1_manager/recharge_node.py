@@ -112,7 +112,7 @@ class DroneNode(Node):
 
     def send_status(self, status):
         msg = DroneStatusUpdate()
-        ms.drone_id = self.drone_id
+        msg.drone_id = self.drone_id
         msg.status = status
         self.status_publisher.publish(msg)
         self.get_logger().info(f"[{self.drone_id}] Status: {status}")
