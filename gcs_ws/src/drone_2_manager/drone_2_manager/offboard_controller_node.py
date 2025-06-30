@@ -127,6 +127,7 @@ class OffboardControl(Node):
 
     def publish_status(self, new_status: str):
         msg = DroneStatusUpdate()
+        msg.drone_id = "drone_2"
         msg.status = new_status
         self.mission_status_publisher.publish(msg)
         self.get_logger().info(f"Published drone status: {new_status}")
