@@ -27,7 +27,7 @@ class StatusPublisher(Node):
 
         self.qgc_command_subscriber = self.create_subscription(
             DroneTypeChange,
-            '/qgc/command', # Topic for QGC commands
+            'drone_2/type_change', # Topic for QGC commands
             self.qgc_command_callback,
             10
         )
