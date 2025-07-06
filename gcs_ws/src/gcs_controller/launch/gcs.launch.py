@@ -63,4 +63,13 @@ def generate_launch_description():
                 {'geotag_file_path': geotag_file_path},
                 ]
         ),
+        Node(
+            package='gcs_controller',
+            executable='dynamic_role_swap_node',
+            name='dynamic_role_swap_node',
+            output='screen',
+            parameters=[
+                {'json_file_path': waypoint_file_path},
+            ]
+        ),
     ])

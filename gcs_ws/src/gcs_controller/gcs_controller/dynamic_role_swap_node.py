@@ -8,7 +8,8 @@ class DynamicRoleSwap(Node):
     def __init__(self):
         super().__init__('dynamic_role_swap_node')
 
-        self.json_file_path = '/path/to/waypoints.json'  # TODO: Update path
+        self.declare_parameter('waypoint_file_path', '')  # fallback path
+        self.json_file_path = self.get_parameter('waypoint_file_path').get_parameter_value().string_value
         self.subscribed = False
         self.swap_done = False
 
