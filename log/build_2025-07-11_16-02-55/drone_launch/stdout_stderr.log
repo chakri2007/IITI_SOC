@@ -1,0 +1,33 @@
+running egg_info
+creating ../../../build/drone_launch/drone_launch.egg-info
+writing ../../../build/drone_launch/drone_launch.egg-info/PKG-INFO
+writing dependency_links to ../../../build/drone_launch/drone_launch.egg-info/dependency_links.txt
+writing entry points to ../../../build/drone_launch/drone_launch.egg-info/entry_points.txt
+writing requirements to ../../../build/drone_launch/drone_launch.egg-info/requires.txt
+writing top-level names to ../../../build/drone_launch/drone_launch.egg-info/top_level.txt
+writing manifest file '../../../build/drone_launch/drone_launch.egg-info/SOURCES.txt'
+reading manifest file '../../../build/drone_launch/drone_launch.egg-info/SOURCES.txt'
+writing manifest file '../../../build/drone_launch/drone_launch.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/bhav/IITISoC-25-IVR09/build/drone_launch/build
+creating /home/bhav/IITISoC-25-IVR09/build/drone_launch/build/lib
+creating /home/bhav/IITISoC-25-IVR09/build/drone_launch/build/lib/drone_launch
+copying drone_launch/__init__.py -> /home/bhav/IITISoC-25-IVR09/build/drone_launch/build/lib/drone_launch
+running install
+running install_lib
+creating /home/bhav/IITISoC-25-IVR09/install/drone_launch/lib/python3.10/site-packages/drone_launch
+copying /home/bhav/IITISoC-25-IVR09/build/drone_launch/build/lib/drone_launch/__init__.py -> /home/bhav/IITISoC-25-IVR09/install/drone_launch/lib/python3.10/site-packages/drone_launch
+byte-compiling /home/bhav/IITISoC-25-IVR09/install/drone_launch/lib/python3.10/site-packages/drone_launch/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/bhav/IITISoC-25-IVR09/install/drone_launch/share/ament_index
+creating /home/bhav/IITISoC-25-IVR09/install/drone_launch/share/ament_index/resource_index
+creating /home/bhav/IITISoC-25-IVR09/install/drone_launch/share/ament_index/resource_index/packages
+copying resource/drone_launch -> /home/bhav/IITISoC-25-IVR09/install/drone_launch/share/ament_index/resource_index/packages
+copying package.xml -> /home/bhav/IITISoC-25-IVR09/install/drone_launch/share/drone_launch
+creating /home/bhav/IITISoC-25-IVR09/install/drone_launch/share/drone_launch/launch
+copying launch/drone.launch.py -> /home/bhav/IITISoC-25-IVR09/install/drone_launch/share/drone_launch/launch
+running install_egg_info
+Copying ../../../build/drone_launch/drone_launch.egg-info to /home/bhav/IITISoC-25-IVR09/install/drone_launch/lib/python3.10/site-packages/drone_launch-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/bhav/IITISoC-25-IVR09/build/drone_launch/install.log'

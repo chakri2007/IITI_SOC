@@ -1,0 +1,54 @@
+running egg_info
+creating ../../../build/drone_2_manager/drone_2_manager.egg-info
+writing ../../../build/drone_2_manager/drone_2_manager.egg-info/PKG-INFO
+writing dependency_links to ../../../build/drone_2_manager/drone_2_manager.egg-info/dependency_links.txt
+writing entry points to ../../../build/drone_2_manager/drone_2_manager.egg-info/entry_points.txt
+writing requirements to ../../../build/drone_2_manager/drone_2_manager.egg-info/requires.txt
+writing top-level names to ../../../build/drone_2_manager/drone_2_manager.egg-info/top_level.txt
+writing manifest file '../../../build/drone_2_manager/drone_2_manager.egg-info/SOURCES.txt'
+reading manifest file '../../../build/drone_2_manager/drone_2_manager.egg-info/SOURCES.txt'
+writing manifest file '../../../build/drone_2_manager/drone_2_manager.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/bhav/IITISoC-25-IVR09/build/drone_2_manager/build
+creating /home/bhav/IITISoC-25-IVR09/build/drone_2_manager/build/lib
+creating /home/bhav/IITISoC-25-IVR09/build/drone_2_manager/build/lib/drone_2_manager
+copying drone_2_manager/recharge_node.py -> /home/bhav/IITISoC-25-IVR09/build/drone_2_manager/build/lib/drone_2_manager
+copying drone_2_manager/mission_handler_node.py -> /home/bhav/IITISoC-25-IVR09/build/drone_2_manager/build/lib/drone_2_manager
+copying drone_2_manager/water_level.py -> /home/bhav/IITISoC-25-IVR09/build/drone_2_manager/build/lib/drone_2_manager
+copying drone_2_manager/status_publisher_node.py -> /home/bhav/IITISoC-25-IVR09/build/drone_2_manager/build/lib/drone_2_manager
+copying drone_2_manager/offboard_controller_node.py -> /home/bhav/IITISoC-25-IVR09/build/drone_2_manager/build/lib/drone_2_manager
+copying drone_2_manager/geotagging_node.py -> /home/bhav/IITISoC-25-IVR09/build/drone_2_manager/build/lib/drone_2_manager
+copying drone_2_manager/__init__.py -> /home/bhav/IITISoC-25-IVR09/build/drone_2_manager/build/lib/drone_2_manager
+running install
+running install_lib
+creating /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager
+copying /home/bhav/IITISoC-25-IVR09/build/drone_2_manager/build/lib/drone_2_manager/recharge_node.py -> /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager
+copying /home/bhav/IITISoC-25-IVR09/build/drone_2_manager/build/lib/drone_2_manager/mission_handler_node.py -> /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager
+copying /home/bhav/IITISoC-25-IVR09/build/drone_2_manager/build/lib/drone_2_manager/water_level.py -> /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager
+copying /home/bhav/IITISoC-25-IVR09/build/drone_2_manager/build/lib/drone_2_manager/status_publisher_node.py -> /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager
+copying /home/bhav/IITISoC-25-IVR09/build/drone_2_manager/build/lib/drone_2_manager/offboard_controller_node.py -> /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager
+copying /home/bhav/IITISoC-25-IVR09/build/drone_2_manager/build/lib/drone_2_manager/geotagging_node.py -> /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager
+copying /home/bhav/IITISoC-25-IVR09/build/drone_2_manager/build/lib/drone_2_manager/__init__.py -> /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager
+byte-compiling /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager/recharge_node.py to recharge_node.cpython-310.pyc
+byte-compiling /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager/mission_handler_node.py to mission_handler_node.cpython-310.pyc
+byte-compiling /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager/water_level.py to water_level.cpython-310.pyc
+byte-compiling /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager/status_publisher_node.py to status_publisher_node.cpython-310.pyc
+byte-compiling /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager/offboard_controller_node.py to offboard_controller_node.cpython-310.pyc
+byte-compiling /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager/geotagging_node.py to geotagging_node.cpython-310.pyc
+byte-compiling /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/share/ament_index
+creating /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/share/ament_index/resource_index
+creating /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/share/ament_index/resource_index/packages
+copying resource/drone_2_manager -> /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/share/ament_index/resource_index/packages
+copying package.xml -> /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/share/drone_2_manager
+running install_egg_info
+Copying ../../../build/drone_2_manager/drone_2_manager.egg-info to /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager-0.0.0-py3.10.egg-info
+running install_scripts
+Installing geotagging_node script to /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/lib/drone_2_manager
+Installing mission_handler_node script to /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/lib/drone_2_manager
+Installing offboard_controller_node script to /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/lib/drone_2_manager
+Installing recharge_node script to /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/lib/drone_2_manager
+Installing status_publisher_node script to /home/bhav/IITISoC-25-IVR09/install/drone_2_manager/lib/drone_2_manager
+writing list of installed files to '/home/bhav/IITISoC-25-IVR09/build/drone_2_manager/install.log'

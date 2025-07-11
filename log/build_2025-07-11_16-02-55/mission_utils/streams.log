@@ -1,0 +1,49 @@
+[0.598s] Invoking command in '/home/bhav/IITISoC-25-IVR09/gcs_ws/src/mission_utils': PYTHONPATH=/home/bhav/IITISoC-25-IVR09/build/mission_utils/prefix_override:/home/bhav/.local/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhav/IITISoC-25-IVR09/install/mission_utils/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/mission_utils build --build-base /home/bhav/IITISoC-25-IVR09/build/mission_utils/build install --record /home/bhav/IITISoC-25-IVR09/build/mission_utils/install.log --single-version-externally-managed install_data
+[0.749s] running egg_info
+[0.750s] creating ../../../build/mission_utils/mission_utils.egg-info
+[0.750s] writing ../../../build/mission_utils/mission_utils.egg-info/PKG-INFO
+[0.750s] writing dependency_links to ../../../build/mission_utils/mission_utils.egg-info/dependency_links.txt
+[0.751s] writing entry points to ../../../build/mission_utils/mission_utils.egg-info/entry_points.txt
+[0.751s] writing requirements to ../../../build/mission_utils/mission_utils.egg-info/requires.txt
+[0.751s] writing top-level names to ../../../build/mission_utils/mission_utils.egg-info/top_level.txt
+[0.751s] writing manifest file '../../../build/mission_utils/mission_utils.egg-info/SOURCES.txt'
+[0.751s] reading manifest file '../../../build/mission_utils/mission_utils.egg-info/SOURCES.txt'
+[0.751s] writing manifest file '../../../build/mission_utils/mission_utils.egg-info/SOURCES.txt'
+[0.751s] running build
+[0.751s] running build_py
+[0.751s] creating /home/bhav/IITISoC-25-IVR09/build/mission_utils/build
+[0.752s] creating /home/bhav/IITISoC-25-IVR09/build/mission_utils/build/lib
+[0.752s] creating /home/bhav/IITISoC-25-IVR09/build/mission_utils/build/lib/mission_utils
+[0.752s] copying mission_utils/geotags_dataset.py -> /home/bhav/IITISoC-25-IVR09/build/mission_utils/build/lib/mission_utils
+[0.752s] copying mission_utils/geotags_visited_updater.py -> /home/bhav/IITISoC-25-IVR09/build/mission_utils/build/lib/mission_utils
+[0.752s] copying mission_utils/waypoints_dataset.py -> /home/bhav/IITISoC-25-IVR09/build/mission_utils/build/lib/mission_utils
+[0.752s] copying mission_utils/surveillance_monitor_node.py -> /home/bhav/IITISoC-25-IVR09/build/mission_utils/build/lib/mission_utils
+[0.752s] copying mission_utils/__init__.py -> /home/bhav/IITISoC-25-IVR09/build/mission_utils/build/lib/mission_utils
+[0.752s] running install
+[0.752s] running install_lib
+[0.752s] creating /home/bhav/IITISoC-25-IVR09/install/mission_utils/lib/python3.10/site-packages/mission_utils
+[0.752s] copying /home/bhav/IITISoC-25-IVR09/build/mission_utils/build/lib/mission_utils/geotags_dataset.py -> /home/bhav/IITISoC-25-IVR09/install/mission_utils/lib/python3.10/site-packages/mission_utils
+[0.753s] copying /home/bhav/IITISoC-25-IVR09/build/mission_utils/build/lib/mission_utils/geotags_visited_updater.py -> /home/bhav/IITISoC-25-IVR09/install/mission_utils/lib/python3.10/site-packages/mission_utils
+[0.753s] copying /home/bhav/IITISoC-25-IVR09/build/mission_utils/build/lib/mission_utils/waypoints_dataset.py -> /home/bhav/IITISoC-25-IVR09/install/mission_utils/lib/python3.10/site-packages/mission_utils
+[0.753s] copying /home/bhav/IITISoC-25-IVR09/build/mission_utils/build/lib/mission_utils/surveillance_monitor_node.py -> /home/bhav/IITISoC-25-IVR09/install/mission_utils/lib/python3.10/site-packages/mission_utils
+[0.753s] copying /home/bhav/IITISoC-25-IVR09/build/mission_utils/build/lib/mission_utils/__init__.py -> /home/bhav/IITISoC-25-IVR09/install/mission_utils/lib/python3.10/site-packages/mission_utils
+[0.753s] byte-compiling /home/bhav/IITISoC-25-IVR09/install/mission_utils/lib/python3.10/site-packages/mission_utils/geotags_dataset.py to geotags_dataset.cpython-310.pyc
+[0.753s] byte-compiling /home/bhav/IITISoC-25-IVR09/install/mission_utils/lib/python3.10/site-packages/mission_utils/geotags_visited_updater.py to geotags_visited_updater.cpython-310.pyc
+[0.754s] byte-compiling /home/bhav/IITISoC-25-IVR09/install/mission_utils/lib/python3.10/site-packages/mission_utils/waypoints_dataset.py to waypoints_dataset.cpython-310.pyc
+[0.754s] byte-compiling /home/bhav/IITISoC-25-IVR09/install/mission_utils/lib/python3.10/site-packages/mission_utils/surveillance_monitor_node.py to surveillance_monitor_node.cpython-310.pyc
+[0.754s] byte-compiling /home/bhav/IITISoC-25-IVR09/install/mission_utils/lib/python3.10/site-packages/mission_utils/__init__.py to __init__.cpython-310.pyc
+[0.755s] running install_data
+[0.755s] creating /home/bhav/IITISoC-25-IVR09/install/mission_utils/share/ament_index
+[0.755s] creating /home/bhav/IITISoC-25-IVR09/install/mission_utils/share/ament_index/resource_index
+[0.755s] creating /home/bhav/IITISoC-25-IVR09/install/mission_utils/share/ament_index/resource_index/packages
+[0.755s] copying resource/mission_utils -> /home/bhav/IITISoC-25-IVR09/install/mission_utils/share/ament_index/resource_index/packages
+[0.755s] copying package.xml -> /home/bhav/IITISoC-25-IVR09/install/mission_utils/share/mission_utils
+[0.755s] running install_egg_info
+[0.756s] Copying ../../../build/mission_utils/mission_utils.egg-info to /home/bhav/IITISoC-25-IVR09/install/mission_utils/lib/python3.10/site-packages/mission_utils-0.0.0-py3.10.egg-info
+[0.756s] running install_scripts
+[0.770s] Installing geotags_dataset script to /home/bhav/IITISoC-25-IVR09/install/mission_utils/lib/mission_utils
+[0.771s] Installing geotags_visited_updater script to /home/bhav/IITISoC-25-IVR09/install/mission_utils/lib/mission_utils
+[0.771s] Installing surveillance_monitor_node script to /home/bhav/IITISoC-25-IVR09/install/mission_utils/lib/mission_utils
+[0.771s] Installing waypoints_dataset script to /home/bhav/IITISoC-25-IVR09/install/mission_utils/lib/mission_utils
+[0.771s] writing list of installed files to '/home/bhav/IITISoC-25-IVR09/build/mission_utils/install.log'
+[0.800s] Invoked command in '/home/bhav/IITISoC-25-IVR09/gcs_ws/src/mission_utils' returned '0': PYTHONPATH=/home/bhav/IITISoC-25-IVR09/build/mission_utils/prefix_override:/home/bhav/.local/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhav/IITISoC-25-IVR09/install/mission_utils/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/mission_utils build --build-base /home/bhav/IITISoC-25-IVR09/build/mission_utils/build install --record /home/bhav/IITISoC-25-IVR09/build/mission_utils/install.log --single-version-externally-managed install_data

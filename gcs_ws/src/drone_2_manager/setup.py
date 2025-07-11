@@ -25,6 +25,7 @@ setup(
             'offboard_controller_node = drone_2_manager.offboard_controller_node:main',
             'geotagging_node = drone_2_manager.geotagging_node:main',
             'recharge_node = drone_2_manager.recharge_node:main',
+            'water_level = drone_2_manager.water_level:main',
         ],
     },
 )
