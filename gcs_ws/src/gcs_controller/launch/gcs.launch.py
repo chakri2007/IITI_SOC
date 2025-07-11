@@ -42,8 +42,8 @@ def generate_launch_description():
             name='waypoints_dataset',
             output='screen',
             parameters=[{
-                'waypoint_file_path': waypoint_file_path
-            }]
+                'waypoint_file_path': waypoint_file_path},
+                ]
         ),
         Node(
             package='mission_utils',
@@ -68,8 +68,14 @@ def generate_launch_description():
             executable='dynamic_role_swap_node',
             name='dynamic_role_swap_node',
             output='screen',
+        ),
+         Node(
+            package='mission_utils',
+            executable='surveillance_monitor_node',
+            name='surveillance_monitor_node',
+            output='screen',
             parameters=[
-                {'json_file_path': waypoint_file_path},
-            ]
+                {'waypoint_file_path': waypoint_file_path},
+                ]
         ),
     ])

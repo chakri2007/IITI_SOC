@@ -1,17 +1,15 @@
 import rclpy
 from rclpy.node import Node
-import json
 from std_msgs.msg import String
-from drone_interfaces.msg import DroneTypeChange  # replace with your actual package name
+from drone_interfaces.msg import DroneTypeChange  
+from drone_interfaces.msg import SurveillanceStatus
 
 class DynamicRoleSwap(Node):
     def __init__(self):
         super().__init__('dynamic_role_swap_node')
 
-        self.declare_parameter('waypoint_file_path', '')  # fallback path
-        self.json_file_path = self.get_parameter('waypoint_file_path').get_parameter_value().string_value
-        self.subscribed = False
         self.swap_done = False
+        self.subscribed = False
 
         self.drone_status = {
             "drone_1": None,
@@ -23,29 +21,21 @@ class DynamicRoleSwap(Node):
             "drone_2": self.create_publisher(DroneTypeChange, 'drone_2/type_change', 10)
         }
 
-        # Timer to check JSON file every 2s
-        self.timer = self.create_timer(2.0, self.check_waypoints)
+        # Subscribe to surveillance monitor node's status
+        self.create_subscription(
+            SurveillanceStatus,
+            'surveillance_status',
+            self.surveillance_status_callback,
+            10
+        )
 
-    def check_waypoints(self):
+    def surveillance_status_callback(self, msg: SurveillanceStatus):
         if self.swap_done or self.subscribed:
             return
 
-        waypoints = self.load_waypoints()
-        if not waypoints:
-            return
-
-        all_visited = all(wp.get('visited', False) for wp in waypoints)
-        if all_visited:
-            self.get_logger().info("All waypoints visited. Subscribing to drone status...")
+        if msg.surveillance_completed:
+            self.get_logger().info("Surveillance complete. Subscribing to drone status...")
             self.subscribe_to_status()
-
-    def load_waypoints(self):
-        try:
-            with open(self.json_file_path, 'r') as f:
-                return json.load(f)
-        except Exception as e:
-            self.get_logger().error(f"Failed to load JSON: {e}")
-            return []
 
     def subscribe_to_status(self):
         self.sub_1 = self.create_subscription(String, 'drone_1/status', self.status_callback_1, 10)
@@ -66,7 +56,7 @@ class DynamicRoleSwap(Node):
 
         for drone_id, status in self.drone_status.items():
             if status == "surveillance":
-                self.send_type_update(drone_id, "irrigation")  # or other role
+                self.send_type_update(drone_id, "irrigation")
                 self.swap_done = True
                 self.get_logger().info(f"Swapped role for {drone_id} to 'irrigation'")
                 break
