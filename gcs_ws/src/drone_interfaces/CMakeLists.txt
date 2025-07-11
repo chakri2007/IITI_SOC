@@ -36,6 +36,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/GeotagArray.msg"
   "msg/GeotagRequest.msg"
   "msg/GeotagVisited.msg"
+  "msg/SurveillanceStatus.msg"
 
   "srv/GetSeverityScore.srv"
 )
