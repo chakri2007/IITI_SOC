@@ -45,7 +45,7 @@ class StatusPublisher(Node):
 
     def qgc_command_callback(self, msg):
         old_drone_type = self.drone_type
-        self.drone_type = msg.new_drone_type.upper() # Store type in uppercase for consistency
+        self.drone_type = msg.new_drone_type
         self.get_logger().info(f'QGC changed drone_type from "{old_drone_type}" to "{self.drone_type}".')
 
     def mission_status_callback(self, msg):

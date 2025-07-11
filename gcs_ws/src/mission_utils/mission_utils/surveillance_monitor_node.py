@@ -12,7 +12,7 @@ class SurveillanceMonitorNode(Node):
 
         # Declare parameter for JSON file path
         self.declare_parameter('waypoint_file_path', '')
-        self.json_file_path = self.get_parameter('json_file_path').get_parameter_value().string_value
+        self.json_file_path = self.get_parameter('waypoint_file_path').get_parameter_value().string_value
 
     def timer_callback(self):
         try:

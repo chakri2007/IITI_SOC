@@ -1,121 +1,128 @@
+#!/usr/bin/env python3
+
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import String, Float32
-from drone_interfaces.msg import DroneTypeChange, SurveillanceStatus
 
+from std_msgs.msg import Float32
+from your_msgs.msg import DroneStatus, DroneTypeChange, SurveillanceStatus, DroneStatusUpdate
 
-class DynamicRoleSwap(Node):
+class DynamicRoleSwapNode(Node):
     def __init__(self):
         super().__init__('dynamic_role_swap_node')
 
-        self.swap_done = False  # set True after one swap is triggered
+        self.drone_ids = ['drone_1', 'drone_2']
+        self.drone_statuses = {}
+        self.surveillance_completed = False
 
-        # Drone tracking dictionaries
-        self.drone_status = {
-            "drone_1": None,
-            "drone_2": None
-        }
-        self.drone_type = {
-            "drone_1": "irrigation",     # assumed initial type
-            "drone_2": "surveillance"
-        }
-        self.water_levels = {
-            "drone_1": None,
-            "drone_2": None
+        # Publishers for type change
+        self.role_change_publishers = {
+            drone_id: self.create_publisher(
+                DroneTypeChange,
+                f'/{drone_id}/type_change',
+                10
+            )
+            for drone_id in self.drone_ids
         }
 
-        # Publishers for type and status updates
-        self.type_update_pubs = {
-            "drone_1": self.create_publisher(DroneTypeChange, 'drone_1/type_change', 10),
-            "drone_2": self.create_publisher(DroneTypeChange, 'drone_2/type_change', 10)
+        # Publishers for status update
+        self.status_update_publishers = {
+            drone_id: self.create_publisher(
+                DroneStatusUpdate,
+                f'/{drone_id}/update_status',
+                10
+            )
+            for drone_id in self.drone_ids
         }
-        self.status_update_pubs = {
-            "drone_1": self.create_publisher(String, 'drone_1/status', 10),
-            "drone_2": self.create_publisher(String, 'drone_2/status', 10)
-        }
 
-        # === Subscriptions ===
+        # Subscriptions
+        for drone_id in self.drone_ids:
+            self.create_subscription(
+                DroneStatus,
+                f'/{drone_id}/status',
+                self.make_drone_status_callback(drone_id),
+                10
+            )
+            self.create_subscription(
+                Float32,
+                f'/{drone_id}/water_level',
+                self.make_water_level_callback(drone_id),
+                10
+            )
 
-        # Subscribe immediately to all topics
-        self.create_subscription(String, 'drone_1/status', self.status_callback_1, 10)
-        self.create_subscription(String, 'drone_2/status', self.status_callback_2, 10)
-        self.create_subscription(Float32, '/drone_1/water_level', self.water_level_callback_1, 10)
-        self.create_subscription(Float32, '/drone_2/water_level', self.water_level_callback_2, 10)
-        self.create_subscription(SurveillanceStatus, 'surveillance_status', self.surveillance_status_callback, 10)
-
-    def surveillance_status_callback(self, msg: SurveillanceStatus):
-        if msg.surveillance_completed:
-            self.get_logger().info("Surveillance task reported as completed.")
-
-    def status_callback_1(self, msg):
-        self.drone_status["drone_1"] = msg.data
-        self.get_logger().info(f"[drone_1] status: {msg.data}")
-        self.check_and_swap("drone_1")
-
-    def status_callback_2(self, msg):
-        self.drone_status["drone_2"] = msg.data
-        self.get_logger().info(f"[drone_2] status: {msg.data}")
-        self.check_and_swap("drone_2")
-
-    def water_level_callback_1(self, msg):
-        self.water_levels["drone_1"] = msg.data
-        self.get_logger().info(f"[drone_1] water level: {msg.data}")
-        self.check_and_swap("drone_1")
-
-    def water_level_callback_2(self, msg):
-        self.water_levels["drone_2"] = msg.data
-        self.get_logger().info(f"[drone_2] water level: {msg.data}")
-        self.check_and_swap("drone_2")
-
-    def check_and_swap(self, drone_id):
-        if self.swap_done:
-            return
-
-        current_type = self.drone_type.get(drone_id)
-        current_status = self.drone_status.get(drone_id)
-        current_water = self.water_levels.get(drone_id)
-
-        self.get_logger().info(
-            f"[CHECK] {drone_id} → Type: {current_type}, Status: {current_status}, Water: {current_water}"
+        self.create_subscription(
+            SurveillanceStatus,
+            '/surveillance_status',
+            self.surveillance_status_callback,
+            10
         )
 
-        # === Logic 1: Irrigation drone with 0 water → switch to surveillance + idle ===
-        if (
-            current_type == "irrigation" and
-            current_status and current_status.strip().lower() == "executing" and
-            current_water is not None and abs(current_water) < 1e-2
-        ):
-            self.send_type_update(drone_id, "surveillance")
-            self.send_status_update(drone_id, "idle")
-            self.drone_type[drone_id] = "surveillance"
-            self.swap_done = True
-            self.get_logger().info(f"{drone_id}: Water exhausted → changed to surveillance and idle.")
-            return
+        self.get_logger().info("Dynamic Role Swap Node initialized.")
 
-        # === Logic 2: Surveillance completed → switch drone to irrigation if status is surveillance ===
-        if current_status and current_status.strip().lower() == "surveillance":
-            self.send_type_update(drone_id, "irrigation")
-            self.drone_type[drone_id] = "irrigation"
-            self.swap_done = True
-            self.get_logger().info(f"{drone_id}: Surveillance complete → changed to irrigation.")
-            return
+    def make_drone_status_callback(self, drone_id):
+        def callback(msg):
+            self.drone_statuses[drone_id] = msg
+            self.get_logger().debug(f"Updated status for {drone_id}: {msg}")
+        return callback
 
-    def send_type_update(self, drone_id, new_type):
+    def make_water_level_callback(self, drone_id):
+        def callback(msg):
+            water_level = msg.data
+            self.get_logger().debug(f"{drone_id} water level: {water_level:.2f}")
+
+            if water_level < 0.01:
+                if not self.surveillance_completed:
+                    status = self.drone_statuses.get(drone_id)
+                    if status and status.type.lower() == "irrigation":
+                        self.get_logger().info(
+                            f"{drone_id} has empty tank and surveillance incomplete → switching to surveillance"
+                        )
+                        self.swap_drone_role(drone_id, "surveillance")
+        return callback
+
+    def surveillance_status_callback(self, msg):
+        self.get_logger().info(
+            f"Surveillance status: completed={msg.surveillance_completed}, remaining={msg.waypoints_remaining}"
+        )
+        self.surveillance_completed = msg.surveillance_completed
+
+        if msg.surveillance_completed:
+            for drone_id in self.drone_ids:
+                status = self.drone_statuses.get(drone_id)
+                if status:
+                    if status.type.lower() == "surveillance":
+                        self.get_logger().info(
+                            f"{drone_id} completed surveillance → switching to irrigation"
+                        )
+                        self.swap_drone_role(drone_id, "irrigation")
+                else:
+                    self.get_logger().warn(f"No status yet for {drone_id}, cannot evaluate type.")
+
+    def swap_drone_role(self, drone_id, new_type):
+        self.publish_type_change(drone_id, new_type)
+        self.publish_status_update(drone_id, "idle")
+
+    def publish_type_change(self, drone_id, new_type):
         msg = DroneTypeChange()
         msg.new_drone_type = new_type
-        self.type_update_pubs[drone_id].publish(msg)
-        self.get_logger().info(f"Published type update to {drone_id}: {new_type}")
+        self.role_change_publishers[drone_id].publish(msg)
+        self.get_logger().info(f"Sent role change to {drone_id}: {new_type}")
 
-    def send_status_update(self, drone_id, new_status):
-        msg = String()
-        msg.data = new_status
-        self.status_update_pubs[drone_id].publish(msg)
-        self.get_logger().info(f"Published status update to {drone_id}: {new_status}")
-
+    def publish_status_update(self, drone_id, status):
+        msg = DroneStatusUpdate()
+        msg.drone_id = drone_id
+        msg.status = status
+        self.status_update_publishers[drone_id].publish(msg)
+        self.get_logger().info(f"Sent status update to {drone_id}: {status}")
 
 def main(args=None):
     rclpy.init(args=args)
-    node = DynamicRoleSwap()
-    rclpy.spin(node)
+    node = DynamicRoleSwapNode()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
     node.destroy_node()
     rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
