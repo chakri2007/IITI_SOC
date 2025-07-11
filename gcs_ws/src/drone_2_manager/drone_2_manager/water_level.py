@@ -10,7 +10,7 @@ class WaterLevelNode(Node):
 
         self.declare_parameter('drone_id', 'drone_2')
         self.drone_id = self.get_parameter('drone_id').get_parameter_value().string_value
-        self.full_capacity = 10.0
+        self.full_capacity = 100.0
         self.water_level = self.full_capacity
         self.drone_type = 'unknown'
         self.last_status = 'idle'
