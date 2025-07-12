@@ -4,7 +4,7 @@ import rclpy
 from rclpy.node import Node
 
 from std_msgs.msg import Float32
-from your_msgs.msg import DroneStatus, DroneTypeChange, SurveillanceStatus, DroneStatusUpdate
+from drone_interfaces.msg import DroneStatus, DroneTypeChange, SurveillanceStatus, DroneStatusUpdate
 
 class DynamicRoleSwapNode(Node):
     def __init__(self):

@@ -6,6 +6,7 @@ from px4_msgs.msg import VehicleOdometry, BatteryStatus
 from drone_interfaces.msg import DroneStatusUpdate
 from geometry_msgs.msg import PoseStamped
 import os
+from std_msgs.msg import Float32
 from drone_interfaces.msg import DroneStatus
 from drone_interfaces.msg import SurveillanceStatus
 
@@ -31,6 +32,9 @@ class DroneNode(Node):
         self.charging_duration = 5
         self.charging_start_time = None
         self.recharge_history = []
+        self.water_level = 100.0
+        self.low_water_threshold = 0.01
+        self.recharging_due_to_water = False
 
         self.fixed_drain_rate = 1.0 / 220.0
         self.has_water_tank = False  # default
@@ -64,6 +68,7 @@ class DroneNode(Node):
 
         self.create_subscription(VehicleOdometry, '/px4_2/fmu/out/vehicle_odometry', self.odometry_callback, qos_profile)
         self.create_subscription(BatteryStatus, '/px4_2/fmu/out/battery_status', self.battery_callback, qos_profile)
+        self.create_subscription(Float32, f'/{self.drone_id}/water_level', self.water_callback, 10)
 
         self.timer = self.create_timer(1.0, self.update_logic)
 
@@ -79,6 +84,9 @@ class DroneNode(Node):
 
     def battery_callback(self, msg):
         self.battery = msg.remaining
+        
+    def water_callback(self, msg: Float32):
+        self.water_level = msg.data
 
     def surveillance_callback(self, msg):
         self.surveillance_completed = msg.surveillance_completed
