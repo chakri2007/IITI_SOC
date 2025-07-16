@@ -120,8 +120,7 @@ class DroneNode(Node):
 
             water_empty = (
                 self.has_water_tank and 
-                self.water_level <= self.low_water_threshold and 
-                self.surveillance_completed
+                self.water_level <= self.low_water_threshold
             )
 
             if battery_low or water_empty:
