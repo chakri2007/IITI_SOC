@@ -11,7 +11,6 @@ from drone_interfaces.msg import DroneStatus
 from drone_interfaces.msg import SurveillanceStatus
 
 
-
 class DroneNode(Node):
     def __init__(self):
         super().__init__('drone_node')
@@ -21,10 +20,10 @@ class DroneNode(Node):
 
         self.speed = 6
         self.battery = 1.0
-        self.position = (0.0, 0.0)
-        self.base_position = (0.0, 0.0, 0.0)  # Set base position to origin
+        self.position = (0.0, 0.0, 0.0)  # ✅ 3D
+        self.base_position = (0.0, 0.0, 0.0)  # ✅ 3D origin
         self.get_logger().info(f"[{self.drone_id}] Base position set to: {self.base_position}")
-        
+
         self.last_working_position = None
         self.reach_threshold = 5
         self.status = 'idle'
@@ -34,19 +33,19 @@ class DroneNode(Node):
         self.recharge_history = []
         self.water_level = 100.0
         self.low_water_threshold = 0.0
-        self.recharging_due_to_water = False  # track if return was due to water
-
+        self.recharging_due_to_water = False
 
         self.fixed_drain_rate = 1.0 / 90.0
-        self.has_water_tank = False  # default
+        self.has_water_tank = False
+
         self.drone_type_sub = self.create_subscription(
             DroneStatus,
-            f'/{self.drone_id}/status',  # assuming drone_id like 'drone_1'
+            f'/{self.drone_id}/status',
             self.drone_type_callback,
             10
         )
 
-        self.surveillance_completed = False  # default
+        self.surveillance_completed = False
 
         self.create_subscription(
             SurveillanceStatus,
@@ -55,10 +54,17 @@ class DroneNode(Node):
             10
         )
 
+        self.status_publisher = self.create_publisher(
+            DroneStatusUpdate,
+            f'/{self.drone_id}/update_status',
+            10
+        )
 
-
-        self.status_publisher = self.create_publisher(DroneStatusUpdate, f'/{self.drone_id}/update_status', 10)
-        self.setpoint_pub = self.create_publisher(PoseStamped, f'/{self.drone_id}/offboard_setpoint_pose', 10)
+        self.setpoint_pub = self.create_publisher(
+            PoseStamped,
+            f'/{self.drone_id}/offboard_setpoint_pose',
+            10
+        )
 
         qos_profile = QoSProfile(
             reliability=ReliabilityPolicy.BEST_EFFORT,
@@ -67,9 +73,27 @@ class DroneNode(Node):
             depth=1
         )
 
-        self.create_subscription(VehicleOdometry, '/px4_1/fmu/out/vehicle_odometry', self.odometry_callback, qos_profile)
-        self.create_subscription(BatteryStatus, '/px4_1/fmu/out/battery_status', self.battery_callback, qos_profile)
-        self.create_subscription(Float32, f'/{self.drone_id}/water_level', self.water_callback, 10)
+        self.create_subscription(
+            VehicleOdometry,
+            '/px4_1/fmu/out/vehicle_odometry',
+            self.odometry_callback,
+            qos_profile
+        )
+
+        self.create_subscription(
+            BatteryStatus,
+            '/px4_1/fmu/out/battery_status',
+            self.battery_callback,
+            qos_profile
+        )
+
+        self.create_subscription(
+            Float32,
+            f'/{self.drone_id}/water_level',
+            self.water_callback,
+            10
+        )
+
         self.timer = self.create_timer(1.0, self.update_logic)
 
     def write_simulated_battery_percentage(self, percentage):
@@ -80,18 +104,22 @@ class DroneNode(Node):
             self.get_logger().error(f"Failed to write battery % to file: {e}")
 
     def odometry_callback(self, msg):
-        self.position = (float(msg.position[0]), float(msg.position[1]))
+        # ✅ Store full 3D position
+        self.position = (
+            float(msg.position[0]),
+            float(msg.position[1]),
+            float(msg.position[2])
+        )
 
     def battery_callback(self, msg):
         self.battery = msg.remaining
-    
+
     def water_callback(self, msg: Float32):
         self.water_level = msg.data
-    
+
     def surveillance_callback(self, msg):
         self.surveillance_completed = msg.surveillance_completed
         self.get_logger().info(f"[{self.drone_id}] Surveillance status → completed: {msg.surveillance_completed}")
-
 
     def drone_type_callback(self, msg):
         if msg.drone_id == self.drone_id:
@@ -101,11 +129,8 @@ class DroneNode(Node):
                 self.has_water_tank = False
             self.get_logger().info(f"Drone type received: {msg.type}, has_water_tank set to {self.has_water_tank}")
 
-            # ✅ Set current status based on external update
             self.status = msg.status.lower().strip()
             self.get_logger().info(f"[{self.drone_id}] Received status update: {self.status}")
-
-
 
     def update_logic(self):
         self.time += 1
@@ -119,7 +144,7 @@ class DroneNode(Node):
             )
 
             water_empty = (
-                self.has_water_tank and 
+                self.has_water_tank and
                 self.water_level <= self.low_water_threshold
             )
 
@@ -129,16 +154,17 @@ class DroneNode(Node):
                 self.recharging_due_to_water = water_empty
                 self.send_status('RTL')
 
-        elif self.status == 'RTL':
+        elif self.status == 'rtl':
             self.publish_position_target(self.base_position)
-            if self.distance_to(self.base_position) <= self.reach_threshold:
+            dist = self.distance_to(self.base_position)
+            if dist <= self.reach_threshold:
                 self.status = 'charging'
                 self.send_status('charging')
 
         elif self.status == 'charging':
             if self.charging_start_time is None:
                 self.get_logger().info(f"[{self.drone_id}] Charging started.")
-                self.charging_start_time = self.time  # ✅ Safe initialization
+                self.charging_start_time = self.time
 
             elapsed = self.time - self.charging_start_time
             charge_progress = min(1.0, elapsed / self.charging_duration)
@@ -157,10 +183,8 @@ class DroneNode(Node):
                 self.status = 'charged'
                 self.send_status('charged')
 
-
-
     def publish_position_target(self, target):
-        if not target or not isinstance(target[0], (float, int)) or not isinstance(target[1], (float, int)):
+        if not target or len(target) < 3:
             self.get_logger().warn(f"[{self.drone_id}] Invalid position target: {target}")
             return
 
@@ -169,11 +193,19 @@ class DroneNode(Node):
         pose.header.frame_id = "map"
         pose.pose.position.x = float(target[0])
         pose.pose.position.y = float(target[1])
-        pose.pose.position.z = 0.0
+        pose.pose.position.z = float(target[2])
         self.setpoint_pub.publish(pose)
 
     def distance_to(self, target):
-        return math.hypot(self.position[0] - target[0], self.position[1] - target[1])
+        # ✅ 3D Euclidean distance
+        if not target or len(target) < 3:
+            self.get_logger().warn(f"[{self.drone_id}] Invalid target for distance: {target}")
+            return float('inf')
+
+        x1, y1, z1 = self.position
+        x2, y2, z2 = target
+
+        return math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2 + (z1 - z2) ** 2)
 
     def send_status(self, status):
         msg = DroneStatusUpdate()
@@ -184,7 +216,6 @@ class DroneNode(Node):
 
     def publish_full_battery(self):
         self.get_logger().info(f"[{self.drone_id}] Battery fully charged.")
-        # Additional full battery behavior can go here
 
 
 def should_return_to_base(battery_level, distance_from_base, drain_rate, speed, safety_margin=0.05):

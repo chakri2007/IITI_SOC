@@ -120,8 +120,9 @@ class OffboardControl(Node):
 
         elif status == "charged":
             self.status_updated = True
+            self.taken_off = False   # ✅ Add this
             self.offboard_setpoint_counter = 0
-            self.get_logger().info("Drone_2 is charged. Will initiate takeoff.")
+            self.get_logger().info("Drone is charged. Will initiate takeoff.")
 
     # ========== Publishing helpers ==========
 
