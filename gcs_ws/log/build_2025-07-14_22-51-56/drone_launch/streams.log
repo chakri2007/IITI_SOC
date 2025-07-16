@@ -1,0 +1,20 @@
+[0.886s] Invoking command in '/home/bhav/IITISoC-25-IVR09/gcs_ws/src/drone_launch': PYTHONPATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_launch/prefix_override:/home/bhav/.local/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_launch/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_launch build --build-base /home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_launch/build install --record /home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_launch/install.log --single-version-externally-managed install_data
+[1.064s] running egg_info
+[1.064s] writing ../../build/drone_launch/drone_launch.egg-info/PKG-INFO
+[1.065s] writing dependency_links to ../../build/drone_launch/drone_launch.egg-info/dependency_links.txt
+[1.065s] writing entry points to ../../build/drone_launch/drone_launch.egg-info/entry_points.txt
+[1.065s] writing requirements to ../../build/drone_launch/drone_launch.egg-info/requires.txt
+[1.065s] writing top-level names to ../../build/drone_launch/drone_launch.egg-info/top_level.txt
+[1.066s] reading manifest file '../../build/drone_launch/drone_launch.egg-info/SOURCES.txt'
+[1.066s] writing manifest file '../../build/drone_launch/drone_launch.egg-info/SOURCES.txt'
+[1.066s] running build
+[1.066s] running build_py
+[1.067s] running install
+[1.067s] running install_lib
+[1.068s] running install_data
+[1.068s] running install_egg_info
+[1.069s] removing '/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_launch/lib/python3.10/site-packages/drone_launch-0.0.0-py3.10.egg-info' (and everything under it)
+[1.069s] Copying ../../build/drone_launch/drone_launch.egg-info to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_launch/lib/python3.10/site-packages/drone_launch-0.0.0-py3.10.egg-info
+[1.070s] running install_scripts
+[1.085s] writing list of installed files to '/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_launch/install.log'
+[1.107s] Invoked command in '/home/bhav/IITISoC-25-IVR09/gcs_ws/src/drone_launch' returned '0': PYTHONPATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_launch/prefix_override:/home/bhav/.local/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_launch/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_launch build --build-base /home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_launch/build install --record /home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_launch/install.log --single-version-externally-managed install_data

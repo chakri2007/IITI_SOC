@@ -1,0 +1,39 @@
+[0.810s] Invoking command in '/home/bhav/IITISoC-25-IVR09/gcs_ws/src/drone_launch': PYTHONPATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_launch/prefix_override:/home/bhav/.local/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_launch/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_launch build --build-base /home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_launch/build install --record /home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_launch/install.log --single-version-externally-managed install_data
+[0.973s] Traceback (most recent call last):
+[0.973s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2866, in get_entry_map
+[0.973s]     ep_map = self._ep_map
+[0.973s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2828, in __getattr__
+[0.973s]     raise AttributeError(attr)
+[0.973s] AttributeError: _ep_map. Did you mean: '_dep_map'?
+[0.973s] 
+[0.973s] During handling of the above exception, another exception occurred:
+[0.973s] 
+[0.973s] Traceback (most recent call last):
+[0.973s]   File "/home/bhav/IITISoC-25-IVR09/gcs_ws/src/drone_launch/setup.py", line 5, in <module>
+[0.973s]     setup(
+[0.973s]   File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 152, in setup
+[0.973s]     _install_setup_requires(attrs)
+[0.973s]   File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 142, in _install_setup_requires
+[0.973s]     dist = MinimalDistribution(attrs)
+[0.973s]   File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 134, in __init__
+[0.974s]     distutils.core.Distribution.__init__(self, filtered)
+[0.974s]   File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 457, in __init__
+[0.974s]     for ep in pkg_resources.iter_entry_points('distutils.setup_keywords'):
+[0.974s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 646, in <genexpr>
+[0.974s]     for entry in dist.get_entry_map(group).values()
+[0.974s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2868, in get_entry_map
+[0.974s]     ep_map = self._ep_map = EntryPoint.parse_map(
+[0.974s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2549, in parse_map
+[0.974s]     for group, lines in data:
+[0.974s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 3205, in split_sections
+[0.974s]     for line in yield_lines(s):
+[0.974s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 2780, in _get_metadata
+[0.974s]     for line in self.get_metadata_lines(name):
+[0.974s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 1422, in get_metadata_lines
+[0.974s]     return yield_lines(self.get_metadata(name))
+[0.974s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 1412, in get_metadata
+[0.975s]     value = self._get(path)
+[0.975s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 1616, in _get
+[0.975s]     with open(path, 'rb') as stream:
+[0.975s] FileNotFoundError: [Errno 2] No such file or directory: '/home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/python3.10/site-packages/mission_utils-0.0.0-py3.10.egg-info/entry_points.txt'
+[0.997s] Invoked command in '/home/bhav/IITISoC-25-IVR09/gcs_ws/src/drone_launch' returned '1': PYTHONPATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_launch/prefix_override:/home/bhav/.local/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_launch/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_launch build --build-base /home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_launch/build install --record /home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_launch/install.log --single-version-externally-managed install_data

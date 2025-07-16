@@ -25,6 +25,7 @@ setup(
             'swarm_supervisor_node = gcs_controller.swarm_supervisor_node:main',
             'waypoint_manager_node = gcs_controller.waypoint_manager_node:main',
             'dynamic_role_swap_node = gcs_controller.dynamic_role_swap_node:main',
+            'charging_queue = gcs_controller.charging_queue:main',
         ],
     },
 )

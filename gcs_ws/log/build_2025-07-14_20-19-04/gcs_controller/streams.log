@@ -1,0 +1,51 @@
+[0.903s] Invoking command in '/home/bhav/IITISoC-25-IVR09/gcs_ws/src/gcs_controller': AMENT_PREFIX_PATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_launch:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_2_manager:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_1_manager:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_interfaces:/home/bhav/px4_ros2_ws/install/px4_msgs:/opt/ros/humble PYTHONPATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/prefix_override:/home/bhav/.local/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/python3.10/site-packages:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_launch/lib/python3.10/site-packages:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages:/home/bhav/px4_ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gcs_controller build --build-base /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build install --record /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/install.log --single-version-externally-managed install_data
+[1.078s] running egg_info
+[1.079s] creating ../../build/gcs_controller/gcs_controller.egg-info
+[1.079s] writing ../../build/gcs_controller/gcs_controller.egg-info/PKG-INFO
+[1.079s] writing dependency_links to ../../build/gcs_controller/gcs_controller.egg-info/dependency_links.txt
+[1.080s] writing entry points to ../../build/gcs_controller/gcs_controller.egg-info/entry_points.txt
+[1.080s] writing requirements to ../../build/gcs_controller/gcs_controller.egg-info/requires.txt
+[1.080s] writing top-level names to ../../build/gcs_controller/gcs_controller.egg-info/top_level.txt
+[1.080s] writing manifest file '../../build/gcs_controller/gcs_controller.egg-info/SOURCES.txt'
+[1.082s] reading manifest file '../../build/gcs_controller/gcs_controller.egg-info/SOURCES.txt'
+[1.082s] writing manifest file '../../build/gcs_controller/gcs_controller.egg-info/SOURCES.txt'
+[1.082s] running build
+[1.082s] running build_py
+[1.083s] creating /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build
+[1.083s] creating /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib
+[1.083s] creating /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller
+[1.083s] copying gcs_controller/waypoint_manager_node.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller
+[1.083s] copying gcs_controller/geotag_manager_node.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller
+[1.083s] copying gcs_controller/swarm_supervisor_node.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller
+[1.083s] copying gcs_controller/__init__.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller
+[1.083s] copying gcs_controller/dynamic_role_swap_node.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller
+[1.083s] running install
+[1.083s] running install_lib
+[1.084s] creating /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller
+[1.084s] copying /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller/waypoint_manager_node.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller
+[1.084s] copying /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller/geotag_manager_node.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller
+[1.084s] copying /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller/swarm_supervisor_node.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller
+[1.084s] copying /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller/__init__.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller
+[1.084s] copying /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller/dynamic_role_swap_node.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller
+[1.085s] byte-compiling /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller/waypoint_manager_node.py to waypoint_manager_node.cpython-310.pyc
+[1.086s] byte-compiling /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller/geotag_manager_node.py to geotag_manager_node.cpython-310.pyc
+[1.087s] byte-compiling /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller/swarm_supervisor_node.py to swarm_supervisor_node.cpython-310.pyc
+[1.088s] byte-compiling /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller/__init__.py to __init__.cpython-310.pyc
+[1.088s] byte-compiling /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller/dynamic_role_swap_node.py to dynamic_role_swap_node.cpython-310.pyc
+[1.089s] running install_data
+[1.089s] creating /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/share/ament_index
+[1.089s] creating /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/share/ament_index/resource_index
+[1.089s] creating /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/share/ament_index/resource_index/packages
+[1.089s] copying resource/gcs_controller -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/share/ament_index/resource_index/packages
+[1.089s] copying package.xml -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/share/gcs_controller
+[1.089s] creating /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/share/gcs_controller/launch
+[1.089s] copying launch/gcs.launch.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/share/gcs_controller/launch
+[1.089s] running install_egg_info
+[1.091s] Copying ../../build/gcs_controller/gcs_controller.egg-info to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller-0.0.0-py3.10.egg-info
+[1.092s] running install_scripts
+[1.110s] Installing dynamic_role_swap_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/gcs_controller
+[1.110s] Installing geotag_manager_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/gcs_controller
+[1.110s] Installing swarm_supervisor_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/gcs_controller
+[1.110s] Installing waypoint_manager_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/gcs_controller
+[1.110s] writing list of installed files to '/home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/install.log'
+[1.131s] Invoked command in '/home/bhav/IITISoC-25-IVR09/gcs_ws/src/gcs_controller' returned '0': AMENT_PREFIX_PATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_launch:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_2_manager:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_1_manager:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_interfaces:/home/bhav/px4_ros2_ws/install/px4_msgs:/opt/ros/humble PYTHONPATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/prefix_override:/home/bhav/.local/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/python3.10/site-packages:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_launch/lib/python3.10/site-packages:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages:/home/bhav/px4_ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gcs_controller build --build-base /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build install --record /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/install.log --single-version-externally-managed install_data

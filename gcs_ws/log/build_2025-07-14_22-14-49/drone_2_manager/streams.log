@@ -1,0 +1,29 @@
+[0.803s] Invoking command in '/home/bhav/IITISoC-25-IVR09/gcs_ws/src/drone_2_manager': PYTHONPATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_2_manager/prefix_override:/home/bhav/.local/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_2_manager build --build-base /home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_2_manager/build install --record /home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_2_manager/install.log --single-version-externally-managed install_data
+[0.960s] running egg_info
+[0.961s] writing ../../build/drone_2_manager/drone_2_manager.egg-info/PKG-INFO
+[0.961s] writing dependency_links to ../../build/drone_2_manager/drone_2_manager.egg-info/dependency_links.txt
+[0.961s] writing entry points to ../../build/drone_2_manager/drone_2_manager.egg-info/entry_points.txt
+[0.961s] writing requirements to ../../build/drone_2_manager/drone_2_manager.egg-info/requires.txt
+[0.961s] writing top-level names to ../../build/drone_2_manager/drone_2_manager.egg-info/top_level.txt
+[0.963s] reading manifest file '../../build/drone_2_manager/drone_2_manager.egg-info/SOURCES.txt'
+[0.963s] writing manifest file '../../build/drone_2_manager/drone_2_manager.egg-info/SOURCES.txt'
+[0.964s] running build
+[0.964s] running build_py
+[0.964s] copying drone_2_manager/recharge_node.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_2_manager/build/lib/drone_2_manager
+[0.964s] running install
+[0.964s] running install_lib
+[0.965s] copying /home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_2_manager/build/lib/drone_2_manager/recharge_node.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager
+[0.966s] byte-compiling /home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager/recharge_node.py to recharge_node.cpython-310.pyc
+[0.967s] running install_data
+[0.967s] running install_egg_info
+[0.968s] removing '/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager-0.0.0-py3.10.egg-info' (and everything under it)
+[0.968s] Copying ../../build/drone_2_manager/drone_2_manager.egg-info to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages/drone_2_manager-0.0.0-py3.10.egg-info
+[0.969s] running install_scripts
+[0.983s] Installing geotagging_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_2_manager/lib/drone_2_manager
+[0.983s] Installing mission_handler_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_2_manager/lib/drone_2_manager
+[0.983s] Installing offboard_controller_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_2_manager/lib/drone_2_manager
+[0.984s] Installing recharge_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_2_manager/lib/drone_2_manager
+[0.984s] Installing status_publisher_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_2_manager/lib/drone_2_manager
+[0.984s] Installing water_level script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_2_manager/lib/drone_2_manager
+[0.984s] writing list of installed files to '/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_2_manager/install.log'
+[1.007s] Invoked command in '/home/bhav/IITISoC-25-IVR09/gcs_ws/src/drone_2_manager' returned '0': PYTHONPATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_2_manager/prefix_override:/home/bhav/.local/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_2_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_2_manager build --build-base /home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_2_manager/build install --record /home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_2_manager/install.log --single-version-externally-managed install_data

@@ -1,0 +1,29 @@
+[0.419s] Invoking command in '/home/bhav/IITISoC-25-IVR09/gcs_ws/src/gcs_controller': AMENT_PREFIX_PATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_interfaces LD_LIBRARY_PATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/prefix_override:/home/bhav/.local/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/python3.10/site-packages:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gcs_controller build --build-base /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build install --record /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/install.log --single-version-externally-managed install_data
+[0.565s] running egg_info
+[0.565s] writing ../../build/gcs_controller/gcs_controller.egg-info/PKG-INFO
+[0.565s] writing dependency_links to ../../build/gcs_controller/gcs_controller.egg-info/dependency_links.txt
+[0.565s] writing entry points to ../../build/gcs_controller/gcs_controller.egg-info/entry_points.txt
+[0.565s] writing requirements to ../../build/gcs_controller/gcs_controller.egg-info/requires.txt
+[0.565s] writing top-level names to ../../build/gcs_controller/gcs_controller.egg-info/top_level.txt
+[0.567s] reading manifest file '../../build/gcs_controller/gcs_controller.egg-info/SOURCES.txt'
+[0.568s] writing manifest file '../../build/gcs_controller/gcs_controller.egg-info/SOURCES.txt'
+[0.568s] running build
+[0.568s] running build_py
+[0.568s] copying gcs_controller/charging_queue.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller
+[0.568s] running install
+[0.568s] running install_lib
+[0.569s] copying /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller/charging_queue.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller
+[0.569s] byte-compiling /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller/charging_queue.py to charging_queue.cpython-310.pyc
+[0.570s] running install_data
+[0.570s] copying launch/gcs.launch.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/share/gcs_controller/launch
+[0.570s] running install_egg_info
+[0.571s] removing '/home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller-0.0.0-py3.10.egg-info' (and everything under it)
+[0.571s] Copying ../../build/gcs_controller/gcs_controller.egg-info to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller-0.0.0-py3.10.egg-info
+[0.572s] running install_scripts
+[0.585s] Installing charging_queue script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/gcs_controller
+[0.585s] Installing dynamic_role_swap_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/gcs_controller
+[0.586s] Installing geotag_manager_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/gcs_controller
+[0.586s] Installing swarm_supervisor_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/gcs_controller
+[0.586s] Installing waypoint_manager_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/gcs_controller
+[0.586s] writing list of installed files to '/home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/install.log'
+[0.603s] Invoked command in '/home/bhav/IITISoC-25-IVR09/gcs_ws/src/gcs_controller' returned '0': AMENT_PREFIX_PATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_interfaces LD_LIBRARY_PATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/prefix_override:/home/bhav/.local/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/python3.10/site-packages:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gcs_controller build --build-base /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build install --record /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/install.log --single-version-externally-managed install_data
