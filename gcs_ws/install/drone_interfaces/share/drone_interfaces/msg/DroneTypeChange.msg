@@ -1,1 +1,0 @@
-string new_drone_type
