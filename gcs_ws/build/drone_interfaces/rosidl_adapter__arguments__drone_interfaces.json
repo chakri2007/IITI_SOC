@@ -1,0 +1,18 @@
+{
+  "package_name": "drone_interfaces",
+  "non_idl_tuples": [
+    "/home/bhav/IITISoC-25-IVR09/gcs_ws/src/drone_interfaces:msg/Waypoint.msg",
+    "/home/bhav/IITISoC-25-IVR09/gcs_ws/src/drone_interfaces:msg/WaypointArray.msg",
+    "/home/bhav/IITISoC-25-IVR09/gcs_ws/src/drone_interfaces:msg/DroneStatus.msg",
+    "/home/bhav/IITISoC-25-IVR09/gcs_ws/src/drone_interfaces:msg/WaypointRequest.msg",
+    "/home/bhav/IITISoC-25-IVR09/gcs_ws/src/drone_interfaces:msg/WaypointVisited.msg",
+    "/home/bhav/IITISoC-25-IVR09/gcs_ws/src/drone_interfaces:msg/DroneStatusUpdate.msg",
+    "/home/bhav/IITISoC-25-IVR09/gcs_ws/src/drone_interfaces:msg/DroneTypeChange.msg",
+    "/home/bhav/IITISoC-25-IVR09/gcs_ws/src/drone_interfaces:msg/Geotag.msg",
+    "/home/bhav/IITISoC-25-IVR09/gcs_ws/src/drone_interfaces:msg/GeotagArray.msg",
+    "/home/bhav/IITISoC-25-IVR09/gcs_ws/src/drone_interfaces:msg/GeotagRequest.msg",
+    "/home/bhav/IITISoC-25-IVR09/gcs_ws/src/drone_interfaces:msg/GeotagVisited.msg",
+    "/home/bhav/IITISoC-25-IVR09/gcs_ws/src/drone_interfaces:msg/SurveillanceStatus.msg",
+    "/home/bhav/IITISoC-25-IVR09/gcs_ws/src/drone_interfaces:srv/GetSeverityScore.srv"
+  ]
+}

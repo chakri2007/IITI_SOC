@@ -1,0 +1,26 @@
+[0.846s] Invoking command in '/home/bhav/IITISoC-25-IVR09/gcs_ws/src/drone_1_manager': CMAKE_PREFIX_PATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_interfaces:/home/bhav/px4_ros2_ws/install/px4_msgs LD_LIBRARY_PATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_interfaces/lib:/home/bhav/px4_ros2_ws/install/px4_msgs/lib:/usr/local/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/bhav/natnetsdk/lib PYTHONPATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_1_manager/prefix_override:/home/bhav/.local/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_1_manager build --build-base /home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_1_manager/build install --record /home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_1_manager/install.log --single-version-externally-managed install_data
+[1.047s] running egg_info
+[1.048s] writing ../../build/drone_1_manager/drone_1_manager.egg-info/PKG-INFO
+[1.048s] writing dependency_links to ../../build/drone_1_manager/drone_1_manager.egg-info/dependency_links.txt
+[1.048s] writing entry points to ../../build/drone_1_manager/drone_1_manager.egg-info/entry_points.txt
+[1.048s] writing requirements to ../../build/drone_1_manager/drone_1_manager.egg-info/requires.txt
+[1.048s] writing top-level names to ../../build/drone_1_manager/drone_1_manager.egg-info/top_level.txt
+[1.049s] reading manifest file '../../build/drone_1_manager/drone_1_manager.egg-info/SOURCES.txt'
+[1.050s] writing manifest file '../../build/drone_1_manager/drone_1_manager.egg-info/SOURCES.txt'
+[1.050s] running build
+[1.050s] running build_py
+[1.050s] running install
+[1.050s] running install_lib
+[1.051s] running install_data
+[1.051s] running install_egg_info
+[1.053s] removing '/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages/drone_1_manager-0.0.0-py3.10.egg-info' (and everything under it)
+[1.053s] Copying ../../build/drone_1_manager/drone_1_manager.egg-info to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages/drone_1_manager-0.0.0-py3.10.egg-info
+[1.053s] running install_scripts
+[1.069s] Installing geotagging_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_1_manager/lib/drone_1_manager
+[1.069s] Installing mission_handler_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_1_manager/lib/drone_1_manager
+[1.069s] Installing offboard_controller_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_1_manager/lib/drone_1_manager
+[1.069s] Installing recharge_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_1_manager/lib/drone_1_manager
+[1.070s] Installing status_publisher_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_1_manager/lib/drone_1_manager
+[1.070s] Installing water_level script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_1_manager/lib/drone_1_manager
+[1.070s] writing list of installed files to '/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_1_manager/install.log'
+[1.095s] Invoked command in '/home/bhav/IITISoC-25-IVR09/gcs_ws/src/drone_1_manager' returned '0': CMAKE_PREFIX_PATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_interfaces:/home/bhav/px4_ros2_ws/install/px4_msgs LD_LIBRARY_PATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_interfaces/lib:/home/bhav/px4_ros2_ws/install/px4_msgs/lib:/usr/local/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/bhav/natnetsdk/lib PYTHONPATH=/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_1_manager/prefix_override:/home/bhav/.local/lib/python3.10/site-packages/colcon_core/task/python/colcon_distutils_commands:/home/bhav/IITISoC-25-IVR09/gcs_ws/install/drone_1_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_1_manager build --build-base /home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_1_manager/build install --record /home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_1_manager/install.log --single-version-externally-managed install_data

@@ -1,0 +1,53 @@
+running egg_info
+creating ../../build/gcs_controller/gcs_controller.egg-info
+writing ../../build/gcs_controller/gcs_controller.egg-info/PKG-INFO
+writing dependency_links to ../../build/gcs_controller/gcs_controller.egg-info/dependency_links.txt
+writing entry points to ../../build/gcs_controller/gcs_controller.egg-info/entry_points.txt
+writing requirements to ../../build/gcs_controller/gcs_controller.egg-info/requires.txt
+writing top-level names to ../../build/gcs_controller/gcs_controller.egg-info/top_level.txt
+writing manifest file '../../build/gcs_controller/gcs_controller.egg-info/SOURCES.txt'
+reading manifest file '../../build/gcs_controller/gcs_controller.egg-info/SOURCES.txt'
+writing manifest file '../../build/gcs_controller/gcs_controller.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build
+creating /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib
+creating /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller
+copying gcs_controller/waypoint_manager_node.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller
+copying gcs_controller/geotag_manager_node.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller
+copying gcs_controller/swarm_supervisor_node.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller
+copying gcs_controller/__init__.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller
+copying gcs_controller/dynamic_role_swap_node.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller
+copying gcs_controller/charging_queue.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller
+running install
+running install_lib
+creating /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller
+copying /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller/waypoint_manager_node.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller
+copying /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller/geotag_manager_node.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller
+copying /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller/swarm_supervisor_node.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller
+copying /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller/__init__.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller
+copying /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller/dynamic_role_swap_node.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller
+copying /home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/build/lib/gcs_controller/charging_queue.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller
+byte-compiling /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller/waypoint_manager_node.py to waypoint_manager_node.cpython-310.pyc
+byte-compiling /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller/geotag_manager_node.py to geotag_manager_node.cpython-310.pyc
+byte-compiling /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller/swarm_supervisor_node.py to swarm_supervisor_node.cpython-310.pyc
+byte-compiling /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller/dynamic_role_swap_node.py to dynamic_role_swap_node.cpython-310.pyc
+byte-compiling /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller/charging_queue.py to charging_queue.cpython-310.pyc
+running install_data
+creating /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/share/ament_index
+creating /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/share/ament_index/resource_index
+creating /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/share/ament_index/resource_index/packages
+copying resource/gcs_controller -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/share/ament_index/resource_index/packages
+copying package.xml -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/share/gcs_controller
+creating /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/share/gcs_controller/launch
+copying launch/gcs.launch.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/share/gcs_controller/launch
+running install_egg_info
+Copying ../../build/gcs_controller/gcs_controller.egg-info to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/python3.10/site-packages/gcs_controller-0.0.0-py3.10.egg-info
+running install_scripts
+Installing charging_queue script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/gcs_controller
+Installing dynamic_role_swap_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/gcs_controller
+Installing geotag_manager_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/gcs_controller
+Installing swarm_supervisor_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/gcs_controller
+Installing waypoint_manager_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/gcs_controller/lib/gcs_controller
+writing list of installed files to '/home/bhav/IITISoC-25-IVR09/gcs_ws/build/gcs_controller/install.log'
