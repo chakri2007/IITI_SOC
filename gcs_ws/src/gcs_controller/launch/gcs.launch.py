@@ -78,12 +78,5 @@ def generate_launch_description():
                 {'waypoint_file_path': waypoint_file_path},
                 ]
         ),
-        Node(
-            package='gcs_controller',
-            executable='charging_queue',
-            name='charging_queue',
-            output='screen',
-           
-        ),
-        
+
     ])

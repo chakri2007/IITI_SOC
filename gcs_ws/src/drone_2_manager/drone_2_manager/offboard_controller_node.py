@@ -165,7 +165,6 @@ class OffboardControl(Node):
         msg.yaw = yaw
         msg.timestamp = int(self.get_clock().now().nanoseconds / 1000)
         self.trajectory_setpoint_publisher.publish(msg)
-        self.get_logger().info(f"Publishing position setpoints {[x, y, z]} with yaw {yaw:.2f}")
 
     def publish_vehicle_command(self, command, **params):
         msg = VehicleCommand()
