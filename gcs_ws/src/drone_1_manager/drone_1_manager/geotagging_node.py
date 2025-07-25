@@ -22,8 +22,8 @@ class GeotaggingNode(Node):
         super().__init__('geotagging_node')
 
         self.active = False
-        self.in_field = False
         self.origin_set = False
+        self.geotagging_active = False
         self.last_tag_position = None
         self.geotag_id = 0
 
@@ -68,13 +68,19 @@ class GeotaggingNode(Node):
     def status_callback(self, msg):
         self.active = (msg.type.lower() == 'surveillance' and msg.status.lower() == 'executing')
 
+        if msg.status.lower() == 'rtl':
+            self.get_logger().info("Drone status is RTL. Geotagging RESET.")
+            self.geotagging_active = False
+            self.last_tag_position = None
+
     def waypoint_visited_callback(self, msg):
         if msg.drone_id == "drone_1":
-            self.in_field = True
-            self.get_logger().info("Waypoint visited for drone_1. Geotagging activated.")
+            self.geotagging_active = True
+            self.last_tag_position = None  # Reset for next segment
+            self.get_logger().info("Waypoint visited. Geotagging ACTIVATED.")
 
     def position_callback(self, msg):
-        if not self.active or not msg.xy_valid:
+        if not self.active or not msg.xy_valid or not self.geotagging_active:
             return
 
         if not self.origin_set and msg.ref_lat != 0.0 and msg.ref_lon != 0.0:
@@ -87,10 +93,6 @@ class GeotaggingNode(Node):
 
         if not self.origin_set:
             self.get_logger().warn("Waiting for origin GPS to be set...")
-            return
-
-        if not self.in_field:
-            self.get_logger().debug("Waiting for first waypoint visited to start geotagging...")
             return
 
         current_local = (msg.x, msg.y, msg.z)
