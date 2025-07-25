@@ -24,6 +24,7 @@ setup(
             'geotags_dataset = mission_utils.geotags_dataset:main',
             'geotags_visited_updater = mission_utils.geotags_visited_updater:main',
             'surveillance_monitor_node = mission_utils.surveillance_monitor_node:main',
+            'lawnmower_generator_node = mission_utils.lawnmower_generator_node:main',
         ],
     },
 )

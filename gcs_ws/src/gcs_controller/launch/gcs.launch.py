@@ -1,6 +1,6 @@
 from launch import LaunchDescription
 from launch_ros.actions import Node
-from ament_index_python.packages import get_package_share_directory
+from launch.actions import TimerAction
 import os
 
 def generate_launch_description():
@@ -10,13 +10,23 @@ def generate_launch_description():
     kml_file_path = os.path.join(mission_path, 'iit_survey.kml')
     waypoint_file_path = os.path.join(mission_path, 'iiti_waypoints.json')
     geotag_file_path = os.path.join(mission_path, 'geotags.json')
+
     return LaunchDescription([
         Node(
-            package='gcs_controller',
-            executable='swarm_supervisor_node',
-            name='swarm_supervisor_node',
-            output='screen'
+            package='mission_utils',
+            executable='lawnmower_generator_node',
+            name='lawnmower_generator_node',
+            output='screen',
+            parameters=[
+                {'kml_file_path': kml_file_path},
+                {'output_file': waypoint_file_path},
+                {'spacing': 12.5},
+                {'turnaround': 3.0},
+                {'start_from': 'top'},
+                {'altitude': 640.0}
+            ]
         ),
+
         Node(
             package='gcs_controller',
             executable='geotag_manager_node',
@@ -24,27 +34,9 @@ def generate_launch_description():
             output='screen',
             parameters=[
                 {'geotag_file_path': geotag_file_path},
-                ]
-        ),
-        Node(
-            package='gcs_controller',
-            executable='waypoint_manager_node',
-            name='waypoint_manager_node',
-            output='screen',
-            parameters=[
-                {'json_file_path': waypoint_file_path},
-                {'batch_size': 5}
             ]
         ),
-        Node(
-            package='mission_utils',
-            executable='waypoints_dataset',
-            name='waypoints_dataset',
-            output='screen',
-            parameters=[{
-                'waypoint_file_path': waypoint_file_path},
-                ]
-        ),
+
         Node(
             package='mission_utils',
             executable='geotags_dataset',
@@ -52,8 +44,9 @@ def generate_launch_description():
             output='screen',
             parameters=[
                 {'geotag_file_path': geotag_file_path},
-                ]
+            ]
         ),
+
         Node(
             package='mission_utils',
             executable='geotags_visited_updater',
@@ -61,7 +54,41 @@ def generate_launch_description():
             output='screen',
             parameters=[
                 {'geotag_file_path': geotag_file_path},
-                ]
+            ]
+        ),
+
+        Node(
+            package='gcs_controller',
+            executable='swarm_supervisor_node',
+            name='swarm_supervisor_node',
+            output='screen'
+        ),
+
+        # Delayed launch of waypoint_manager_node (10 seconds)
+        TimerAction(
+            period=10.0,
+            actions=[
+                Node(
+                    package='gcs_controller',
+                    executable='waypoint_manager_node',
+                    name='waypoint_manager_node',
+                    output='screen',
+                    parameters=[
+                        {'json_file_path': waypoint_file_path},
+                        {'batch_size': 5}
+                    ]
+                )
+            ]
+        ),
+
+        Node(
+            package='mission_utils',
+            executable='waypoints_dataset',
+            name='waypoints_dataset',
+            output='screen',
+            parameters=[
+                {'waypoint_file_path': waypoint_file_path}
+            ]
         ),
         Node(
             package='gcs_controller',
@@ -69,14 +96,13 @@ def generate_launch_description():
             name='dynamic_role_swap_node',
             output='screen',
         ),
-         Node(
+        Node(
             package='mission_utils',
             executable='surveillance_monitor_node',
             name='surveillance_monitor_node',
             output='screen',
             parameters=[
                 {'waypoint_file_path': waypoint_file_path},
-                ]
+            ]
         ),
-
     ])
