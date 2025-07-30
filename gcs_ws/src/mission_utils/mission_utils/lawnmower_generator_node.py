@@ -26,6 +26,8 @@ class LawnmowerGeneratorNode(Node):
         self.declare_parameter('start_from', 'top')
         self.declare_parameter('altitude', 640.0)
 
+        self.delete_old_json_files()
+
         qos_profile = QoSProfile(
             reliability=ReliabilityPolicy.BEST_EFFORT,
             durability=DurabilityPolicy.VOLATILE,
@@ -41,7 +43,28 @@ class LawnmowerGeneratorNode(Node):
         )
 
         self.received_position = False
+    
+    def delete_old_json_files(self):
+        try:
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            gcs_ws_root = os.path.abspath(os.path.join(current_dir, '..', '..', '..'))
+            workspace_root = os.path.expanduser('~/IITISoC-25-IVR09/gcs_ws')
 
+            waypoint_path = os.path.join(workspace_root, 'mission_files', 'iiti_waypoints.json')
+            geotag_path = os.path.join(workspace_root, 'mission_files', 'geotags.json')
+
+            if os.path.exists(waypoint_path):
+                os.remove(waypoint_path)
+                self.get_logger().info(f"Deleted old waypoint file: {waypoint_path}")    
+
+            if os.path.exists(geotag_path):
+                os.remove(geotag_path)
+                self.get_logger().info(f"Deleted old geotag file: {geotag_path}")
+
+        except Exception as e:
+            self.get_logger().warn(f"Failed to delete old JSON files: {e}")
+    
+        
     def local_position_callback(self, msg):
 
         if not self.received_position:
