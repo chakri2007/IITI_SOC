@@ -20,22 +20,26 @@ def generate_launch_description():
             parameters=[
                 {'kml_file_path': kml_file_path},
                 {'output_file': waypoint_file_path},
-                {'spacing': 12.5},
+                {'spacing': 5.0},
                 {'turnaround': 3.0},
                 {'start_from': 'top'},
                 {'altitude': 640.0}
             ]
         ),
-
-        Node(
-            package='gcs_controller',
-            executable='geotag_manager_node',
-            name='geotag_manager_node',
-            output='screen',
-            parameters=[
-                {'geotag_file_path': geotag_file_path},
+        TimerAction(
+            period=10.0,
+            actions=[
+                Node(
+                    package='gcs_controller',
+                    executable='geotag_manager_node',
+                    name='geotag_manager_node',
+                    output='screen',
+                    parameters=[
+                        {'geotag_file_path': geotag_file_path},
+                    ]
+                )
             ]
-        ),
+        ) ,       
 
         Node(
             package='mission_utils',
