@@ -1,0 +1,13 @@
+/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/Waypoint.idl
+/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/WaypointArray.idl
+/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/DroneStatus.idl
+/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/WaypointRequest.idl
+/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/WaypointVisited.idl
+/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/DroneStatusUpdate.idl
+/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/DroneTypeChange.idl
+/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/Geotag.idl
+/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/GeotagArray.idl
+/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/GeotagRequest.idl
+/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/GeotagVisited.idl
+/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/SurveillanceStatus.idl
+/home/bhav/IITISoC-25-IVR09/gcs_ws/build/drone_interfaces/rosidl_adapter/drone_interfaces:srv/GetSeverityScore.idl

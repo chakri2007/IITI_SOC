@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from drone_interfaces/srv/GetSeverityScore.srv
+// generated code does not contain a copyright notice
+
+
+module drone_interfaces {
+  module srv {
+    struct GetSeverityScore_Request {
+      uint32 id;
+    };
+    struct GetSeverityScore_Response {
+      uint8 severity_score;
+    };
+  };
+};

@@ -1,0 +1,51 @@
+running egg_info
+creating ../../build/mission_utils/mission_utils.egg-info
+writing ../../build/mission_utils/mission_utils.egg-info/PKG-INFO
+writing dependency_links to ../../build/mission_utils/mission_utils.egg-info/dependency_links.txt
+writing entry points to ../../build/mission_utils/mission_utils.egg-info/entry_points.txt
+writing requirements to ../../build/mission_utils/mission_utils.egg-info/requires.txt
+writing top-level names to ../../build/mission_utils/mission_utils.egg-info/top_level.txt
+writing manifest file '../../build/mission_utils/mission_utils.egg-info/SOURCES.txt'
+reading manifest file '../../build/mission_utils/mission_utils.egg-info/SOURCES.txt'
+writing manifest file '../../build/mission_utils/mission_utils.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/bhav/IITISoC-25-IVR09/gcs_ws/build/mission_utils/build
+creating /home/bhav/IITISoC-25-IVR09/gcs_ws/build/mission_utils/build/lib
+creating /home/bhav/IITISoC-25-IVR09/gcs_ws/build/mission_utils/build/lib/mission_utils
+copying mission_utils/geotags_dataset.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/build/mission_utils/build/lib/mission_utils
+copying mission_utils/geotags_visited_updater.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/build/mission_utils/build/lib/mission_utils
+copying mission_utils/waypoints_dataset.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/build/mission_utils/build/lib/mission_utils
+copying mission_utils/surveillance_monitor_node.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/build/mission_utils/build/lib/mission_utils
+copying mission_utils/lawnmower_generator_node.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/build/mission_utils/build/lib/mission_utils
+copying mission_utils/__init__.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/build/mission_utils/build/lib/mission_utils
+running install
+running install_lib
+creating /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/python3.10/site-packages/mission_utils
+copying /home/bhav/IITISoC-25-IVR09/gcs_ws/build/mission_utils/build/lib/mission_utils/geotags_dataset.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/python3.10/site-packages/mission_utils
+copying /home/bhav/IITISoC-25-IVR09/gcs_ws/build/mission_utils/build/lib/mission_utils/geotags_visited_updater.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/python3.10/site-packages/mission_utils
+copying /home/bhav/IITISoC-25-IVR09/gcs_ws/build/mission_utils/build/lib/mission_utils/waypoints_dataset.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/python3.10/site-packages/mission_utils
+copying /home/bhav/IITISoC-25-IVR09/gcs_ws/build/mission_utils/build/lib/mission_utils/surveillance_monitor_node.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/python3.10/site-packages/mission_utils
+copying /home/bhav/IITISoC-25-IVR09/gcs_ws/build/mission_utils/build/lib/mission_utils/lawnmower_generator_node.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/python3.10/site-packages/mission_utils
+copying /home/bhav/IITISoC-25-IVR09/gcs_ws/build/mission_utils/build/lib/mission_utils/__init__.py -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/python3.10/site-packages/mission_utils
+byte-compiling /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/python3.10/site-packages/mission_utils/geotags_dataset.py to geotags_dataset.cpython-310.pyc
+byte-compiling /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/python3.10/site-packages/mission_utils/geotags_visited_updater.py to geotags_visited_updater.cpython-310.pyc
+byte-compiling /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/python3.10/site-packages/mission_utils/waypoints_dataset.py to waypoints_dataset.cpython-310.pyc
+byte-compiling /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/python3.10/site-packages/mission_utils/surveillance_monitor_node.py to surveillance_monitor_node.cpython-310.pyc
+byte-compiling /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/python3.10/site-packages/mission_utils/lawnmower_generator_node.py to lawnmower_generator_node.cpython-310.pyc
+byte-compiling /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/python3.10/site-packages/mission_utils/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/share/ament_index
+creating /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/share/ament_index/resource_index
+creating /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/share/ament_index/resource_index/packages
+copying resource/mission_utils -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/share/ament_index/resource_index/packages
+copying package.xml -> /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/share/mission_utils
+running install_egg_info
+Copying ../../build/mission_utils/mission_utils.egg-info to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/python3.10/site-packages/mission_utils-0.0.0-py3.10.egg-info
+running install_scripts
+Installing geotags_dataset script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/mission_utils
+Installing geotags_visited_updater script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/mission_utils
+Installing lawnmower_generator_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/mission_utils
+Installing surveillance_monitor_node script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/mission_utils
+Installing waypoints_dataset script to /home/bhav/IITISoC-25-IVR09/gcs_ws/install/mission_utils/lib/mission_utils
+writing list of installed files to '/home/bhav/IITISoC-25-IVR09/gcs_ws/build/mission_utils/install.log'
