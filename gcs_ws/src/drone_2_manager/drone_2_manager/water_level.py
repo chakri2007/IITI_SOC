@@ -2,6 +2,8 @@ import rclpy
 from rclpy.node import Node
 from drone_interfaces.msg import GeotagArray, DroneStatusUpdate, DroneStatus, GeotagVisited
 from std_msgs.msg import Float32
+import fcntl
+import os
 
 
 class WaterLevelNode(Node):
@@ -26,6 +28,8 @@ class WaterLevelNode(Node):
         # Publisher
         self.water_pub = self.create_publisher(Float32, f'/{self.drone_id}/water_level', 10)
         self.timer = self.create_timer(5.0, self.publish_water_level)
+
+        self.file_path = '/home/bhav/IITISoC-25-IVR09/gcs_ws/mission_files/water_levels.txt'
 
         self.get_logger().info(f"[{self.drone_id}] WaterLevelNode initialized.")
 
@@ -67,7 +71,6 @@ class WaterLevelNode(Node):
                     self.water_level = 0.0
                     self.get_logger().info("Surveillance drone detected. Water level forcibly set to 0.")
 
-
     def status_update_callback(self, msg: DroneStatusUpdate):
         if msg.drone_id != self.drone_id:
             return
@@ -81,6 +84,33 @@ class WaterLevelNode(Node):
         msg.data = self.water_level
         self.water_pub.publish(msg)
         self.get_logger().debug(f"Published water level: {self.water_level:.2f}")
+
+        # Update shared water level file
+        self.update_water_level_file()
+
+    def update_water_level_file(self):
+        try:
+            os.makedirs(os.path.dirname(self.file_path), exist_ok=True)
+            with open(self.file_path, 'a+') as f:
+                fcntl.flock(f, fcntl.LOCK_EX)
+                f.seek(0)
+                lines = f.readlines()
+                updated_lines = []
+                found = False
+                for line in lines:
+                    if line.startswith(f"{self.drone_id} ="):
+                        updated_lines.append(f"{self.drone_id} = {self.water_level:.2f}\n")
+                        found = True
+                    else:
+                        updated_lines.append(line)
+                if not found:
+                    updated_lines.append(f"{self.drone_id} = {self.water_level:.2f}\n")
+                f.seek(0)
+                f.truncate(0)
+                f.writelines(updated_lines)
+                fcntl.flock(f, fcntl.LOCK_UN)
+        except Exception as e:
+            self.get_logger().error(f"Error writing to water level file: {e}")
 
 
 def main(args=None):
@@ -97,4 +127,3 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
-

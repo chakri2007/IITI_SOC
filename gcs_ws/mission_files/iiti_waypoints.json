@@ -32,69 +32,69 @@
     "lat": 22.524996740935173,
     "lon": 75.92249528491409,
     "alt": 640.0,
-    "visited": true
+    "visited": false
   },
   {
     "id": 6,
     "lat": 22.524151353314583,
     "lon": 75.92242199002006,
     "alt": 640.0,
-    "visited": true
+    "visited": false
   },
   {
     "id": 7,
     "lat": 22.524156372631133,
     "lon": 75.92230977625918,
     "alt": 640.0,
-    "visited": true
+    "visited": false
   },
   {
     "id": 8,
     "lat": 22.525001320983872,
     "lon": 75.92238303307137,
     "alt": 640.0,
-    "visited": true
+    "visited": false
   },
   {
     "id": 9,
     "lat": 22.52500590103241,
     "lon": 75.92227078122866,
     "alt": 640.0,
-    "visited": true
+    "visited": false
   },
   {
     "id": 10,
     "lat": 22.524161391947477,
     "lon": 75.92219756249833,
     "alt": 640.0,
-    "visited": true
+    "visited": false
   },
   {
     "id": 11,
     "lat": 22.52416641126364,
     "lon": 75.92208534873747,
     "alt": 640.0,
-    "visited": true
+    "visited": false
   },
   {
     "id": 12,
     "lat": 22.52501048108079,
     "lon": 75.92215852938591,
     "alt": 640.0,
-    "visited": true
+    "visited": false
   },
   {
     "id": 13,
     "lat": 22.525015061129043,
     "lon": 75.9220462775432,
     "alt": 640.0,
-    "visited": true
+    "visited": false
   },
   {
     "id": 14,
     "lat": 22.524171430579653,
     "lon": 75.92197313497661,
     "alt": 640.0,
-    "visited": true
+    "visited": false
   }
 ]
