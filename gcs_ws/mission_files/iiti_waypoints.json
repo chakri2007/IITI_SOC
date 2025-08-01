@@ -67,28 +67,28 @@
     "lat": 22.52414633399787,
     "lon": 75.9225342037809,
     "alt": 640.0,
-    "visited": false
+    "visited": true
   },
   {
     "id": 11,
     "lat": 22.52414834172458,
     "lon": 75.92248931827655,
     "alt": 640.0,
-    "visited": false
+    "visited": true
   },
   {
     "id": 12,
     "lat": 22.524993992905898,
     "lon": 75.92256263601973,
     "alt": 640.0,
-    "visited": false
+    "visited": true
   },
   {
     "id": 13,
     "lat": 22.524995824925426,
     "lon": 75.92251773528264,
     "alt": 640.0,
-    "visited": false
+    "visited": true
   },
   {
     "id": 14,
