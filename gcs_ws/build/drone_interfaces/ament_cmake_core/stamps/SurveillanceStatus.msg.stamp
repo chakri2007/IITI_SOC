@@ -1,0 +1,2 @@
+bool surveillance_completed
+int32 waypoints_remaining

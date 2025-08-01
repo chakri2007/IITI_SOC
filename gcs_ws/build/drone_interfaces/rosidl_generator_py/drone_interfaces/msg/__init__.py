@@ -1,0 +1,12 @@
+from drone_interfaces.msg._drone_status import DroneStatus  # noqa: F401
+from drone_interfaces.msg._drone_status_update import DroneStatusUpdate  # noqa: F401
+from drone_interfaces.msg._drone_type_change import DroneTypeChange  # noqa: F401
+from drone_interfaces.msg._geotag import Geotag  # noqa: F401
+from drone_interfaces.msg._geotag_array import GeotagArray  # noqa: F401
+from drone_interfaces.msg._geotag_request import GeotagRequest  # noqa: F401
+from drone_interfaces.msg._geotag_visited import GeotagVisited  # noqa: F401
+from drone_interfaces.msg._surveillance_status import SurveillanceStatus  # noqa: F401
+from drone_interfaces.msg._waypoint import Waypoint  # noqa: F401
+from drone_interfaces.msg._waypoint_array import WaypointArray  # noqa: F401
+from drone_interfaces.msg._waypoint_request import WaypointRequest  # noqa: F401
+from drone_interfaces.msg._waypoint_visited import WaypointVisited  # noqa: F401
