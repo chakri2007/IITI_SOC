@@ -13,7 +13,7 @@
     "lon": 75.92276863043509,
     "alt": 640.078857421875,
     "severity_score": 5,
-    "irrigated": false
+    "irrigated": true
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "lon": 75.92275115669263,
     "alt": 640.2927627563477,
     "severity_score": 3,
-    "irrigated": false
+    "irrigated": true
   },
   {
     "id": 3,
@@ -29,7 +29,7 @@
     "lon": 75.9227312298926,
     "alt": 640.4663619995117,
     "severity_score": 1,
-    "irrigated": false
+    "irrigated": true
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "lon": 75.92271444575331,
     "alt": 640.284309387207,
     "severity_score": 1,
-    "irrigated": false
+    "irrigated": true
   },
   {
     "id": 5,
@@ -45,7 +45,7 @@
     "lon": 75.9226681957332,
     "alt": 640.3283538818359,
     "severity_score": 1,
-    "irrigated": false
+    "irrigated": true
   },
   {
     "id": 6,
@@ -53,7 +53,7 @@
     "lon": 75.92267974965783,
     "alt": 640.1918106079102,
     "severity_score": 2,
-    "irrigated": false
+    "irrigated": true
   },
   {
     "id": 7,
@@ -61,7 +61,7 @@
     "lon": 75.92270224104101,
     "alt": 640.1434783935547,
     "severity_score": 3,
-    "irrigated": false
+    "irrigated": true
   },
   {
     "id": 8,
@@ -77,6 +77,142 @@
     "lon": 75.92274094227814,
     "alt": 639.9621963500977,
     "severity_score": 1,
+    "irrigated": false
+  },
+  {
+    "id": 10,
+    "lat": 22.5241425202994,
+    "lon": 75.92262560779488,
+    "alt": 639.0462188720703,
+    "severity_score": 5,
+    "irrigated": false
+  },
+  {
+    "id": 11,
+    "lat": 22.524144574867062,
+    "lon": 75.9225877892072,
+    "alt": 639.7491455078125,
+    "severity_score": 4,
+    "irrigated": false
+  },
+  {
+    "id": 12,
+    "lat": 22.52437034609366,
+    "lon": 75.92259316759238,
+    "alt": 639.8122177124023,
+    "severity_score": 1,
+    "irrigated": false
+  },
+  {
+    "id": 13,
+    "lat": 22.524595782287314,
+    "lon": 75.92261469565395,
+    "alt": 639.8493041992188,
+    "severity_score": 3,
+    "irrigated": false
+  },
+  {
+    "id": 14,
+    "lat": 22.52482193831653,
+    "lon": 75.92263633065443,
+    "alt": 639.8703689575195,
+    "severity_score": 5,
+    "irrigated": false
+  },
+  {
+    "id": 15,
+    "lat": 22.524983138670088,
+    "lon": 75.92265147354799,
+    "alt": 639.6919174194336,
+    "severity_score": 3,
+    "irrigated": false
+  },
+  {
+    "id": 16,
+    "lat": 22.52500030028234,
+    "lon": 75.92260979889247,
+    "alt": 639.7278900146484,
+    "severity_score": 1,
+    "irrigated": false
+  },
+  {
+    "id": 17,
+    "lat": 22.524775530795306,
+    "lon": 75.92258131504629,
+    "alt": 639.6961059570312,
+    "severity_score": 5,
+    "irrigated": false
+  },
+  {
+    "id": 18,
+    "lat": 22.52455015543513,
+    "lon": 75.92256344686044,
+    "alt": 639.6935272216797,
+    "severity_score": 5,
+    "irrigated": false
+  },
+  {
+    "id": 19,
+    "lat": 22.52432445081022,
+    "lon": 75.92254580120887,
+    "alt": 639.6824951171875,
+    "severity_score": 2,
+    "irrigated": false
+  },
+  {
+    "id": 20,
+    "lat": 22.524152975784084,
+    "lon": 75.9225336243031,
+    "alt": 639.4533004760742,
+    "severity_score": 2,
+    "irrigated": false
+  },
+  {
+    "id": 21,
+    "lat": 22.52414636746524,
+    "lon": 75.92249729025737,
+    "alt": 639.5815658569336,
+    "severity_score": 3,
+    "irrigated": false
+  },
+  {
+    "id": 22,
+    "lat": 22.524372433951257,
+    "lon": 75.92250065365847,
+    "alt": 639.5972595214844,
+    "severity_score": 1,
+    "irrigated": false
+  },
+  {
+    "id": 23,
+    "lat": 22.52459798943034,
+    "lon": 75.92252286836302,
+    "alt": 639.5597152709961,
+    "severity_score": 4,
+    "irrigated": false
+  },
+  {
+    "id": 24,
+    "lat": 22.52482348533717,
+    "lon": 75.9225454723295,
+    "alt": 639.5193939208984,
+    "severity_score": 4,
+    "irrigated": false
+  },
+  {
+    "id": 25,
+    "lat": 22.524988039494833,
+    "lon": 75.92256164010142,
+    "alt": 639.3575210571289,
+    "severity_score": 3,
+    "irrigated": false
+  },
+  {
+    "id": 26,
+    "lat": 22.52499710749876,
+    "lon": 75.92251933243124,
+    "alt": 639.0684127807617,
+    "severity_score": 3,
     "irrigated": false
   }
 ]
