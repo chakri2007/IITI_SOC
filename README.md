@@ -1,4 +1,4 @@
-# IITISoC-25-IVR009: Coordinated Dual Drone Framework for Coverage Based Irrigation Tasks
+# Coordinated Dual Drone Framework for Coverage Based Irrigation Tasks
 
 ### Team Members
 
